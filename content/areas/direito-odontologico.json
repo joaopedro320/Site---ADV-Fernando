@@ -1,0 +1,24 @@
+{
+  "ordem": 4,
+  "numero": "IV",
+  "slug": "direito-odontologico",
+  "titulo_curto": "Direito odontológico",
+  "titulo": "Direito Odontológico",
+  "subtitulo": "Segurança jurídica para cirurgiões-dentistas e consultórios",
+  "descricao_seo": "Segurança jurídica para cirurgiões-dentistas e consultórios: processos éticos no CRO, responsabilidade civil, contratos, prontuário e termo de consentimento.",
+  "paragrafos": [
+    "Orientação e defesa de cirurgiões-dentistas e clínicas odontológicas, com atenção às particularidades da prática clínica e da relação com o paciente, especialmente em tratamentos estéticos e reabilitadores."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Defesa em processos éticos perante o Conselho Regional de Odontologia",
+    "Defesa em ações de responsabilidade civil",
+    "Contratos de prestação de serviços e orçamentos",
+    "Prontuário, termo de consentimento e documentação clínica",
+    "Sociedades, parcerias e contratos entre profissionais",
+    "Relação com operadoras de planos odontológicos"
+  ],
+  "cta": "Orientação jurídica especializada para o seu consultório. Agende uma consulta.",
+  "cor": "verde",
+  "imagem": "/assets/img/direito-odontologico.webp"
+}

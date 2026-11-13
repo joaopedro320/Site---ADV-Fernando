@@ -1,0 +1,70 @@
+{
+  "ordem": 2,
+  "slug": "pacientes-e-beneficiarios",
+  "cor": "verde",
+  "titulo_curto": "Pacientes e beneficiários",
+  "eyebrow": "Para pacientes e beneficiários de planos de saúde",
+  "titulo": "Orientação jurídica para quem precisa de cuidado e quer seus direitos respeitados",
+  "descricao_seo": "Advogado para pacientes e beneficiários de planos de saúde: negativa de cobertura, reajustes, cancelamento, home care, medicamentos e erro médico.",
+  "resumo": "Orientação para negativas de cobertura, reajustes, cancelamentos, acesso a tratamentos e falhas no atendimento.",
+  "intro": [
+    "Quando a saúde está em jogo, a incerteza sobre cobertura, custos e responsabilidades aumenta a preocupação.",
+    "Orientamos pacientes e beneficiários de planos de saúde para que entendam seus direitos, avaliem as alternativas e tomem decisões com segurança, com atenção à urgência que cada situação pode exigir."
+  ],
+  "secoes": [
+    {
+      "titulo": "Situações em que podemos ajudar",
+      "grupos": [
+        {
+          "titulo": "Planos de saúde",
+          "itens": [
+            "Negativa de cobertura de tratamentos, exames, cirurgias e medicamentos",
+            "Reajustes elevados e planos “falso coletivo”",
+            "Cancelamento unilateral do contrato",
+            "Home care e internação domiciliar",
+            "Cirurgia bariátrica e plástica reparadora",
+            "Direitos do beneficiário idoso"
+          ]
+        },
+        {
+          "titulo": "Acesso à saúde",
+          "itens": [
+            "Fornecimento de medicamentos e tratamentos indicados pelo médico",
+            "Terapias para pessoas com deficiência e transtornos do neurodesenvolvimento",
+            "Medidas de urgência quando o tempo faz diferença"
+          ]
+        },
+        {
+          "titulo": "Falhas no atendimento",
+          "itens": [
+            "Erro médico e hospitalar",
+            "Erro odontológico",
+            "Erro veterinário, quando o paciente é o seu animal de estimação",
+            "Análise de prontuários, exames e laudos"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Por onde começar",
+      "numerada": true,
+      "itens": [
+        "Agende uma consulta conosco",
+        "Peça a negativa ou a resposta do plano por escrito.",
+        "Guarde o relatório médico, os exames e todos os comunicados recebidos.",
+        "Reúna contrato, boletos e protocolos de atendimento.",
+        "Registre reclamação na ANS, quando se tratar de plano de saúde.",
+        "Procure orientação jurídica antes de aceitar acordos ou assinar documentos."
+      ]
+    },
+    {
+      "titulo": "Nossa forma de atuar",
+      "paragrafos": [
+        "Analisamos o contrato, a indicação médica e a documentação do caso para explicar, de forma clara, o que pode ser exigido e quais providências são possíveis.",
+        "Cada situação tem particularidades, por isso o atendimento é individualizado e respeita o ritmo e a urgência de cada pessoa."
+      ]
+    }
+  ],
+  "cta": "Recebeu uma negativa, um reajuste ou passou por uma falha no atendimento? Entre em contato, agende uma consulta e tire suas dúvidas.",
+  "imagem": "/assets/img/plano-saude-idosos.webp"
+}

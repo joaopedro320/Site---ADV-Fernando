@@ -1,0 +1,25 @@
+{
+  "ordem": 1,
+  "numero": "I",
+  "slug": "plano-de-saude-e-saude-suplementar",
+  "titulo_curto": "Plano de saúde e saúde suplementar",
+  "titulo": "Plano de Saúde e Saúde Suplementar",
+  "subtitulo": "Negativas de cobertura, reajustes abusivos e cancelamentos de planos de saúde",
+  "descricao_seo": "Advogado para negativas de cobertura, reajustes abusivos e cancelamentos de plano de saúde. Análise do contrato, da indicação médica e das regras da ANS.",
+  "paragrafos": [
+    "Orientação e defesa de beneficiários em conflitos com operadoras de planos de saúde.",
+    "Nossa análise considera o contrato, a indicação médica e a regulamentação da ANS para identificar o que pode ser exigido e quais providências adotar."
+  ],
+  "rotulo_lista": "Principais reclamações:",
+  "itens": [
+    "Negativa de cobertura de tratamentos, exames, cirurgias e medicamentos",
+    "Reajustes abusivos e planos “falso coletivo”",
+    "Cancelamento unilateral de contratos",
+    "Home care e internação domiciliar",
+    "Cirurgia bariátrica e reparadora",
+    "Direitos do beneficiário idoso"
+  ],
+  "cta": "Recebeu uma negativa ou um reajuste que não entendeu? Agende uma consulta e tire suas dúvidas.",
+  "cor": "verde",
+  "imagem": "/assets/img/plano-saude-negativa.webp"
+}

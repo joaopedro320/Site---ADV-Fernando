@@ -1,0 +1,83 @@
+{
+  "titulo": "O escritório",
+  "subtitulo": "Direito da Saúde com rigor técnico, análise estratégica e atendimento individualizado",
+  "texto": [
+    "O escritório é especializado em Direito da Saúde. Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde e na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+    "Unimos rigor técnico, análise estratégica e atendimento individualizado, com foco na prevenção de riscos e na construção de soluções adequadas a cada caso."
+  ],
+  "advogado_titulo": "Luiz Fernando Neves",
+  "advogado_texto": [
+    "Luiz Fernando Neves, advogado, regularmente inscrito na OAB/SP, com atuação voltada ao Direito da Saúde, à proteção e orientação jurídica de médicos, dentistas e profissionais da saúde, bem como à defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+    "É pós-graduando em Direito Médico, Hospitalar e da Saúde pela Pontifícia Universidade Católica de São Paulo (PUC-SP), pós-graduado em Direito Processual Civil pela Faculdade de Direito, Educação e Gestão (FADEG) e está sempre aprofundando seus conhecimentos nas questões jurídicas que envolvem a assistência à saúde e as relações entre profissionais, instituições, pacientes e operadoras de planos de saúde.",
+    "Sua formação é complementada por cursos de extensão e aperfeiçoamento em Direito Médico e Odontológico, entre eles os promovidos pela Escola Superior de Advocacia da OAB-SP e pela Academia Brasileira de Direito Médico, além da participação em congressos e eventos acadêmicos, incluindo iniciativas do grupo de pesquisa em Direito Médico e Bioética da Faculdade de Direito de Ribeirão Preto da Universidade de São Paulo (FDRP-USP), buscando atualização constante e aprofundamento técnico nas matérias relacionadas à sua atuação."
+  ],
+  "principios_titulo": "Como o trabalho é conduzido",
+  "principios": [
+    "Seu trabalho é pautado pelo rigor técnico, pela análise estratégica e pelo atendimento individualizado, com foco na prevenção de riscos, na proteção de direitos e na construção de soluções jurídicas adequadas às particularidades de cada caso.",
+    "Acredita em uma advocacia que vai além da resolução de conflitos: uma atuação que combina prevenção, conhecimento, estratégia e proximidade com o cliente para oferecer segurança jurídica a quem cuida e a quem precisa de cuidados."
+  ],
+  "formacao_titulo": "Formação complementar",
+  "formacao": [
+    {
+      "titulo": "Cursos de extensão",
+      "itens": [
+        "Direito Médico: Aspectos Criminais, Cíveis e Administrativos, Escola Superior de Advocacia da OAB-SP (ESA), janeiro de 2026",
+        "Direito Odontológico na Prática, Academia Brasileira de Direito Médico (Abradimed), agosto a setembro de 2025"
+      ]
+    },
+    {
+      "titulo": "Congressos e eventos",
+      "itens": [
+        "II Congresso de Direito Médico e Bioética, Grupo de Pesquisa da Faculdade de Direito de Ribeirão Preto da USP (FDRP-USP), agosto de 2025",
+        "3º Congresso Brasileiro de Direito Médico, Escola Mineira de Direito, maio de 2024"
+      ]
+    }
+  ],
+  "destaque_frase": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade com o cliente.",
+  "linha_titulo": "Trajetória e formação",
+  "linha_texto": "Atualização constante em Direito Médico, Odontológico e da Saúde, com formação acadêmica e participação em congressos da área.",
+  "linha_do_tempo": [
+    {
+      "ano": "Base",
+      "periodo": "Pós-graduação concluída",
+      "titulo": "Pós-graduação em Direito Processual Civil",
+      "instituicao": "Faculdade de Direito, Educação e Gestão (FADEG)",
+      "cor": "azul"
+    },
+    {
+      "ano": "2024",
+      "periodo": "Maio de 2024",
+      "titulo": "3º Congresso Brasileiro de Direito Médico",
+      "instituicao": "Escola Mineira de Direito",
+      "cor": "verde"
+    },
+    {
+      "ano": "2025",
+      "periodo": "Agosto de 2025",
+      "titulo": "II Congresso de Direito Médico e Bioética",
+      "instituicao": "Grupo de Pesquisa da Faculdade de Direito de Ribeirão Preto da USP (FDRP-USP)",
+      "cor": "verde"
+    },
+    {
+      "ano": "2025",
+      "periodo": "Agosto a setembro de 2025",
+      "titulo": "Curso de extensão: Direito Odontológico na Prática",
+      "instituicao": "Academia Brasileira de Direito Médico (Abradimed)",
+      "cor": "verde"
+    },
+    {
+      "ano": "2026",
+      "periodo": "Janeiro de 2026",
+      "titulo": "Curso de extensão: Direito Médico, aspectos criminais, cíveis e administrativos",
+      "instituicao": "Escola Superior de Advocacia da OAB-SP (ESA)",
+      "cor": "verde"
+    },
+    {
+      "ano": "Hoje",
+      "periodo": "Em andamento",
+      "titulo": "Pós-graduação em Direito Médico, Hospitalar e da Saúde",
+      "instituicao": "Pontifícia Universidade Católica de São Paulo (PUC-SP)",
+      "cor": "verde"
+    }
+  ]
+}

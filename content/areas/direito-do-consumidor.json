@@ -1,0 +1,25 @@
+{
+  "ordem": 7,
+  "numero": "VII",
+  "slug": "direito-do-consumidor",
+  "titulo_curto": "Direito do consumidor",
+  "titulo": "Direito do Consumidor",
+  "subtitulo": "Defesa de quem contrata serviços e produtos",
+  "descricao_seo": "Defesa de consumidores em falhas na prestação de serviços, cobranças indevidas, cláusulas abusivas, cancelamentos e publicidade enganosa.",
+  "paragrafos": [
+    "Atuação na defesa de consumidores em conflitos com fornecedores de produtos e serviços.",
+    "A análise parte do Código de Defesa do Consumidor e das particularidades de cada contrato."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Falhas na prestação de serviços",
+    "Cobranças indevidas e tarifas abusivas",
+    "Cláusulas contratuais abusivas",
+    "Cancelamento e rescisão de contratos",
+    "Publicidade enganosa e descumprimento de oferta",
+    "Pedidos de reparação por danos materiais e morais"
+  ],
+  "cta": "Tem dúvidas sobre seus direitos como consumidor? Entre em contato e agende uma consulta.",
+  "cor": "azul",
+  "imagem": "/assets/img/reajuste-plano-saude.webp"
+}

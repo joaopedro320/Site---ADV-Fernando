@@ -1,0 +1,23 @@
+{
+  "ordem": 5,
+  "numero": "V",
+  "slug": "erro-medico-odontologico-e-veterinario",
+  "titulo_curto": "Erro médico, odontológico e veterinário",
+  "titulo": "Erro Médico, Odontológico e Veterinário",
+  "subtitulo": "Análise e atuação em casos de falha no atendimento a pacientes e animais de estimação.",
+  "descricao_seo": "Análise jurídica de falhas no atendimento a pacientes e animais de estimação: documentação, responsabilidades e reparação por danos materiais e morais.",
+  "paragrafos": [
+    "Avaliação jurídica de casos em que o paciente ou o tutor de um animal sofreu danos decorrentes de falha na prestação do serviço. A atuação envolve análise da documentação, identificação de responsabilidades e busca da reparação adequada."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Erro médico e hospitalar",
+    "Erro odontológico",
+    "Erro veterinário",
+    "Análise de prontuários, exames e laudos",
+    "Pedidos de reparação por danos materiais e morais"
+  ],
+  "cta": "Dúvidas sobre o atendimento recebido? Entre em contato e agende uma consulta.",
+  "cor": "verde",
+  "imagem": "/assets/img/erro-veterinario.webp"
+}

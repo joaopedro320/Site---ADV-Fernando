@@ -1,0 +1,36 @@
+{
+  "itens": [
+    {
+      "pergunta": "O plano de saúde negou meu tratamento. O que posso fazer?",
+      "resposta": "Em regra, quem define o tratamento adequado é o médico assistente, e não o plano. Peça a negativa por escrito, guarde o relatório médico com a justificativa clínica e busque orientação jurídica. Na maioria dos casos, é possível pedir decisão liminar para garantir o tratamento de forma rápida."
+    },
+    {
+      "pergunta": "O rol da ANS é taxativo?",
+      "resposta": "Desde a Lei 14.454/2022, o rol da ANS passou a ser exemplificativo, desde que presentes requisitos como comprovação de eficácia e recomendação de órgãos técnicos. A ausência de um procedimento no rol, por si só, nem sempre justifica a recusa."
+    },
+    {
+      "pergunta": "Todo reajuste do plano de saúde é abusivo?",
+      "resposta": "Nem todo reajuste é ilegal, mas nem todo reajuste é válido. Nos planos individuais e familiares, o percentual anual é limitado pela ANS. Nos planos coletivos não há teto da ANS, mas a operadora deve demonstrar de forma transparente a base do aumento, como a sinistralidade."
+    },
+    {
+      "pergunta": "O plano de saúde pode cancelar meu contrato?",
+      "resposta": "Nos planos individuais e familiares, a operadora não pode rescindir o contrato por conta própria, salvo em casos de fraude ou de inadimplência superior a 60 dias, consecutivos ou não, nos últimos 12 meses, e desde que o beneficiário seja notificado até o 50º dia de atraso. Nos planos coletivos, a rescisão é permitida em condições mais amplas. Em qualquer caso, cada contrato tem regras próprias."
+    },
+    {
+      "pergunta": "O que é plano de saúde “falso coletivo”?",
+      "resposta": "É um contrato vendido formalmente como coletivo empresarial ou por adesão, mas que, na prática, funciona como um plano individual ou familiar, atendendo apenas ao titular e à sua família, geralmente por meio de um CNPJ aberto apenas para contratar o plano."
+    },
+    {
+      "pergunta": "Recebi uma notificação do CRM ou fui processado por um paciente. Qual o primeiro passo?",
+      "resposta": "Evite contatar o paciente por conta própria, não altere registros e procure orientação jurídica especializada antes de apresentar qualquer manifestação. Cada passo inicial pode influenciar todo o desfecho."
+    },
+    {
+      "pergunta": "Por quanto tempo o prontuário deve ser guardado?",
+      "resposta": "O prontuário deve ser guardado por no mínimo 20 anos, conforme a Lei 13.787/2018. Um prontuário completo, legível e cronologicamente consistente demonstra a conduta adotada, as orientações dadas e as decisões tomadas."
+    },
+    {
+      "pergunta": "O que reunir antes de agendar uma consulta?",
+      "resposta": "Guarde o relatório médico, os exames e todos os comunicados recebidos, e reúna contrato, boletos e protocolos de atendimento. Se houve negativa, peça a resposta do plano por escrito."
+    }
+  ]
+}

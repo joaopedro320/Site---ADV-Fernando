@@ -1,0 +1,11 @@
+{
+  "ordem": 1,
+  "titulo": "Plano de saúde negou seu tratamento?",
+  "slug": "plano-de-saude-negou-tratamento",
+  "categoria": "Plano de saúde",
+  "data": "2026-11-13",
+  "resumo": "A negativa de cobertura é um dos conflitos mais comuns entre beneficiários e operadoras. Em regra, quem define o tratamento adequado é o médico assistente, e não o plano.",
+  "imagem": "/assets/img/plano-saude-negativa.webp",
+  "texto": "A negativa de cobertura é um dos conflitos mais comuns entre beneficiários e operadoras.\n\nEm regra, quem define o tratamento adequado é o médico assistente, e não o plano.\n\nDesde a Lei 14.454/2022, o rol da ANS passou a ser exemplificativo, desde que presentes requisitos como comprovação de eficácia e recomendação de órgãos técnicos.\n\nIsso significa que a ausência de um procedimento no rol, por si só, nem sempre justifica a recusa.\n\nSe o plano negou, o beneficiário deve pedir a negativa por escrito, guardar o relatório médico com a justificativa clínica e buscar orientação jurídica.\n\nNa maioria dos casos, é possível pedir decisão liminar para garantir o tratamento de forma rápida.",
+  "cta": "Cada caso tem suas particularidades. Agende uma consulta e receba uma orientação individualizada."
+}

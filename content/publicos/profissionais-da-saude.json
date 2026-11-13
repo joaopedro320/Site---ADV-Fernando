@@ -1,0 +1,56 @@
+{
+  "ordem": 1,
+  "slug": "profissionais-da-saude",
+  "cor": "verde",
+  "titulo_curto": "Profissionais da saúde",
+  "eyebrow": "Para profissionais da saúde",
+  "titulo": "Segurança jurídica para quem dedica a vida a cuidar",
+  "descricao_seo": "Advogado para médicos, dentistas e clínicas: defesa em processos éticos no CRM e CRO, responsabilidade civil, contratos, prontuários e atuação preventiva.",
+  "resumo": "Prevenção de riscos e defesa em situações de conflito para médicos, dentistas, clínicas e consultórios.",
+  "intro": [
+    "A prática da medicina, da odontologia e das demais áreas da saúde exige decisões diárias, e cada uma delas pode ter repercussões jurídicas.",
+    "Atuamos ao lado dos profissionais da saúde, clínicas e consultórios, tanto na prevenção de riscos quanto na defesa em situações de conflito, com conhecimento da rotina profissional e atenção às particularidades de cada atividade."
+  ],
+  "secoes": [
+    {
+      "titulo": "Em que podemos ajudar",
+      "grupos": [
+        {
+          "titulo": "Quando o conflito já existe",
+          "itens": [
+            "Notificações e processos éticos perante o CRM e o CRO",
+            "Ações de responsabilidade civil movidas por pacientes",
+            "Reclamações em redes sociais, plataformas e órgãos de defesa do consumidor",
+            "Conflitos com operadoras de planos de saúde, descredenciamentos e glosas",
+            "Divergências com pacientes sobre honorários e cobrança"
+          ]
+        },
+        {
+          "titulo": "Para evitar que o conflito aconteça",
+          "itens": [
+            "Estruturação de prontuários e termos de consentimento",
+            "Elaboração e revisão de contratos de prestação de serviços e orçamentos",
+            "Contratos entre profissionais, sociedades e parcerias",
+            "Orientação sobre publicidade e comunicação nas redes sociais",
+            "Orientação sobre a conduta adequada diante de situações de risco"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Caso você receba uma notificação ou ação judicial",
+      "destaque": true,
+      "paragrafos": [
+        "Os primeiros passos costumam influenciar todo o desfecho. Evite contatar o paciente por conta própria, não altere registros e busque orientação jurídica antes de apresentar qualquer manifestação."
+      ]
+    },
+    {
+      "titulo": "Nossa forma de atuar",
+      "paragrafos": [
+        "Cada caso começa com a análise da documentação e do contexto. A partir dela, orientamos sobre os caminhos possíveis, os riscos envolvidos e a estratégia mais adequada, com atendimento individualizado e comunicação clara durante todo o acompanhamento."
+      ]
+    }
+  ],
+  "cta": "Atuação preventiva e defesa especializada para profissionais da saúde. Entre em contato e agende uma consulta.",
+  "imagem": "/assets/img/processo-etico-crm.webp"
+}

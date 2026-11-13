@@ -1,0 +1,68 @@
+{
+  "ordem": 3,
+  "slug": "direito-civil-e-consumidor",
+  "cor": "azul",
+  "titulo_curto": "Direito civil e do consumidor",
+  "eyebrow": "Para clientes de direito civil e do consumidor",
+  "titulo": "Orientação jurídica clara para contratos, cobranças e relações de consumo",
+  "descricao_seo": "Advogado de direito civil e do consumidor: contratos, cobranças indevidas, cláusulas abusivas, cancelamento, negativação indevida e indenizações.",
+  "resumo": "Análise técnica de contratos, cobranças indevidas e relações de consumo, pela via negocial ou judicial.",
+  "intro": [
+    "Contratos mal compreendidos, cobranças indevidas e serviços que não foram prestados como prometido geram desgaste e insegurança.",
+    "Atuamos na orientação e na defesa de pessoas e empresas em questões cíveis e de consumo, com análise técnica do caso, comunicação clara e busca da solução mais adequada, seja pela via negocial ou pela via judicial."
+  ],
+  "secoes": [
+    {
+      "titulo": "Em que podemos ajudar",
+      "grupos": [
+        {
+          "titulo": "Direito do Consumidor",
+          "itens": [
+            "Falhas na prestação de serviços e vícios em produtos",
+            "Cobranças indevidas, tarifas e encargos abusivos",
+            "Cláusulas contratuais abusivas",
+            "Cancelamento e rescisão de contratos",
+            "Publicidade enganosa e descumprimento de oferta",
+            "Negativação indevida do nome",
+            "Pedidos de reparação por danos materiais e morais"
+          ]
+        },
+        {
+          "titulo": "Direito Civil",
+          "itens": [
+            "Elaboração, revisão e rescisão de contratos",
+            "Descumprimento contratual e cobranças",
+            "Responsabilidade civil e ações de indenização",
+            "Notificações extrajudiciais",
+            "Negociação e acordos"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Por onde começar",
+      "numerada": true,
+      "itens": [
+        "Reúna o contrato, a proposta, os comprovantes de pagamento e as conversas com a empresa.",
+        "Guarde protocolos de atendimento, e-mails, mensagens e gravações.",
+        "Registre a reclamação por escrito, de preferência pelos canais oficiais da empresa.",
+        "Anote datas e prazos, pois alguns direitos têm prazo para serem exercidos.",
+        "Procure orientação jurídica antes de assinar acordos, distratos ou documentos de quitação."
+      ]
+    },
+    {
+      "titulo": "Por que o contrato importa",
+      "paragrafos": [
+        "Muitos conflitos nascem de cláusulas que não foram bem compreendidas no momento da assinatura. Por isso, a análise do contrato é o primeiro passo: ela mostra o que foi combinado, o que pode ser exigido e quais caminhos estão disponíveis."
+      ]
+    },
+    {
+      "titulo": "Nossa forma de atuar",
+      "paragrafos": [
+        "Cada caso começa pela análise da documentação e pela escuta atenta da situação. Em seguida, explicamos de forma clara os caminhos possíveis, os riscos envolvidos e as providências recomendadas, com atendimento individualizado."
+      ]
+    }
+  ],
+  "cta": "Tem dúvidas sobre um contrato, uma cobrança ou seus direitos como consumidor? Entre em contato e agende uma consulta.",
+  "imagem": "/assets/img/plano-saude-falso-coletivo.webp"
+}

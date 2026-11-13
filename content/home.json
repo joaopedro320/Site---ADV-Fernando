@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Direito da Saúde",
+  "hero_titulo": "Direito da Saúde com estratégia, precisão, técnica e compromisso",
+  "hero_texto": "Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde e na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+  "hero_cta_principal": "Agende uma consulta",
+  "hero_cta_secundario": "Conheça as áreas de atuação",
+  "alerta_ativo": true,
+  "alerta_titulo": "Atenção ao golpe do falso advogado",
+  "alerta_texto": "Golpistas se passam por advogados e pedem pagamentos ou dados pessoais com urgência. Desconfie e confirme sempre o contato pelos canais oficiais do escritório, listados neste site.",
+  "publicos_titulo": "Para quem atuamos",
+  "publicos_texto": "Cada pessoa chega com uma necessidade diferente. Por isso, o atendimento é organizado em três frentes.",
+  "areas_titulo": "Áreas de atuação",
+  "areas_texto": "Oito frentes de atuação, da saúde suplementar ao direito civil, com análise individual de cada caso.",
+  "metodo_titulo": "Nossa forma de atuar",
+  "metodo_passos": [
+    {
+      "titulo": "Análise da documentação",
+      "texto": "Cada caso começa pela análise da documentação e do contexto, com escuta atenta da situação."
+    },
+    {
+      "titulo": "Estratégia e caminhos possíveis",
+      "texto": "Explicamos, de forma clara, os caminhos possíveis, os riscos envolvidos e a estratégia mais adequada."
+    },
+    {
+      "titulo": "Acompanhamento individualizado",
+      "texto": "Atendimento individualizado e comunicação clara durante todo o acompanhamento, respeitando o ritmo e a urgência de cada pessoa."
+    }
+  ],
+  "conteudo_titulo": "Notícias e artigos",
+  "conteudo_texto": "Informação jurídica clara sobre saúde, planos de saúde e direitos de pacientes e profissionais.",
+  "destaques": [],
+  "faq_titulo": "Perguntas frequentes",
+  "cta_titulo": "Cada situação é única",
+  "cta_texto": "Agende uma consulta e receba uma orientação adequada ao seu caso.",
+  "hero_linha_1": "Direito da Saúde",
+  "hero_linha_2": "com estratégia",
+  "statement": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade para oferecer segurança jurídica a quem cuida e a quem precisa de cuidados."
+}

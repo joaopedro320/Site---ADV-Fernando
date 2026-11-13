@@ -1,0 +1,23 @@
+{
+  "ordem": 2,
+  "numero": "II",
+  "slug": "direito-a-saude",
+  "titulo_curto": "Direito à saúde",
+  "titulo": "Direito à Saúde",
+  "subtitulo": "Acesso a tratamentos, medicamentos e procedimentos indicados pelo médico",
+  "descricao_seo": "Acesso a tratamentos, medicamentos e procedimentos indicados pelo médico, pelo plano de saúde ou pelo poder público. Orientação jurídica e medidas de urgência.",
+  "paragrafos": [
+    "O direito à saúde é garantido pela Constituição, e sua efetivação depende, muitas vezes, de orientação jurídica adequada.",
+    "Atuamos para que o paciente tenha acesso ao tratamento indicado por seu médico, seja por meio do plano de saúde ou do poder público."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Fornecimento de medicamentos, inclusive de alto custo",
+    "Tratamentos e procedimentos de urgência",
+    "Acesso a terapias para pessoas com deficiência e transtornos do neurodesenvolvimento",
+    "Medidas judiciais de urgência quando necessário"
+  ],
+  "cta": "Cada situação é única. Agende uma consulta e receba uma orientação adequada ao seu caso.",
+  "cor": "verde",
+  "imagem": "/assets/img/home-care.webp"
+}

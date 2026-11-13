@@ -1,0 +1,23 @@
+{
+  "ordem": 8,
+  "numero": "VIII",
+  "slug": "direito-civil",
+  "titulo_curto": "Direito civil",
+  "titulo": "Direito Civil",
+  "subtitulo": "Contratos, responsabilidade civil e indenizações",
+  "descricao_seo": "Contratos, responsabilidade civil e indenizações: elaboração, revisão e rescisão de contratos, cobranças, notificações extrajudiciais, negociação e acordos.",
+  "paragrafos": [
+    "Assessoria e atuação em demandas cíveis, com foco em contratos e na responsabilidade civil. Cada caso é analisado com atenção à documentação, às provas e às medidas mais adequadas para a proteção dos interesses do cliente, seja pela via extrajudicial ou pela via judicial."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Elaboração, revisão e rescisão de contratos",
+    "Responsabilidade civil e ações de indenização",
+    "Cobranças e inadimplemento contratual",
+    "Notificações extrajudiciais",
+    "Negociação e acordos"
+  ],
+  "cta": "Cada situação é única. Agende uma consulta e receba uma orientação adequada ao seu caso.",
+  "cor": "azul",
+  "imagem": "/assets/img/plano-saude-falso-coletivo.webp"
+}

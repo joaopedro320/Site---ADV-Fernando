@@ -1,0 +1,25 @@
+{
+  "ordem": 3,
+  "numero": "III",
+  "slug": "direito-medico",
+  "titulo_curto": "Direito médico",
+  "titulo": "Direito Médico",
+  "subtitulo": "Proteção jurídica preventiva e defesa para médicos e clínicas",
+  "descricao_seo": "Assessoria jurídica preventiva e defesa para médicos e clínicas: processos éticos no CRM, responsabilidade civil, prontuários, contratos e publicidade médica.",
+  "paragrafos": [
+    "Assessoria jurídica para médicos e clínicas, com atuação preventiva e, caso necessário, na defesa em situações de conflito.",
+    "O objetivo é proteger a atividade profissional e reduzir riscos antes que se transformem em litígios."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Defesa em processos éticos perante o Conselho Regional de Medicina",
+    "Defesa em ações de responsabilidade civil",
+    "Estruturação de prontuários e termos de consentimento",
+    "Contratos médicos: prestação de serviços, sociedades e credenciamentos",
+    "Relação com operadoras, hospitais e clínicas",
+    "Orientação sobre publicidade médica e redes sociais"
+  ],
+  "cta": "Atuação preventiva e defesa especializada para profissionais da medicina. Entre em contato.",
+  "cor": "verde",
+  "imagem": "/assets/img/processo-etico-crm.webp"
+}

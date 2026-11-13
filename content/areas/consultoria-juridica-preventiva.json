@@ -1,0 +1,22 @@
+{
+  "ordem": 6,
+  "numero": "VI",
+  "slug": "consultoria-juridica-preventiva",
+  "titulo_curto": "Consultoria jurídica preventiva",
+  "titulo": "Consultoria Jurídica Preventiva",
+  "subtitulo": "Prevenção de riscos para profissionais, clínicas e consultórios",
+  "descricao_seo": "Prevenção de riscos para profissionais, clínicas e consultórios: revisão de contratos, termos de consentimento, documentação clínica e conduta em conflitos.",
+  "paragrafos": [
+    "A advocacia preventiva reduz riscos e evita conflitos. Auxiliamos profissionais e estabelecimentos de saúde na organização documental, na revisão de contratos e na adoção de boas práticas jurídicas."
+  ],
+  "rotulo_lista": "",
+  "itens": [
+    "Revisão e elaboração de contratos",
+    "Modelos de termos de consentimento e documentos clínicos",
+    "Orientação para conduta em situações de conflito com pacientes",
+    "Análise de notificações de conselhos e operadoras"
+  ],
+  "cta": "Proteger sua prática profissional começa pela orientação certa. Fale com nossa equipe.",
+  "cor": "verde",
+  "imagem": "/assets/img/cirurgia-reparadora-bariatrica.webp"
+}
