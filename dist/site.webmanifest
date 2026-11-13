@@ -1,0 +1,21 @@
+{
+  "name": "Luiz Fernando Neves Advocacia",
+  "short_name": "Luiz Fernando Neves",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F1E7",
+  "theme_color": "#28583F",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

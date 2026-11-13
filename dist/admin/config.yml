@@ -1,0 +1,228 @@
+backend:
+  name: github
+  repo: SEU-USUARIO/SEU-REPOSITORIO   # trocar pelo repositorio do GitHub
+  branch: main
+  base_url: https://SEU-DOMINIO.com.br
+  auth_endpoint: api/auth
+publish_mode: editorial_workflow
+media_folder: static/assets/img
+public_folder: /assets/img
+locale: pt
+site_url: https://luizfernandoneves.com.br
+display_url: https://luizfernandoneves.com.br
+logo_url: /assets/logo/logo-verde.svg
+slug:
+  encoding: ascii
+  clean_accents: true
+collections:
+  - name: artigos
+    label: "Notícias e artigos"
+    label_singular: "Artigo"
+    folder: content/artigos
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    summary: "{{titulo}} ({{categoria}})"
+    fields:
+      - {label: "Ordem (número maior aparece depois)", name: ordem, widget: number, value_type: int, default: 99}
+      - {label: "Título", name: titulo, widget: string}
+      - {label: "Endereço da página (sem espaços)", name: slug, widget: string, hint: "Ex.: plano-de-saude-negou-tratamento"}
+      - label: "Categoria"
+        name: categoria
+        widget: select
+        options: ["Plano de saúde","Direito Médico","Direito Odontológico","Erro veterinário","Direito do Consumidor"]
+      - {label: "Data de publicação", name: data, widget: string, hint: "Formato AAAA-MM-DD"}
+      - {label: "Resumo (aparece nos cards e no Google)", name: resumo, widget: text}
+      - {label: "Imagem de capa", name: imagem, widget: image, required: false, hint: "Prefira .webp, 1600 px de largura"}
+      - {label: "Texto do artigo", name: texto, widget: markdown, buttons: [bold, italic, heading-two, heading-three, bulleted-list, numbered-list, link], editor_components: [], modes: [rich_text]}
+      - {label: "Chamada para o WhatsApp (final do artigo)", name: cta, widget: string, required: false}
+  - name: areas
+    label: "Áreas de atuação"
+    label_singular: "Área"
+    folder: content/areas
+    extension: json
+    format: json
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Ordem", name: ordem, widget: number, value_type: int}
+      - {label: "Número (I, II...)", name: numero, widget: string}
+      - {label: "Endereço da página", name: slug, widget: string}
+      - {label: "Título curto (menu e cards)", name: titulo_curto, widget: string}
+      - {label: "Título completo", name: titulo, widget: string}
+      - {label: "Subtítulo", name: subtitulo, widget: text}
+      - {label: "Descrição para o Google (até 155 caracteres)", name: descricao_seo, widget: text}
+      - {label: "Parágrafos", name: paragrafos, widget: list, field: {label: Parágrafo, name: p, widget: text}}
+      - {label: "Título da lista", name: rotulo_lista, widget: string}
+      - {label: "Itens da lista", name: itens, widget: list, field: {label: Item, name: i, widget: string}}
+      - {label: "Chamada para o WhatsApp", name: cta, widget: string}
+      - {label: "Cor (verde = saúde, azul = civil e consumidor)", name: cor, widget: select, options: [verde, azul]}
+      - {label: "Imagem", name: imagem, widget: image, required: false}
+  - name: publicos
+    label: "Para quem atuamos"
+    label_singular: "Página de público"
+    folder: content/publicos
+    extension: json
+    format: json
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Ordem", name: ordem, widget: number, value_type: int}
+      - {label: "Endereço da página", name: slug, widget: string}
+      - {label: "Cor (verde = saúde, azul = civil e consumidor)", name: cor, widget: select, options: [verde, azul]}
+      - {label: "Imagem", name: imagem, widget: image, required: false}
+      - {label: "Título curto", name: titulo_curto, widget: string}
+      - {label: "Etiqueta superior", name: eyebrow, widget: string}
+      - {label: "Título", name: titulo, widget: string}
+      - {label: "Descrição para o Google", name: descricao_seo, widget: text}
+      - {label: "Resumo (card)", name: resumo, widget: text}
+      - {label: "Introdução", name: intro, widget: list, field: {label: Parágrafo, name: p, widget: text}}
+      - label: "Seções"
+        name: secoes
+        widget: list
+        fields:
+          - {label: "Título", name: titulo, widget: string}
+          - {label: "Parágrafos", name: paragrafos, widget: list, required: false, field: {label: Parágrafo, name: p, widget: text}}
+          - {label: "Itens", name: itens, widget: list, required: false, field: {label: Item, name: i, widget: string}}
+          - {label: "Lista numerada?", name: numerada, widget: boolean, required: false}
+          - {label: "Destaque?", name: destaque, widget: boolean, required: false}
+          - label: "Grupos"
+            name: grupos
+            widget: list
+            required: false
+            fields:
+              - {label: "Título", name: titulo, widget: string}
+              - {label: "Itens", name: itens, widget: list, field: {label: Item, name: i, widget: string}}
+      - {label: "Chamada para o WhatsApp", name: cta, widget: string}
+  - name: paginas
+    label: "Páginas e configurações"
+    files:
+      - name: configuracoes
+        label: "Configurações do site (contatos, rastreamento)"
+        file: content/configuracoes.json
+        format: json
+        fields:
+          - {label: "Nome do escritório", name: nome, widget: string}
+          - {label: "Nome curto", name: nome_curto, widget: string}
+          - {label: "Nome do advogado", name: advogado, widget: string}
+          - {label: "OAB UF", name: oab_uf, widget: string}
+          - {label: "Número da OAB", name: oab_numero, widget: string, required: false}
+          - {label: "Endereço do site (https://...)", name: dominio, widget: string}
+          - {label: "WhatsApp só números com 55 e DDD", name: whatsapp, widget: string}
+          - {label: "Telefone para exibir", name: telefone, widget: string}
+          - {label: "E-mail", name: email, widget: string}
+          - {label: "Link do Instagram", name: instagram_url, widget: string}
+          - {label: "Usuário do Instagram", name: instagram_usuario, widget: string}
+          - {label: "Link do LinkedIn", name: linkedin_url, widget: string, required: false}
+          - {label: "Link do Facebook", name: facebook_url, widget: string, required: false}
+          - {label: "Endereço (rua e número)", name: endereco_rua, widget: string, required: false}
+          - {label: "Cidade", name: endereco_cidade, widget: string, required: false}
+          - {label: "UF", name: endereco_uf, widget: string}
+          - {label: "CEP", name: endereco_cep, widget: string, required: false}
+          - {label: "Mapa url", name: mapa_url, widget: string, required: false}
+          - {label: "Mensagem inicial do WhatsApp", name: mensagem_whatsapp, widget: text}
+          - {label: "Link das avaliações no Google", name: google_avaliacoes_url, widget: string, required: false}
+          - {label: "ID do Google Tag Manager (GTM-XXXX)", name: gtm_id, widget: string, required: false}
+          - {label: "ID do Pixel da Meta", name: meta_pixel_id, widget: string, required: false}
+          - {label: "ID do Google Analytics 4 (G-XXXX)", name: ga4_id, widget: string, required: false}
+          - {label: "Código de verificação do Search Console", name: verificacao_google, widget: string, required: false}
+          - {label: "Aviso legal do rodapé", name: aviso_legal, widget: text}
+      - name: home
+        label: "Página inicial"
+        file: content/home.json
+        format: json
+        fields:
+          - {label: "Hero eyebrow", name: hero_eyebrow, widget: string}
+          - {label: "Título completo do topo (Google e leitores de tela)", name: hero_titulo, widget: string}
+          - {label: "Topo: linha grande 1", name: hero_linha_1, widget: string}
+          - {label: "Topo: linha grande 2", name: hero_linha_2, widget: string}
+          - {label: "Frase de destaque (abaixo do topo)", name: statement, widget: text}
+          - {label: "Hero texto", name: hero_texto, widget: text}
+          - {label: "Hero cta principal", name: hero_cta_principal, widget: string}
+          - {label: "Hero cta secundario", name: hero_cta_secundario, widget: string}
+          - {label: "Alerta ativo", name: alerta_ativo, widget: boolean}
+          - {label: "Alerta titulo", name: alerta_titulo, widget: string}
+          - {label: "Alerta texto", name: alerta_texto, widget: text}
+          - {label: "Publicos titulo", name: publicos_titulo, widget: string}
+          - {label: "Publicos texto", name: publicos_texto, widget: string}
+          - {label: "Areas titulo", name: areas_titulo, widget: string}
+          - {label: "Areas texto", name: areas_texto, widget: string}
+          - {label: "Metodo titulo", name: metodo_titulo, widget: string}
+          - label: "Metodo passos"
+            name: metodo_passos
+            widget: list
+            fields:
+            - {label: "Titulo", name: titulo, widget: string}
+            - {label: "Texto", name: texto, widget: string}
+          - {label: "Conteudo titulo", name: conteudo_titulo, widget: string}
+          - {label: "Conteudo texto", name: conteudo_texto, widget: string}
+          - {label: "Destaques", name: destaques, widget: list, required: false, field: {label: Item, name: t, widget: string}}
+          - {label: "Faq titulo", name: faq_titulo, widget: string}
+          - {label: "Cta titulo", name: cta_titulo, widget: string}
+          - {label: "Cta texto", name: cta_texto, widget: string}
+      - name: escritorio
+        label: "Página O escritório"
+        file: content/escritorio.json
+        format: json
+        fields:
+          - {label: "Titulo", name: titulo, widget: string}
+          - {label: "Subtitulo", name: subtitulo, widget: string}
+          - {label: "Frase em destaque", name: destaque_frase, widget: text}
+          - {label: "Linha do tempo: título", name: linha_titulo, widget: string}
+          - {label: "Linha do tempo: texto", name: linha_texto, widget: text}
+          - label: "Linha do tempo"
+            name: linha_do_tempo
+            widget: list
+            fields:
+              - {label: "Ano ou rótulo (ex.: 2025, Hoje)", name: ano, widget: string}
+              - {label: "Período", name: periodo, widget: string}
+              - {label: "Título", name: titulo, widget: string}
+              - {label: "Instituição", name: instituicao, widget: string}
+              - {label: "Cor", name: cor, widget: select, options: [verde, azul]}
+          - {label: "Texto", name: texto, widget: list, field: {label: Texto, name: t, widget: text}}
+          - {label: "Advogado titulo", name: advogado_titulo, widget: string}
+          - {label: "Advogado texto", name: advogado_texto, widget: list, field: {label: Texto, name: t, widget: text}}
+          - {label: "Principios titulo", name: principios_titulo, widget: string}
+          - {label: "Principios", name: principios, widget: list, field: {label: Texto, name: t, widget: text}}
+          - {label: "Formacao titulo", name: formacao_titulo, widget: string}
+          - label: "Formacao"
+            name: formacao
+            widget: list
+            fields:
+            - {label: "Titulo", name: titulo, widget: string}
+            - {label: "Itens", name: itens, widget: list, field: {label: Texto, name: t, widget: text}}
+      - name: faq
+        label: "Perguntas frequentes"
+        file: content/faq.json
+        format: json
+        fields:
+          - label: "Itens"
+            name: itens
+            widget: list
+            fields:
+            - {label: "Pergunta", name: pergunta, widget: string}
+            - {label: "Resposta", name: resposta, widget: text}
+      - name: avaliacoes
+        label: "Avaliações de clientes"
+        file: content/avaliacoes.json
+        format: json
+        fields:
+          - {label: "Titulo", name: titulo, widget: string}
+          - {label: "Texto", name: texto, widget: string}
+          - label: "Avaliações"
+            name: itens
+            widget: list
+            required: false
+            fields:
+              - {label: "Nome", name: autor, widget: string}
+              - {label: "Texto", name: texto, widget: text}
+              - {label: "Nota (1 a 5)", name: nota, widget: number, value_type: int, min: 1, max: 5}
+      - name: privacidade
+        label: "Política de privacidade"
+        file: content/privacidade.json
+        format: json
+        fields:
+          - {label: "Título", name: titulo, widget: string}
+          - {label: "Atualizado em (AAAA-MM-DD)", name: atualizado_em, widget: string}
+          - {label: "Texto", name: texto, widget: markdown, modes: [rich_text]}
