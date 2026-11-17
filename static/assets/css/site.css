@@ -758,3 +758,9 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 .marquee .mq-track span::after{width:72px;height:18px;background:url(/assets/logo/monograma-claro.svg) center/contain no-repeat;-webkit-mask:none;mask:none}
 @media (max-width:640px){.marquee .mq-track span::after{width:54px;height:14px}}
 @media (min-width:901px){.cta-mono{width:26%;right:-3%;top:auto;bottom:-6%;translate:none;opacity:.4}}
+/* faixa em movimento mais baixa */
+.marquee{padding:.8rem 0}
+.marquee .mq-track{gap:2rem}
+.marquee .mq-track span{font-size:1.3rem;gap:2rem;letter-spacing:-.02em}
+.marquee .mq-track span::after{width:48px;height:12px}
+@media (max-width:640px){.marquee{padding:.65rem 0}.marquee .mq-track span{font-size:1.05rem;gap:1.4rem}.marquee .mq-track{gap:1.4rem}.marquee .mq-track span::after{width:38px;height:10px}}

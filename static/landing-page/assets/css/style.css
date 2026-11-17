@@ -243,11 +243,11 @@ p{margin:0}
 /* ===== Animações e carrosséis ===== */
 
 /* Faixa animada (igual ao site) */
-.mq{background:var(--verde-prof);color:#EEF2EF;overflow:hidden;padding:22px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.mq__track{display:flex;gap:44px;width:max-content;animation:mq 46s linear infinite}
+.mq{background:var(--verde-prof);color:#EEF2EF;overflow:hidden;padding:13px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq__track{display:flex;gap:32px;width:max-content;animation:mq 46s linear infinite}
 .mq:hover .mq__track{animation-play-state:paused}
-.mq__track span{font:400 30px/1 var(--f-tit);letter-spacing:-.03em;white-space:nowrap;display:inline-flex;align-items:center;gap:44px}
-.mq__track span::after{content:"";width:72px;height:18px;background:url(../logo/monograma-claro.svg) center/contain no-repeat}
+.mq__track span{font:400 20px/1 var(--f-tit);letter-spacing:-.02em;white-space:nowrap;display:inline-flex;align-items:center;gap:32px}
+.mq__track span::after{content:"";width:48px;height:12px;background:url(../logo/monograma-claro.svg) center/contain no-repeat}
 .mq--claro{background:var(--verde-cl);color:var(--verde-esc)}
 .mq--claro .mq__track{animation-duration:38s;animation-direction:reverse}
 .mq--claro .mq__track span::after{background-image:url(../logo/monograma-verde.svg)}
@@ -283,8 +283,8 @@ p{margin:0}
 
 /* Galeria do advogado (troca automática) */
 .adv__foto{aspect-ratio:4/5;max-width:440px;width:100%}
-.adv__foto img{position:absolute;inset:0;width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:center 20%;opacity:0;transform:scale(1.06);transition:opacity 1s ease,transform 6s ease}
-.adv__foto img.is-on{opacity:1;transform:scale(1)}
+.adv__foto img{position:absolute;inset:0;width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:center 20%;opacity:0;transition:opacity 1.1s ease}
+.adv__foto img.is-on{opacity:1}
 .adv__foto::after{width:100%;height:100%}
 .adv__dots{position:absolute;left:20px;bottom:20px;display:flex;gap:8px;z-index:2}
 .adv__dots button{width:28px;height:4px;border:0;border-radius:2px;background:rgba(251,249,244,.45);cursor:pointer;padding:0;transition:background .3s,width .3s}
@@ -317,9 +317,10 @@ p{margin:0}
   .brasil__in{grid-template-columns:1fr;gap:48px}
   .duo{height:420px}
   .adv__foto{max-width:380px}
-  .mq__track span{font-size:22px;gap:32px}
-  .mq__track{gap:32px}
-  .mq__track span::after{width:54px;height:14px}
+  .mq{padding:10px 0}
+  .mq__track span{font-size:16px;gap:22px}
+  .mq__track{gap:22px}
+  .mq__track span::after{width:38px;height:10px}
 }
 @media (max-width:560px){
   .car__nav{display:none}
@@ -329,3 +330,44 @@ p{margin:0}
   .mq__track{animation:none}
   .rv,.rv-duo figure{opacity:1;transform:none;clip-path:none}
 }
+
+/* Brasil: texto + mapa (igual ao site) */
+.brasil{overflow:hidden}
+.brasil__in{grid-template-columns:1fr 1.05fr;gap:72px}
+.brasil__mapa{margin:0;position:relative}
+.br-map{width:100%;height:auto;overflow:visible}
+.br-map .uf{fill:#CFE0D4;stroke:var(--verde-cl);stroke-width:1.1;transition:fill .4s}
+.br-map .uf:hover{fill:#B9D1C0}
+.br-map .uf-sp{fill:var(--verde)}
+.br-map .arc{fill:none;stroke:var(--bronze);stroke-width:1.3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:.85}
+.br-map .cap{fill:var(--verde-esc);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(0)}
+.br-map .sp-dot{fill:var(--bronze);stroke:#fff;stroke-width:3}
+.br-map .sp-pulse{fill:var(--bronze);opacity:.5;transform-box:fill-box;transform-origin:center;animation:sp-pulse 2.4s ease-out infinite}
+.br-map .sp-label{font:600 15px var(--f-txt);letter-spacing:.06em;fill:var(--verde-esc);text-transform:uppercase}
+.brasil__mapa.is-in .arc{animation:draw-arc 1.4s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.07s + .2s) forwards}
+.brasil__mapa.is-in .cap{animation:cap-in .6s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.07s + 1.1s) forwards}
+@keyframes draw-arc{to{stroke-dashoffset:0}}
+@keyframes cap-in{to{opacity:1;transform:scale(1)}}
+@keyframes sp-pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(3.4);opacity:0}}
+@media (max-width:900px){.brasil__mapa{max-width:520px;margin-inline:auto;width:100%}}
+@media (prefers-reduced-motion:reduce){.br-map .arc{stroke-dashoffset:0}.br-map .cap{opacity:1;transform:none}.br-map .sp-pulse{animation:none}}
+
+/* Abertura com a marca (igual ao site, uma vez por sessão) */
+.ld{position:fixed;inset:0;z-index:400;background:var(--verde-esc);display:grid;place-items:center;transition:transform 1.1s cubic-bezier(.87,0,.13,1)}
+html.ld-on body{overflow:hidden}
+.ld__in{display:flex;flex-direction:column;align-items:center;gap:30px;transition:opacity .6s cubic-bezier(.55,0,1,.45),transform .6s cubic-bezier(.55,0,1,.45)}
+.ld__mark{width:min(220px,50vw);height:auto;overflow:visible}
+.ld__mark path{opacity:0;transform:translate(-9%,9%);animation:ld-path 1s cubic-bezier(.16,1,.3,1) calc(var(--k)*.1s) forwards}
+.ld__word{width:min(300px,64vw);height:auto;clip-path:inset(0 100% 0 0);animation:ld-word 1.1s cubic-bezier(.87,0,.13,1) .35s forwards}
+.ld__bar{width:min(300px,64vw);height:1px;background:rgba(255,255,255,.18);position:relative;overflow:hidden}
+.ld__bar i{position:absolute;inset:0;background:var(--bronze);transform:scaleX(0);transform-origin:left;animation:ld-bar 1.3s cubic-bezier(.87,0,.13,1) .35s forwards}
+.ld.is-out .ld__in{opacity:0;transform:translateY(-30px)}
+.ld.is-up{transform:translateY(-100%)}
+@keyframes ld-path{to{opacity:1;transform:none}}
+@keyframes ld-word{to{clip-path:inset(0 0 0 0)}}
+@keyframes ld-bar{to{transform:scaleX(1)}}
+/* hero entra depois da abertura */
+.hero__txt>*{transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+html.ld-on .hero__txt>*{opacity:0;transform:translateY(30px)}
+html.hero-in .hero__txt>*{opacity:1;transform:none}
+.hero__txt>*:nth-child(2){transition-delay:.08s}.hero__txt>*:nth-child(3){transition-delay:.16s}.hero__txt>*:nth-child(4){transition-delay:.24s}.hero__txt>*:nth-child(5){transition-delay:.32s}

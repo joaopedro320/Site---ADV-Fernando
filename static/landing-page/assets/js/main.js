@@ -76,7 +76,7 @@
   }
 
   // Revelar ao rolar
-  var rv = document.querySelectorAll(".passos__lista li, .adv__txt, .duo, .reunir, .form, .golpe");
+  var rv = document.querySelectorAll(".passos__lista li, .adv__txt, .brasil__txt, .reunir, .form, .golpe");
   rv.forEach(function (el) { el.classList.add(el.classList.contains("duo") ? "rv-duo" : "rv"); });
   document.querySelectorAll(".passos__lista li").forEach(function (el, i) { el.style.transitionDelay = (i * 0.12) + "s"; });
   document.querySelectorAll(".duo figure").forEach(function (el, i) { el.style.transitionDelay = (i * 0.25) + "s"; });
@@ -85,9 +85,26 @@
     rv.forEach(function (el) { io.observe(el); });
   } else rv.forEach(function (el) { el.classList.add("is-in"); });
 
-  // Carta do hero: anima uma vez ao carregar
+  // Abertura com a marca e entrada do hero
   var carta = document.querySelector(".carta");
-  if (carta) requestAnimationFrame(function () { setTimeout(function () { carta.classList.add("is-on"); }, 250); });
+  var heroIn = function () {
+    document.documentElement.classList.add("hero-in");
+    if (carta) setTimeout(function () { carta.classList.add("is-on"); }, 250);
+  };
+  var ld = document.getElementById("ld");
+  if (ld && document.documentElement.classList.contains("ld-on")) {
+    setTimeout(function () { ld.classList.add("is-out"); }, 1750);
+    setTimeout(function () { ld.classList.add("is-up"); }, 2000);
+    setTimeout(function () { document.documentElement.classList.remove("ld-on"); heroIn(); }, 2150);
+    setTimeout(function () { ld.remove(); }, 3200);
+  } else { requestAnimationFrame(heroIn); }
+
+  // Mapa: desenha as rotas quando aparece
+  document.querySelectorAll("[data-map]").forEach(function (m) {
+    if (!("IntersectionObserver" in window) || calmo) { m.classList.add("is-in"); return; }
+    var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { m.classList.add("is-in"); o.disconnect(); } }, { threshold: 0.3 });
+    o.observe(m);
+  });
 
   // Botão flutuante aparece depois do hero
   var flut = document.querySelector(".wa-float");
