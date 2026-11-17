@@ -226,7 +226,7 @@
     var mm=gsap.matchMedia();
     mm.add('(min-width: 1101px)',function(){
       var dist=function(){return Math.max(0,trk.scrollWidth-(w.innerWidth-trk.getBoundingClientRect().left)+40)};
-      gsap.to(trk,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:sec,pin:pin,start:'top top',end:function(){return '+='+dist()},scrub:1,invalidateOnRefresh:true,onUpdate:function(s){if(pbar)pbar.style.transform='scaleX('+s.progress+')'}}});
+      gsap.to(trk,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:sec,pin:pin,start:'center center',end:function(){return '+='+dist()},scrub:1,invalidateOnRefresh:true,onUpdate:function(s){if(pbar)pbar.style.transform='scaleX('+s.progress+')'}}});
       $$('.htl-i',trk).forEach(function(li,i){gsap.fromTo(li,{opacity:.25,y:30},{opacity:1,y:0,ease:'none',scrollTrigger:{trigger:sec,start:function(){return 'top+='+(i*dist()/($$('.htl-i',trk).length))+' 70%'},end:'+=280',scrub:true}})});
       return function(){gsap.set(trk,{clearProps:'transform'})};
     });

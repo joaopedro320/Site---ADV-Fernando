@@ -746,3 +746,15 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 /* justificado só onde cabe: listas sempre alinhadas à esquerda, celular sem buracos */
 .prose-j li,.art-body li,.faq-a li{text-align:left}
 @media (max-width:760px){.prose-j p,.art-body p,.faq-a p,.art-resumo p:last-child{text-align:left}}
+/* lista numerada: bloco simples (o texto pode ser dividido em palavras pela animação) */
+.numlist li{display:block;position:relative;padding:.75rem 0 .75rem 3.4rem;border-bottom:1px solid var(--linha)}
+.numlist li::before{position:absolute;left:0;top:.8rem}
+/* linha do tempo: altura do conteúdo, fixada no centro da tela */
+@media (min-width:1101px){.htl-pin{height:auto;min-height:0;padding-block:clamp(80px,8vw,130px)}}
+/* faixa de CTA: rosto do Fernando inteiro, sem corte */
+.cta-bg img{object-position:50% 28%}
+@media (min-width:901px){.cta-bg{left:auto;width:52%}.cta-bg img{object-position:50% 40%;opacity:.4}}
+/* faixa de áreas: ícone da marca (monograma) no lugar do N */
+.marquee .mq-track span::after{width:72px;height:18px;background:url(/assets/logo/monograma-claro.svg) center/contain no-repeat;-webkit-mask:none;mask:none}
+@media (max-width:640px){.marquee .mq-track span::after{width:54px;height:14px}}
+@media (min-width:901px){.cta-mono{width:26%;right:-3%;top:auto;bottom:-6%;translate:none;opacity:.4}}
