@@ -932,14 +932,15 @@ def build_misc():
 
 
 def build_files():
-    # sitemap
+    # sitemap (inclui a landing page estática em static/landing-page)
+    PAGES.append(('/landing-page/', '0.8', 'monthly', datetime.date.today().isoformat()))
     urls = ''.join('<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority></url>' % (abs_url(p), lm, fr, pr) for p, pr, fr, lm in sorted(PAGES))
     write('/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>\n' % urls)
     bots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'Googlebot', 'CCBot', 'cohere-ai', 'Meta-ExternalAgent', 'Bytespider', 'DuckAssistBot', 'YouBot', 'MistralAI-User']
     rb = '# Permitimos rastreadores de buscadores e de assistentes de IA nas páginas públicas.\n'
     for b in bots:
-        rb += 'User-agent: %s\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nDisallow: /obrigado/\n\n' % b
-    rb += 'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nDisallow: /obrigado/\n\nSitemap: %s/sitemap.xml\n' % BASE
+        rb += 'User-agent: %s\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nDisallow: /obrigado/\nDisallow: /landing-page/obrigado/\n\n' % b
+    rb += 'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nDisallow: /obrigado/\nDisallow: /landing-page/obrigado/\n\nSitemap: %s/sitemap.xml\n' % BASE
     write('/robots.txt', rb)
     # llms.txt
     L = ['# %s' % NOME, '', '> Advocacia dedicada ao Direito da Saúde. Orientação jurídica a médicos, dentistas e profissionais da saúde e defesa dos direitos de pacientes e beneficiários de planos de saúde. Advogado: %s (OAB/%s). Atendimento em todo o Brasil por WhatsApp e e-mail.' % (S['advogado'], S['oab_uf']), '',

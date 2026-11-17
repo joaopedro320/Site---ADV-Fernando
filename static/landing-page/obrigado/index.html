@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- [QH4 SLOT 6] Google Tag Manager (head) da página de obrigado -->
+<title>Mensagem pronta | Luiz Fernando Neves Advocacia</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B4130">
+<link rel="canonical" href="https://luizfernandoneves.com.br/landing-page/obrigado/">
+<link rel="icon" href="/landing-page/assets/logo/monograma-verde.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/landing-page/assets/css/style.css">
+<style>
+.ok{min-height:100vh;background:var(--verde-esc);color:var(--papel);display:grid;place-items:center;padding:40px 0}
+.ok__in{max-width:620px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ok__in img{width:150px;margin-bottom:56px}
+.ok h1{font-size:clamp(32px,5vw,48px);font-weight:300}
+.ok p{margin-top:18px;color:#D0DED4}
+.ok .btn{margin-top:34px}
+.ok__cont{font-size:14px;color:#9FBBA8}
+.ok__volta{margin-top:28px;font-size:14px;color:#B9CDBF}
+</style>
+</head>
+<body>
+<!-- [QH4 SLOT 7] Google Tag Manager (noscript) e evento de conversão -->
+<main class="ok">
+  <div class="wrap ok__in">
+    <img src="/landing-page/assets/logo/logo-claro.svg" alt="Luiz Fernando Neves Advocacia" width="186" height="94">
+    <h1>Sua mensagem está pronta.</h1>
+    <p>Vamos abrir o WhatsApp do escritório com os dados que você preencheu. É só tocar em enviar por lá.</p>
+    <a class="btn btn--bronze" id="ok-wa" href="https://wa.me/5511986408203" target="_self" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24Z"/></svg>
+      Abrir o WhatsApp
+    </a>
+    <p class="ok__cont" id="ok-cont" aria-live="polite">Abrindo em <span id="ok-s">4</span> segundos.</p>
+    <a class="ok__volta" href="/landing-page/">Voltar para a página</a>
+  </div>
+</main>
+<script src="/landing-page/assets/js/tracking.js"></script>
+<script>
+(function(){
+  var url = null;
+  try { url = sessionStorage.getItem("lfn_wa"); } catch (e) {}
+  if (!url) url = "https://wa.me/5511986408203?text=" + encodeURIComponent("Olá, vim pela página do escritório e gostaria de agendar uma consulta.");
+  var a = document.getElementById("ok-wa");
+  a.href = url;
+  var s = new URLSearchParams(location.search).get("s") || "";
+  window.lpTrack && window.lpTrack("thank_you_view", { situacao: s });
+  a.addEventListener("click", function(){ window.lpTrack && window.lpTrack("whatsapp_click", { wa_local: "obrigado" }); });
+  var n = 4, el = document.getElementById("ok-s");
+  var t = setInterval(function(){
+    n--; if (el) el.textContent = n;
+    if (n <= 0) {
+      clearInterval(t);
+      try { sessionStorage.removeItem("lfn_wa"); } catch (e) {}
+      document.getElementById("ok-cont").textContent = "Se o WhatsApp não abriu, toque no botão acima.";
+      window.location.href = url;
+    }
+  }, 1000);
+})();
+</script>
+<script src="https://app-validacao-lp-sapp-validacao-lp.vercel.app/api/t" data-lp="luizfernandoneves.com.br" defer></script>
+</body>
+</html>

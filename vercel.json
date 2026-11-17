@@ -4,6 +4,11 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {"source": "/lp", "destination": "/landing-page/", "permanent": true},
+    {"source": "/lp/", "destination": "/landing-page/", "permanent": true},
+    {"source": "/landing", "destination": "/landing-page/", "permanent": true}
+  ],
   "headers": [
     {"source": "/assets/(css|js|fonts|img|logo)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
     {"source": "/(.*)", "headers": [
