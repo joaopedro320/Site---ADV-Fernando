@@ -126,23 +126,35 @@
     </div>
   </section>
 
+  <!-- FAIXA ANIMADA -->
+  <div class="mq" data-mq aria-hidden="true"><div class="mq__track"><span>Negativa de cobertura</span><span>Reajuste abusivo</span><span>Cancelamento do plano</span><span>Home care</span><span>Cirurgia bariátrica e reparadora</span><span>Beneficiários idosos</span><span>Medicamentos e terapias</span></div></div>
+
   <!-- SITUAÇÕES -->
   <section class="sit" id="situacoes" aria-labelledby="sit-t">
     <div class="wrap">
       <div class="sec-head">
         <h2 id="sit-t">Qual é a sua situação?</h2>
-        <p>Escolha a que mais se parece com o seu caso. Ela já vai preenchida no formulário.</p>
+        <div class="sec-head__lado">
+          <p>Escolha a que mais se parece com o seu caso. Ela já vai preenchida no formulário.</p>
+          <div class="car__nav">
+            <button type="button" class="car__btn" data-car-prev aria-label="Situação anterior"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-seta"/></svg></button>
+            <button type="button" class="car__btn" data-car-next aria-label="Próxima situação"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
       </div>
-      <ul class="sit__lista">
-        <li><button type="button" class="sit__item" data-sit="Negativa de cobertura"><span class="sit__nome">Negativa de cobertura</span><span class="sit__desc">Tratamentos, exames, cirurgias, terapias e medicamentos prescritos pelo seu médico.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Reajuste abusivo"><span class="sit__nome">Reajuste abusivo</span><span class="sit__desc">Aumentos por faixa etária, sinistralidade e planos falso coletivo.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Cancelamento do plano"><span class="sit__nome">Cancelamento do plano</span><span class="sit__desc">Rescisão ou suspensão do contrato sem justificativa válida.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Home care"><span class="sit__nome">Home care e internação domiciliar</span><span class="sit__desc">Continuidade do cuidado em casa quando o plano nega esse direito.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Cirurgia bariátrica ou reparadora"><span class="sit__nome">Cirurgia bariátrica e reparadora</span><span class="sit__desc">Autorizações negadas ou que estão demorando além do razoável.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Beneficiário idoso"><span class="sit__nome">Beneficiários idosos</span><span class="sit__desc">Proteção contra práticas abusivas e garantia de atendimento.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item" data-sit="Medicamentos e terapias"><span class="sit__nome">Medicamentos e terapias</span><span class="sit__desc">Acesso a tratamentos de alto custo indicados pelo médico, inclusive pelo SUS.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
-        <li><button type="button" class="sit__item sit__item--outro" data-sit="Outra situação"><span class="sit__nome">Outra situação</span><span class="sit__desc">Não encontrou o seu caso aqui? Conte com as suas palavras.</span><svg class="sit__seta" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></button></li>
+    </div>
+    <div class="car" data-car>
+      <ul class="car__track" tabindex="0" aria-label="Situações atendidas">
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Negativa de cobertura"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-negativa.webp" alt="Pessoa lendo uma carta de negativa do plano de saúde" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Negativa de cobertura</span><span class="sit-card__desc">Tratamentos, exames, cirurgias, terapias e medicamentos prescritos pelo seu médico.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Reajuste abusivo"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-reajuste.webp" alt="Casal analisando o boleto do plano de saúde" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Reajuste abusivo</span><span class="sit-card__desc">Aumentos por faixa etária, sinistralidade e planos falso coletivo.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Cancelamento do plano"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-cancelamento.webp" alt="Família conversando sobre o cancelamento do plano" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Cancelamento do plano</span><span class="sit-card__desc">Rescisão ou suspensão do contrato sem justificativa válida.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Home care"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-home-care.webp" alt="Paciente recebendo cuidados em casa" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Home care e internação domiciliar</span><span class="sit-card__desc">Continuidade do cuidado em casa quando o plano nega esse direito.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Cirurgia bariátrica ou reparadora"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-bariatrica.webp" alt="Paciente em consulta médica" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Cirurgia bariátrica e reparadora</span><span class="sit-card__desc">Autorizações negadas ou que estão demorando além do razoável.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Beneficiário idoso"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-idosos.webp" alt="Senhora idosa em atendimento com a família" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Beneficiários idosos</span><span class="sit-card__desc">Proteção contra práticas abusivas e garantia de atendimento.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Medicamentos e terapias"><span class="sit-card__img"><img src="/landing-page/assets/img/sit-medicamentos.webp" alt="Blocos com ícones de saúde e medicamentos" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Medicamentos e terapias</span><span class="sit-card__desc">Acesso a tratamentos de alto custo indicados pelo médico, inclusive pelo SUS.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
+        <li class="car__slide"><button type="button" class="sit-card" data-sit="Outra situação"><span class="sit-card__img"><img src="/landing-page/assets/img/lfn-telefone.webp" alt="Advogado Luiz Fernando Neves ao telefone" width="760" height="507" loading="lazy" decoding="async"></span><span class="sit-card__txt"><span class="sit-card__nome">Outra situação</span><span class="sit-card__desc">Não encontrou o seu caso aqui? Conte com as suas palavras.</span><span class="sit-card__cta">Escolher esta situação <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-seta"/></svg></span></span></button></li>
       </ul>
+      <div class="wrap"><div class="car__barra"><span></span></div></div>
     </div>
   </section>
 
@@ -164,8 +176,12 @@
   <!-- ADVOGADO -->
   <section class="adv" aria-labelledby="adv-t">
     <div class="wrap adv__grid">
-      <div class="adv__foto">
-        <img src="/landing-page/assets/img/luiz-fernando-neves.webp" alt="Advogado Luiz Fernando Neves" width="900" height="1349" loading="lazy">
+      <div class="adv__foto" data-gal>
+        <img class="is-on" src="/landing-page/assets/img/luiz-fernando-neves.webp" alt="Advogado Luiz Fernando Neves" width="900" height="1349" loading="lazy">
+        <img src="/landing-page/assets/img/lfn-mesa.webp" alt="Luiz Fernando Neves em seu escritório" width="1100" height="734" loading="lazy">
+        <img src="/landing-page/assets/img/lfn-livro.webp" alt="Luiz Fernando Neves lendo um livro de Direito" width="1100" height="734" loading="lazy">
+        <img src="/landing-page/assets/img/lfn-escritorio.webp" alt="Luiz Fernando Neves à mesa de trabalho" width="1100" height="734" loading="lazy">
+        <div class="adv__dots" role="group" aria-label="Fotos do advogado"><button type="button" aria-label="Foto 1" aria-current="true"></button><button type="button" aria-label="Foto 2"></button><button type="button" aria-label="Foto 3"></button><button type="button" aria-label="Foto 4"></button></div>
       </div>
       <div class="adv__txt">
         <h2 id="adv-t">Luiz Fernando Neves</h2>
@@ -185,8 +201,15 @@
   <!-- BRASIL -->
   <section class="brasil" aria-labelledby="br-t">
     <div class="wrap brasil__in">
+      <div class="duo">
+        <figure class="duo__a"><img src="/landing-page/assets/img/lfn-externo.webp" alt="Luiz Fernando Neves" width="734" height="1100" loading="lazy"></figure>
+        <figure class="duo__b"><img src="/landing-page/assets/img/lfn-leitura.webp" alt="Luiz Fernando Neves estudando um caso" width="734" height="1100" loading="lazy"></figure>
+      </div>
+      <div>
       <h2 id="br-t">A distância não limita a atuação.</h2>
       <p>O atendimento é digital e abrange todo o território nacional. Com o processo eletrônico, petições, audiências virtuais e o acompanhamento do caso acontecem sem a necessidade de deslocamentos frequentes.</p>
+      <ul class="brasil__lista"><li>Atendimento por WhatsApp e e-mail</li><li>Audiências virtuais</li><li>Acompanhamento do processo eletrônico</li></ul>
+      </div>
     </div>
   </section>
 
@@ -266,6 +289,8 @@
       </div>
     </div>
   </section>
+
+  <div class="mq mq--claro" data-mq aria-hidden="true"><div class="mq__track"><span>Análise individual de cada caso</span><span>Linguagem clara</span><span>Atendimento em todo o Brasil</span><span>Processo eletrônico</span><span>OAB/SP 530.097</span></div></div>
 
   <!-- CTA FINAL -->
   <section class="final">
