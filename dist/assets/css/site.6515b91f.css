@@ -733,3 +733,16 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 .art-full span:last-child{display:inline-flex;gap:.5rem;align-items:center;color:var(--tinta-2);font-size:.92rem}
 /* hero: rótulo "Em destaque" não fica sob a foto pequena */
 @media (min-width:761px){.hero-v2 .news-banner .news-ctl{padding-left:clamp(5.8rem,9vw,8rem)}}
+/* mobile: cabeçalho sólido e controles do banner sem corte */
+@media (max-width:900px){.site-header,.site-header.is-stuck{background:#fbf9f4!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+@media (max-width:760px){
+  .news-banner .news-ctl{gap:.7rem;padding:.8rem 1rem 1rem 1.3rem}
+  .news-banner .news-h{display:none}
+  .news-banner .dots{margin-right:auto;min-width:0;flex-wrap:wrap}
+  .news-banner .arrows{display:flex;gap:.5rem;flex-shrink:0}
+  .news-banner .arrows button{width:44px;height:44px}
+}
+@media (max-width:760px){.site-footer{padding-bottom:6.5rem}}
+/* justificado só onde cabe: listas sempre alinhadas à esquerda, celular sem buracos */
+.prose-j li,.art-body li,.faq-a li{text-align:left}
+@media (max-width:760px){.prose-j p,.art-body p,.faq-a p,.art-resumo p:last-child{text-align:left}}
