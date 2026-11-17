@@ -162,8 +162,7 @@ p{margin:0}
 .check input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--verde)}
 .form .btn{grid-column:1/-1}
 .form__nota{grid-column:1/-1;font-size:13px;color:var(--cinza);text-align:center;margin-top:-6px}
-.form.is-ok .form .btn{grid-column:1/-1}
-.form__nota{visibility:hidden}
+.form.is-ok .form__nota{visibility:hidden}
 
 /* FAQ */
 .faq{padding:110px 0}
