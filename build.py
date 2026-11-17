@@ -33,8 +33,31 @@ REV = load('content/avaliacoes.json')
 PRIV = load('content/privacidade.json')
 ARTS = load_dir('content/artigos')
 ARTS.sort(key=lambda a: (a.get('data', ''), -a.get('ordem', 0)), reverse=True)
+def _norm_date(v):
+    v = str(v or '').strip()[:10]
+    for f in ('%Y-%m-%d', '%d-%m-%Y', '%d/%m/%Y', '%Y/%m/%d'):
+        try:
+            return datetime.datetime.strptime(v, f).strftime('%Y-%m-%d')
+        except ValueError:
+            pass
+    return datetime.date.today().isoformat()
+
+
+def _slugify(t):
+    import unicodedata
+    t = unicodedata.normalize('NFKD', str(t)).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z0-9]+', '-', t).strip('-') or 'artigo'
+
+
 for _a in ARTS:
     _a.setdefault('tipo', 'artigo')
+    _a['tipo'] = _a.get('tipo') or 'artigo'
+    _a['data'] = _norm_date(_a.get('data'))
+    _a['slug'] = _slugify(_a.get('slug') or _a.get('titulo', ''))
+    for _k in ('resumo', 'texto', 'cta', 'categoria'):
+        _a[_k] = _a.get(_k) or ''
+    _a['categoria'] = _a['categoria'] or 'Plano de saúde'
+ARTS.sort(key=lambda a: (a.get('data', ''), -a.get('ordem', 0)), reverse=True)
 ARTIGOS = [a for a in ARTS if a['tipo'] == 'artigo']
 NOTICIAS = [a for a in ARTS if a['tipo'] != 'artigo']
 AREAS = load_dir('content/areas')
@@ -84,7 +107,10 @@ def img_tag(src, alt, cls='', eager=False, sizes=None):
 
 # ---------- markdown minimo ----------
 def inline(t):
+    t = re.sub(r'\\([\\`*_{}\[\]()#+\-.!])', r'\1', t)
     t = h(t)
+    t = re.sub(r'__(.+?)__', r'<strong>\1</strong>', t)
+    t = re.sub(r'(?<![\w_])_(?!_)(.+?)(?<!_)_(?![\w_])', r'<em>\1</em>', t)
     t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
     t = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'<em>\1</em>', t)
     t = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', lambda m: '<a href="%s">%s</a>' % (m.group(2), m.group(1)), t)
@@ -99,10 +125,12 @@ def md(text):
         lines = [l for l in b.split('\n') if l.strip()]
         if not lines:
             continue
-        if all(l.startswith('- ') for l in lines):
-            out.append('<ul>' + ''.join('<li>%s</li>' % inline(l[2:]) for l in lines) + '</ul>')
+        if all(re.match(r'^[-*+]\s', l) for l in lines):
+            out.append('<ul>' + ''.join('<li>%s</li>' % inline(l[2:].strip()) for l in lines) + '</ul>')
         elif all(re.match(r'^\d+\.\s', l) for l in lines):
             out.append('<ol>' + ''.join('<li>%s</li>' % inline(re.sub(r'^\d+\.\s', '', l)) for l in lines) + '</ol>')
+        elif lines[0].startswith('#### '):
+            out.append('<h3>%s</h3>' % inline(lines[0][5:]))
         elif lines[0].startswith('### '):
             out.append('<h3>%s</h3>' % inline(lines[0][4:]))
         elif lines[0].startswith('## '):
