@@ -1,3 +1,105 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Painel de conteúdo</title></head>
-<body><script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script></body></html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Painel · Luiz Fernando Neves</title>
+<link rel="icon" href="/assets/logo/monograma-verde.svg">
+<style>
+@font-face{font-family:Inter;src:url(/assets/fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/inter-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600 700;font-display:swap}
+@font-face{font-family:Poppins;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format("woff2");font-weight:500 700;font-display:swap}
+:root{--verde:#2C6046;--verde-esc:#1B4130;--verde-cl:#E3EDE6;--azul:#2A5079;--areia:#F4EEE3;--papel:#FBF9F4;--tinta:#1B2420;--linha:#DCD3C2;--bronze:#B57D4C}
+body{background:var(--areia)!important;font-family:Inter,system-ui,sans-serif!important;color:var(--tinta)}
+body *{font-family:inherit}
+h1,h2,[class*="-CollectionTopHeading"],[class*="-SidebarHeading"]{font-family:Poppins,Inter,sans-serif!important;letter-spacing:-.01em}
+/* topo */
+[class*="-AppHeader-css"],[class*="-AppHeader "]{background:var(--verde-esc)!important;box-shadow:none!important}
+[class*="-AppHeaderNavLink"],[class*="-AppHeaderButton"],[class*="-AppHeaderSiteLink"]{color:rgba(255,255,255,.75)!important}
+[class*="-AppHeaderNavLink"]:hover,[class*="-AppHeaderNavLink"].active{color:#fff!important}
+[class*="-AppHeaderNavLink"] svg,[class*="-AppHeaderButton"] svg{color:inherit!important}
+[class*="-AppHeaderQuickNewButton"]{background:var(--bronze)!important;color:#fff!important}
+/* cartões e lateral */
+[class*="-card-card"]{border-radius:6px!important;box-shadow:0 1px 0 var(--linha)!important}
+[class*="-SidebarNavLink"]{border-left-color:transparent!important}
+[class*="-SidebarNavLink"].active,[class*="-SidebarNavLink"]:hover{color:var(--verde)!important;background:var(--verde-cl)!important;border-left-color:var(--verde)!important}
+[class*="-CollectionTopNewButton"],[class*="-PublishButton"],[class*="-SaveButton"]{background:var(--verde)!important;color:#fff!important}
+[class*="-CollectionTopDescription"]{color:#4A5650!important;font-size:15px!important;line-height:1.5!important;background:var(--verde-cl);padding:12px 16px;border-radius:6px;margin-top:12px!important}
+/* editor */
+[class*="-ControlHint"]{color:#4A5650!important;font-size:13px!important;line-height:1.45!important;margin-top:6px!important}
+[class*="-FieldLabel"]{background:var(--verde-cl)!important;color:var(--verde-esc)!important;border-color:var(--verde-cl)!important}
+[class*="-ControlContainer"] input:focus,[class*="-ControlContainer"] textarea:focus{border-color:var(--verde)!important}
+/* ajuda */
+#lfn-help-btn{position:fixed;right:22px;bottom:22px;z-index:9999;background:var(--verde);color:#fff;border:0;border-radius:40px;padding:12px 20px;font:600 14px Inter,sans-serif;box-shadow:0 10px 30px rgba(27,65,48,.3);cursor:pointer;display:flex;gap:8px;align-items:center}
+#lfn-help-btn:hover{background:var(--verde-esc)}
+#lfn-help{position:fixed;inset:0;z-index:10000;background:rgba(27,36,32,.45);display:none;justify-content:flex-end}
+#lfn-help.on{display:flex}
+#lfn-help .pn{width:min(520px,100%);height:100%;overflow:auto;background:var(--papel);padding:36px 34px 60px;box-sizing:border-box;font:15px/1.6 Inter,sans-serif;color:var(--tinta)}
+#lfn-help h2{font:600 26px/1.2 Poppins,sans-serif;margin:8px 0 6px;color:var(--verde-esc)}
+#lfn-help h3{font:600 17px/1.3 Poppins,sans-serif;margin:26px 0 8px;color:var(--verde)}
+#lfn-help .ey{font:500 12px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
+#lfn-help ol,#lfn-help ul{padding-left:20px;margin:6px 0}
+#lfn-help li{margin:4px 0}
+#lfn-help .tip{background:var(--verde-cl);border-left:3px solid var(--verde);padding:12px 14px;border-radius:4px;margin:14px 0}
+#lfn-help .warn{background:#F5E6D6;border-left:3px solid var(--bronze);padding:12px 14px;border-radius:4px;margin:14px 0}
+#lfn-help .x{float:right;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--tinta)}
+#lfn-help .ft{margin-top:30px;font-size:13px;color:#4A5650}
+#lfn-help a{color:var(--verde)}
+</style></head>
+<body>
+<script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
+<button id="lfn-help-btn" type="button" aria-haspopup="dialog">? Como usar o painel</button>
+<div id="lfn-help" role="dialog" aria-modal="true" aria-label="Como usar o painel"><div class="pn">
+<button class="x" type="button" aria-label="Fechar">×</button>
+<p class="ey">Painel do site</p>
+<h2>Como usar o painel</h2>
+<p>Aqui você edita o site sozinho. Tudo que você publica entra no ar em cerca de 1 minuto.</p>
+
+<h3>Publicar um artigo novo</h3>
+<ol>
+<li>No menu da esquerda, clique em <b>Notícias e artigos</b>.</li>
+<li>Clique em <b>Novo Artigo</b>.</li>
+<li>Preencha título, categoria, resumo e o texto. A data já vem com o dia de hoje.</li>
+<li>Se quiser, coloque uma imagem de capa em <b>Escolha uma imagem</b> e depois <b>Enviar</b>.</li>
+<li>Clique em <b>Publicar</b> e depois em <b>Publicar agora</b>.</li>
+</ol>
+<div class="tip">O endereço da página é criado sozinho a partir do título. Só preencha o campo "Endereço da página" se quiser outro.</div>
+
+<h3>Editar um texto que já existe</h3>
+<ol>
+<li>Escolha a coleção no menu (artigos, áreas, páginas).</li>
+<li>Clique no item, altere o que quiser e clique em <b>Publicar</b>.</li>
+</ol>
+
+<h3>Avisos no topo do site</h3>
+<p>Em <b>Páginas e configurações → Página inicial</b>, ligue "Faixa de aviso: mostrar?" para destacar uma notícia importante, como uma decisão da ANS. Desligue quando o assunto passar.</p>
+
+<h3>Imagens</h3>
+<ul>
+<li>Prefira fotos horizontais, com pelo menos 1600 px de largura.</li>
+<li>Formato .webp ou .jpg, até 1 MB, para o site continuar rápido.</li>
+<li>Use só imagens próprias ou de banco de imagens com licença.</li>
+</ul>
+
+<h3>Regras da OAB nos textos</h3>
+<div class="warn"><ul>
+<li>Não divulgar preço, desconto ou promoção.</li>
+<li>Não prometer resultado ("ganhe sua causa").</li>
+<li>Conteúdo informativo, sem chamar para contratar.</li>
+<li>Nas avaliações, só depoimentos reais copiados do Google.</li>
+</ul></div>
+
+<h3>Algo deu errado?</h3>
+<ul>
+<li>Publicou e não apareceu? Espere 2 minutos e atualize o site com Ctrl+Shift+R (ou Cmd+Shift+R no Mac).</li>
+<li>Apareceu "campo obrigatório"? Role a página: o campo que falta fica em vermelho.</li>
+<li>Apagou algo sem querer? Me chama que eu recupero, tudo fica guardado.</li>
+</ul>
+<p class="ft">Suporte: Malta Business · WhatsApp (31) 98763-7599</p>
+</div></div>
+<script>
+(function(){var b=document.getElementById('lfn-help-btn'),d=document.getElementById('lfn-help');
+function o(){d.classList.add('on')}function c(){d.classList.remove('on')}
+b.onclick=o;d.querySelector('.x').onclick=c;d.addEventListener('click',function(e){if(e.target===d)c()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')c()});
+try{if(!localStorage.getItem('lfn-help-visto')){localStorage.setItem('lfn-help-visto','1');setTimeout(o,1500)}}catch(e){}})();
+</script>
+</body></html>
