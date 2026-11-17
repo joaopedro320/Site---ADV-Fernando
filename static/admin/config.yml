@@ -128,7 +128,7 @@ collections:
     widget: string
     required: false
     hint: Só para notícias curtas que resumem um artigo. Deixe em branco nos artigos normais.
-  description: Artigos e notícias do blog. Clique em "Novo Artigo" para escrever. Ao clicar em Publicar, o texto entra no site em cerca de 1 minuto.
+  description: Artigos e notícias do blog. Clique em "+ Artigo" para escrever um novo. Ao clicar em Publicar, o texto entra no site em cerca de 1 minuto.
 - name: areas
   label: Áreas de atuação
   label_singular: Área
