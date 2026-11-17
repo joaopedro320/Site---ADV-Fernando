@@ -1,11 +1,38 @@
 {
-  "ordem": 9,
+  "ordem": 6,
+  "tipo": "artigo",
   "titulo": "Plano de saúde para idosos: direitos e proteções que todo beneficiário deve conhecer",
   "slug": "plano-de-saude-para-idosos",
   "categoria": "Plano de saúde",
-  "data": "2026-11-13",
-  "resumo": "A legislação protege o idoso de várias formas. O Estatuto da Pessoa Idosa proíbe a discriminação por idade na cobrança de planos de saúde, e a Lei dos Planos veda reajuste por faixa etária para quem tem mais de 60 anos e participa do plano há mais de 10 anos.",
-  "imagem": "/assets/img/plano-saude-idosos.webp",
-  "texto": "A legislação protege o idoso de várias formas.\n\nO Estatuto da Pessoa Idosa proíbe a discriminação por idade na cobrança de planos de saúde, e a Lei dos Planos veda reajuste por faixa etária para quem tem mais de 60 anos e participa do plano há mais de 10 anos.\n\nNinguém pode ser impedido de contratar plano em razão da idade.\n\nTambém há direito a acompanhante em tempo integral em caso de internação e prioridade na tramitação de processos judiciais para maiores de 60 anos.\n\nAumentos expressivos, negativas de cobertura e cancelamentos exigem atenção redobrada.",
-  "cta": "Conte com uma escuta atenta e orientação especializada. Agende sua consulta."
+  "data": "2026-11-17",
+  "resumo": "A partir dos 60 anos, o beneficiário não pode ser recusado por causa da idade, não pode ser discriminado nos valores e tem direito à cobertura do seu contrato. Em muitos casos, o plano também não pode aumentar a mensalidade por mudança de faixa etária. Quem passa por negativa, aumento abusivo ou cancelamento pode contestar.",
+  "imagem": "/assets/img/artigos/plano-de-saude-para-idosos.webp",
+  "texto": "Com o passar dos anos, o plano de saúde se torna ainda mais importante, e é justamente nessa fase que muitos beneficiários enfrentam mensalidades altas, negativas e insegurança. Conhecer os seus direitos ajuda a agir rápido. Veja os principais:\n\n## O plano pode recusar por causa da idade?\n\nNão. A lei proíbe que uma pessoa seja impedida de participar de plano de saúde por causa da idade. A recusa de contratação baseada só nisso é considerada discriminatória. O plano pode cobrar valores conforme a faixa etária, dentro das regras da ANS, mas não pode negar a contratação por ser idoso.\n\n## Aumento por idade: o que pode e o que não pode\n\nOs planos têm dez faixas de idade, e a última começa aos 59 anos. O aumento por mudança de faixa etária só é válido se estiver previsto no contrato, seguir as regras da ANS e não for exagerado.\n\nAs principais proteções são:\n\n- **Mais de 10 anos de plano:** quem tem mais de 60 anos e está no mesmo plano há mais de dez anos não pode sofrer aumento por faixa etária (art. 15, parágrafo único, da Lei 9.656/98).\n- **Estatuto da Pessoa Idosa:** proíbe a cobrança de valores diferentes em razão da idade, e o STJ aplica essa proteção em muitos casos.\n- **Percentuais abusivos:** mesmo quando o aumento é permitido, o STJ não aceita percentuais sem base técnica que onerem demais o consumidor ou discriminem o idoso (Tema 952).\n- **Contratos anteriores a 2004:** o STF ainda discute se o Estatuto alcança esses contratos, e em outubro de 2026 enviou o tema à conciliação. Se o seu plano é antigo, vale analisar o caso com cuidado.\n\n## E o reajuste anual?\n\nO reajuste anual é outra coisa: ele atinge todos os beneficiários do contrato. Nos planos individuais, há um teto da ANS (5,11% em 2026). Nos coletivos, não há teto, mas a operadora deve justificar. Veja nosso artigo sobre mensalidade que disparou para entender como contestar.\n\n## O plano pode negar tratamento ao idoso?\n\nA lei assegura atenção integral à saúde da pessoa idosa. Na prática, o plano deve cobrir o que o contrato e a lei garantem, e as negativas costumam ser contestadas quando não têm justificativa válida. Alguns pontos importantes:\n\n- o plano não pode limitar por prazo a internação hospitalar;\n- o home care pode ser obrigatório quando substitui a internação;\n- tratamentos fora do Rol da ANS podem ser obrigatórios se cumpridos os requisitos definidos pelo STF;\n- a escolha do tratamento é, em regra, do médico que acompanha o paciente.\n\n## Carência e doenças preexistentes\n\nNos casos de urgência e emergência, a carência máxima é de 24 horas. Para doenças que já existiam, o plano pode exigir cobertura parcial temporária, por até 24 meses, apenas para procedimentos de alta complexidade, leitos de alta tecnologia e cirurgias ligadas à doença. Depois disso, a cobertura deve ser integral.\n\n## Posso ter meu plano cancelado por ser idoso?\n\nNo plano individual ou familiar, o cancelamento só pode ocorrer por fraude ou por atraso de mais de 60 dias, com aviso prévio. Nos planos coletivos, o cancelamento é possível em algumas situações, mas quem está internado ou em tratamento essencial tem direito à continuidade da cobertura até a alta (Tema 1.082 do STJ). Se você recebeu um aviso de cancelamento, leia nosso artigo sobre esse tema.\n\n## Aposentado e ex-empregado: você pode manter o plano da empresa\n\nQuem contribuiu para o plano da empresa e se aposentou pode ter direito de manter o plano, desde que assuma o pagamento integral:\n\n- **contribuiu por 10 anos ou mais:** pode manter o plano por prazo indeterminado;\n- **contribuiu por menos de 10 anos:** pode manter por um ano para cada ano de contribuição.\n\nOs direitos de quem foi demitido sem justa causa têm regras próprias, por isso vale pedir orientação.\n\n## O que fazer se os seus direitos forem desrespeitados\n\n1. **Guarde todos os documentos:** contrato, boletos, cartas de reajuste e negativas.\n2. **Peça as explicações por escrito:** anote os protocolos.\n3. **Reclame na ouvidoria e na ANS:** o Disque ANS é o 0800 701 9656.\n4. **Procure um advogado da área da saúde:** em casos urgentes, é possível pedir liminar.",
+  "faq": [
+    {
+      "pergunta": "Aos 60 anos, a mensalidade do plano pode subir?",
+      "resposta": "Pode haver o reajuste anual. O aumento por mudança de faixa etária aos 60 anos depende do tempo de contrato e da data em que foi firmado, e não pode ser abusivo."
+    },
+    {
+      "pergunta": "Tenho mais de 10 anos de plano. O que isso muda?",
+      "resposta": "Após os 60 anos, o plano não pode aumentar a mensalidade por mudança de faixa etária."
+    },
+    {
+      "pergunta": "O plano pode mudar meu contrato porque estou idoso?",
+      "resposta": "Não. Mudanças no contrato dependem das regras do contrato e da lei, e não podem se basear só na idade."
+    },
+    {
+      "pergunta": "Meu filho pode contestar o aumento por mim?",
+      "resposta": "Sim, com procuração ou, quando necessário, representação legal. Um advogado orienta sobre a melhor forma."
+    },
+    {
+      "pergunta": "Posso pedir de volta o que paguei a mais?",
+      "resposta": "Se o aumento for considerado abusivo, é possível pedir a devolução da diferença. Existem limites de tempo, por isso agir cedo ajuda."
+    },
+    {
+      "pergunta": "Preciso esperar a ANS para ir à Justiça?",
+      "resposta": "Não. Em muitos casos, você pode procurar a Justiça diretamente."
+    }
+  ],
+  "cta": "Se você ou alguém da sua família tem dúvidas sobre os direitos no plano de saúde, vale analisar o contrato com calma. Entre em contato, agende uma consulta e tire suas dúvidas."
 }

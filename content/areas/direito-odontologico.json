@@ -1,13 +1,14 @@
 {
-  "ordem": 4,
-  "numero": "IV",
+  "ordem": 3,
+  "numero": "III",
   "slug": "direito-odontologico",
   "titulo_curto": "Direito odontológico",
   "titulo": "Direito Odontológico",
-  "subtitulo": "Segurança jurídica para cirurgiões-dentistas e consultórios",
+  "subtitulo": "Proteção jurídica para quem transforma sorrisos e cuida de vidas",
   "descricao_seo": "Segurança jurídica para cirurgiões-dentistas e consultórios: processos éticos no CRO, responsabilidade civil, contratos, prontuário e termo de consentimento.",
   "paragrafos": [
-    "Orientação e defesa de cirurgiões-dentistas e clínicas odontológicas, com atenção às particularidades da prática clínica e da relação com o paciente, especialmente em tratamentos estéticos e reabilitadores."
+    "Assessoria jurídica dedicada ao Direito Odontológico, com atuação preventiva e contenciosa na orientação e defesa de cirurgiões-dentistas e clínicas odontológicas.",
+    "Oferecemos suporte jurídico para prevenir conflitos, reduzir riscos e proteger a atuação profissional, considerando as particularidades da prática clínica e da relação com os pacientes, especialmente em procedimentos estéticos, tratamentos reabilitadores e demais intervenções odontológicas."
   ],
   "rotulo_lista": "",
   "itens": [
@@ -18,7 +19,10 @@
     "Sociedades, parcerias e contratos entre profissionais",
     "Relação com operadoras de planos odontológicos"
   ],
-  "cta": "Orientação jurídica especializada para o seu consultório. Agende uma consulta.",
+  "cta": "Orientação jurídica dedicada ao seu consultório. Agende uma consulta.",
   "cor": "verde",
-  "imagem": "/assets/img/direito-odontologico.webp"
+  "imagem": "/assets/img/artigos/defesa-processo-erro-odontologico.webp",
+  "intro_titulo": "",
+  "categoria_artigos": "Direito Odontológico",
+  "chamada": "Proteção jurídica para quem transforma sorrisos e cuida de vidas"
 }

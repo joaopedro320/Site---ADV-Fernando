@@ -1,0 +1,38 @@
+{
+  "ordem": 8,
+  "tipo": "artigo",
+  "titulo": "Fui denunciado no CRM: o que fazer no processo ético-profissional?",
+  "slug": "denuncia-no-crm-processo-etico",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "Não ignore a notificação do CRM. Procure um advogado, reúna o prontuário e os documentos do caso e respeite os prazos. Quando o processo ético é aberto, a defesa prévia deve ser apresentada em 30 dias, e a falta de defesa pode levar à nomeação de defensor dativo.",
+  "imagem": "/assets/img/artigos/denuncia-no-crm-processo-etico.webp",
+  "texto": "Receber uma notificação do Conselho Regional de Medicina gera apreensão em qualquer médico. A boa notícia é que o processo ético-profissional garante contraditório e ampla defesa, e quem se prepara desde o início tem muito mais chance de se defender bem. Veja como funciona e o que fazer.\n\n## Como começa o processo no CRM\n\nO processo ético segue o Código de Processo Ético-Profissional (Resolução CFM 2.306/2022). Ele pode começar por denúncia de paciente, familiar ou de quem tenha interesse legítimo, ou de ofício, quando o próprio CRM toma conhecimento de uma possível infração, inclusive por notícias na imprensa ou nas redes sociais. A denúncia anônima não é aceita.\n\n## Etapa 1: sindicância\n\nA primeira fase é a sindicância, uma apuração preliminar conduzida por um conselheiro. Nela, o CRM decide se há indícios suficientes para abrir o processo. Em regra, o prazo é de 90 dias, prorrogável por mais 90. O médico é chamado a se manifestar, e é nesse momento que muitos cometem o primeiro erro: responder sem orientação, de forma emocional ou incompleta.\n\n## Etapa 2: processo ético-profissional (PEP)\n\nSe a sindicância indicar infração, o processo é instaurado. O médico é citado e tem 30 dias para apresentar a defesa prévia. Em regra, é nessa peça que se apresentam os argumentos e se indicam as provas, como documentos, testemunhas e perícias. Se o médico não responder, é declarado revel, e o CRM nomeia um defensor dativo.\n\nDepois vêm a instrução (produção de provas), as alegações finais e o julgamento pelo Conselho.\n\n## Quais são as penalidades?\n\nAs penas previstas na Lei 3.268/1957 são:\n\n- advertência confidencial;\n- censura confidencial;\n- censura pública;\n- suspensão do exercício profissional por até 30 dias;\n- cassação do exercício profissional.\n\nA gravidade depende da conduta, do dano e de outras circunstâncias do caso. Há possibilidade de recurso ao Conselho Federal de Medicina.\n\n## Processo ético e ação judicial são independentes\n\nO mesmo fato pode gerar um processo ético, uma ação de indenização e até um processo criminal. As esferas são independentes: o médico pode ser absolvido em uma e condenado em outra. Por isso a defesa deve ser pensada de forma integrada, para que o que for dito no CRM não prejudique o resto.\n\n## Erros mais comuns do médico denunciado\n\n- deixar passar o prazo da defesa;\n- apresentar defesa genérica sozinho, sem provas e argumentos jurídicos;\n- contatar o paciente ou a família por conta própria para “resolver”;\n- alterar ou complementar o prontuário depois da denúncia;\n- comentar o caso nas redes sociais ou em grupos de mensagens;\n- subestimar a sindicância, por parecer apenas uma etapa preliminar.\n\n## O que fazer passo a passo\n\n1. Leia a notificação com atenção. Anote o prazo e o tipo de procedimento (sindicância ou processo).\n2. Procure um advogado imediatamente. Quanto mais cedo, melhor a estratégia.\n3. Reúna os documentos. Prontuário completo, termos de consentimento, exames, prescrições e comunicações com o paciente.\n4. Não altere nada no prontuário. Qualquer alteração posterior pode ser interpretada como tentativa de ocultar fatos.\n5. Liste testemunhas e colegas. Quem participou do atendimento pode ser importante.\n\n## Como prevenir\n\nA melhor defesa começa antes da denúncia: prontuário bem preenchido, consentimento informado, boa comunicação com o paciente e documentação de orientações. Uma assessoria jurídica preventiva ajuda a revisar esses pontos e a reduzir riscos.",
+  "faq": [
+    {
+      "pergunta": "Posso ser punido pelo CRM mesmo sem condenação na Justiça?",
+      "resposta": "Sim. O processo ético é independente, e o resultado em uma esfera não vincula automaticamente a outra."
+    },
+    {
+      "pergunta": "Preciso de advogado no processo ético?",
+      "resposta": "A lei permite a defesa pelo próprio médico, mas contar com advogado costuma fazer diferença, principalmente na defesa prévia e na produção de provas."
+    },
+    {
+      "pergunta": "A denúncia pode ser anônima?",
+      "resposta": "Não. O Código de Processo Ético-Profissional não aceita denúncia anônima."
+    },
+    {
+      "pergunta": "O que acontece se eu não responder?",
+      "resposta": "A ausência de defesa leva à revelia e à nomeação de defensor dativo, o que reduz as chances de uma defesa feita com todos os detalhes do caso."
+    },
+    {
+      "pergunta": "Cabe recurso da decisão do CRM?",
+      "resposta": "Sim, existe recurso ao Conselho Federal de Medicina, dentro do prazo previsto nas normas."
+    },
+    {
+      "pergunta": "O processo é público?",
+      "resposta": "Em regra, o processo ético tramita em sigilo, mas a penalidade de censura pública, por exemplo, é divulgada."
+    }
+  ],
+  "cta": "Se você recebeu uma notificação do CRM ou quer se prevenir, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

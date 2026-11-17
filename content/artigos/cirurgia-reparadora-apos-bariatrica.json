@@ -1,11 +1,38 @@
 {
-  "ordem": 6,
-  "titulo": "Cirurgia reparadora após a bariátrica é tratamento, não estética",
+  "ordem": 3,
+  "tipo": "artigo",
+  "titulo": "Cirurgia reparadora pós-bariátrica: o plano de saúde precisa cobrir?",
   "slug": "cirurgia-reparadora-apos-bariatrica",
   "categoria": "Plano de saúde",
-  "data": "2026-11-13",
-  "resumo": "A cirurgia bariátrica tem cobertura obrigatória pelos planos de saúde quando preenchidos os critérios clínicos das diretrizes da ANS, como o índice de massa corporal e a presença de comorbidades, além da indicação médica.",
-  "imagem": "/assets/img/cirurgia-reparadora-bariatrica.webp",
-  "texto": "A cirurgia bariátrica tem cobertura obrigatória pelos planos de saúde quando preenchidos os critérios clínicos das diretrizes da ANS, como o índice de massa corporal e a presença de comorbidades, além da indicação médica.\n\nJá a cirurgia plástica reparadora após o emagrecimento, como a retirada do excesso de pele, costuma ser tratada pelos tribunais como etapa complementar do tratamento da obesidade, e não como procedimento estético.\n\nDiante da negativa, o beneficiário deve pedir a recusa por escrito, reunir relatórios médicos e laudos que demonstrem a necessidade funcional (assaduras, infecções, dores, limitações de movimento).\n\nCada operadora e cada contrato têm particularidades, por isso a análise do caso concreto é indispensável.",
-  "cta": "Cada situação é única. Agende uma consulta e receba uma orientação adequada ao seu caso."
+  "data": "2026-11-17",
+  "resumo": "Na maioria dos casos, sim. Para o Superior Tribunal de Justiça (STJ), a cirurgia reparadora indicada após a bariátrica faz parte do tratamento da obesidade e não é estética.",
+  "imagem": "/assets/img/artigos/cirurgia-reparadora-apos-bariatrica.webp",
+  "texto": "O plano de saúde pode pedir comprovação da necessidade, mas não pode recusar só por dizer que a cirurgia é \"plástica\".\n\nQuem perdeu muito peso depois da cirurgia bariátrica costuma ficar com excesso de pele. Além do incômodo visual, isso pode causar assaduras, infecções, dores, dificuldade para se movimentar e até problemas emocionais.\n\nQuando o médico indica a cirurgia reparadora e o plano recusa, é comum ouvir que \"é estética\". Veja por que essa justificativa nem sempre se sustenta.\n\n## O que é a cirurgia reparadora pós-bariátrica?\n\nSão as cirurgias que retiram o excesso de pele e corrigem deformidades causadas pela grande perda de peso. As mais comuns são a abdominoplastia (abdome), a mamoplastia e a mastopexia (mamas), a braquioplastia (braços) e a cruroplastia (coxas).\n\n## Por que não é estética?\n\nA cirurgia estética busca melhorar a aparência de um corpo saudável. A reparadora, no caso pós-bariátrico, busca corrigir sequelas do tratamento da obesidade, com finalidade funcional e terapêutica. O excesso de pele é consequência direta do emagrecimento tratado pela bariátrica, e por isso a cirurgia reparadora é vista como continuação do tratamento.\n\n## O que o STJ decidiu?\n\nO STJ fixou o entendimento (Tema 1.069) de que os planos devem cobrir a cirurgia plástica de caráter reparador ou funcional indicada pelo médico assistente a paciente pós-bariátrico, por ser parte do tratamento da obesidade mórbida.\n\nSe houver dúvida razoável sobre o caráter estético da cirurgia, o plano pode pedir uma junta médica para analisar o caso. O que não pode é negar de forma automática. Porém, mesmo com a junta médica o beneficiário pode recorrer à Justiça.\n\n## E o Rol da ANS?\n\nO Rol da ANS prevê, para esse tratamento, apenas a abdominoplastia e a correção da diástase dos músculos abdominais. As demais cirurgias, como mamas, braços e coxas, não aparecem de forma específica na lista. Mesmo assim, o STJ entende que a falta de previsão no rol não afasta o direito, desde que a cirurgia seja reparadora e indicada pelo médico.\n\n## E depois da decisão do STF?\n\nEm setembro de 2025, o Supremo Tribunal Federal (STF) definiu cinco requisitos para tratamentos fora do rol, como prescrição médica, ausência de alternativa adequada no rol e comprovação científica de eficácia e segurança. Parte dos advogados entende que esses critérios também se aplicam às cirurgias pós-bariátricas, e os tribunais ainda estão consolidando o tema. Na prática, isso reforça a importância de um relatório médico completo e bem fundamentado.\n\n## Por que os planos costumam negar?\n\n- dizem que a cirurgia é \"puramente estética\";\n- alegam que o procedimento não consta no rol;\n- apontam cláusula do contrato que exclui cirurgia plástica;\n- exigem prazos ou exames que não estão previstos em lei;\n- autorizam só uma parte das cirurgias indicadas.\n\nNenhuma dessas respostas encerra a discussão. É preciso analisar o contrato, o laudo e a situação clínica.\n\n## Documentos que fortalecem o seu caso\n\n- relatório do cirurgião plástico, explicando a necessidade e a finalidade funcional;\n- relatório de outros médicos, como endocrinologista ou dermatologista, quando houver complicações;\n- fotos que mostrem o excesso de pele e as lesões;\n- exames e registros de assaduras, infecções ou dores;\n- documentos da cirurgia bariátrica;\n- negativa do plano por escrito e protocolos.\n\n## O que fazer passo a passo\n\n1. **Peça a negativa por escrito:** anote o protocolo e o motivo informado.\n2. **Reúna os documentos:** peça ao médico um relatório detalhado.\n3. **Reclame na ouvidoria e na ANS:** o disque ANS é o 0800 701 9656.\n4. **Procure um advogado da área da saúde:** em muitos casos, é possível pedir à Justiça uma liminar para autorizar a cirurgia.\n5. Se o plano pedir junta médica, acompanhe o processo e guarde toda a documentação.\n\n## Posso pedir indenização?\n\nSe a negativa for indevida e causar sofrimento ou agravamento do quadro, é possível pedir também indenização por danos morais. Cada caso é diferente e não há garantia de resultado.",
+  "faq": [
+    {
+      "pergunta": "Todas as cirurgias após a bariátrica são cobertas?",
+      "resposta": "Não necessariamente. A cobertura depende de a cirurgia ter finalidade reparadora ou funcional e de estar indicada pelo médico para o seu caso."
+    },
+    {
+      "pergunta": "O plano pode negar por causa de cláusula que exclui cirurgia plástica?",
+      "resposta": "Essa cláusula não costuma valer para a cirurgia reparadora pós-bariátrica, por ela ser parte do tratamento da obesidade."
+    },
+    {
+      "pergunta": "Existe um tempo mínimo depois da bariátrica?",
+      "resposta": "A lei não fixa um prazo, mas o médico avalia o momento ideal, geralmente quando o peso está estável."
+    },
+    {
+      "pergunta": "O plano pode exigir junta médica?",
+      "resposta": "Pode pedir, se houver dúvida razoável sobre a natureza da cirurgia, mas a junta não deve ser usada para atrasar ou barrar o tratamento."
+    },
+    {
+      "pergunta": "Posso fazer mais de uma cirurgia reparadora?",
+      "resposta": "Sim, se cada uma for indicada pelo médico e tiver finalidade reparadora. Costuma ser necessário justificar cada procedimento."
+    },
+    {
+      "pergunta": "A cirurgia nas mamas também é coberta?",
+      "resposta": "Pode ser, quando indicada como reparadora ou funcional. Ela não aparece de forma específica no rol, por isso a documentação médica é ainda mais importante."
+    }
+  ],
+  "cta": "Se o seu plano negou a cirurgia reparadora, vale analisar o seu caso com calma. Entre em contato conosco, agende uma consulta e tire suas dúvidas."
 }

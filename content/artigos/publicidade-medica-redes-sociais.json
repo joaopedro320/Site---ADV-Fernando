@@ -1,0 +1,38 @@
+{
+  "ordem": 12,
+  "tipo": "artigo",
+  "titulo": "Publicidade médica nas redes sociais: o que o CFM permite e o que proíbe?",
+  "slug": "publicidade-medica-redes-sociais",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "Desde a Resolução CFM 2.336/2023, o médico pode divulgar seu trabalho nas redes sociais, informar preços de consultas e usar imagens de pacientes em alguns casos, desde que com caráter educativo e autorização. Não pode prometer resultados, usar sensacionalismo ou se apresentar como especialista sem título. Infrações podem gerar processo ético.",
+  "imagem": "/assets/img/artigos/publicidade-medica-redes-sociais.webp",
+  "texto": "As redes sociais são hoje uma das principais vitrines do médico. Mas um post mal pensado pode virar denúncia no CRM. Veja o que mudou e como se proteger.\n\n## O que mudou com a nova resolução?\n\nA Resolução CFM 2.336/2023 atualizou as regras de publicidade médica, que eram de 2011. As novas normas passaram a valer em 11 de março de 2024, e tornaram a divulgação nas redes mais flexível, mas com limites.\n\n## O que o médico pode fazer\n\nDe acordo com a resolução, em geral é permitido:\n\n- divulgar o trabalho, a clínica e os equipamentos disponíveis, com informações verdadeiras;\n- informar o valor das consultas e formas de pagamento;\n- anunciar descontos, sem vantagens casadas;\n- publicar conteúdo educativo e de orientação ao público;\n- anunciar pós-graduações concluídas, com a indicação “não especialista” quando for o caso;\n- repostar elogios e depoimentos de pacientes, sem exageros;\n- divulgar imagens de “antes e depois”, com critérios.\n\n## Como usar “antes e depois”\n\nAs imagens de pacientes podem ser usadas com finalidade educativa, sem sensacionalismo e sem expor o paciente. Em geral, os cuidados incluem:\n\n- autorização expressa e específica do paciente para esse uso;\n- informações sobre a indicação terapêutica, a evolução do caso e possíveis complicações;\n- não identificar o paciente de forma indevida;\n- nada que sugira garantia de resultado;\n- respeitar o sigilo médico e a LGPD.\n\nO consentimento para o tratamento não substitui a autorização para publicar a imagem.\n\n## O que não pode\n\n- prometer ou garantir resultados ou cura;\n- usar adjetivos de superioridade ou que induzam à promessa de resultado;\n- divulgar que atende órgãos, sistemas ou doenças específicas se não for especialista na área;\n- usar títulos ou especialidades que não possui;\n- dar selo de qualidade a produtos, como alimentos ou suplementos, induzindo a garantia de resultados;\n- comparar-se com colegas ou se autoproclamar o melhor;\n- sensacionalismo, autopromoção exagerada ou exposição indevida de pacientes;\n- quebrar o sigilo médico, mesmo de forma indireta.\n\n## O que não pode faltar nas peças de publicidade\n\nEm regra, anúncios e perfis profissionais devem trazer o nome do médico, o número do CRM e, quando houver, o RQE (registro de qualificação de especialista). Confira as regras sobre onde e como essas informações devem aparecer.\n\n## E as clínicas e os influenciadores?\n\nAs clínicas também devem seguir as regras, e o diretor técnico responde pelas peças da instituição. Quando o médico é divulgado por terceiros, como agências ou influenciadores, ele pode responder se houver participação ou anuência. Por isso, vale ter contratos claros e aprovação prévia do conteúdo.\n\n## Quais são os riscos?\n\n- denúncia e processo ético no CRM, que pode levar a penalidades;\n- ações de pacientes por propaganda enganosa ou exposição indevida;\n- problemas com a LGPD, pelo uso de dados e imagens;\n- danos à reputação e à carreira.\n\n## Como fazer publicidade com segurança\n\n1. Releia a resolução e o manual de publicidade médica do CFM antes de criar campanhas.\n2. Revise o conteúdo. Procure promessas, superlativos e informações que não possa comprovar.\n3. Use termo de autorização de imagem específico e assinado pelo paciente.\n4. Tenha contrato com agência, social media e influenciadores.\n5. Monitore comentários e reposts. O que você compartilha também é publicidade.\n6. Peça revisão jurídica em campanhas, sites e redes sociais com frequência.",
+  "faq": [
+    {
+      "pergunta": "Posso postar “antes e depois”?",
+      "resposta": "Pode, desde que siga os critérios da resolução, como finalidade educativa, informações sobre o caso e autorização do paciente."
+    },
+    {
+      "pergunta": "Posso divulgar o preço da consulta?",
+      "resposta": "Sim, assim como formas de pagamento e descontos, sem vantagem casada."
+    },
+    {
+      "pergunta": "Posso repostar elogios de pacientes?",
+      "resposta": "Pode, desde que o conteúdo não tenha adjetivos de superioridade nem prometa resultados."
+    },
+    {
+      "pergunta": "Posso fazer lives e vídeos de procedimentos?",
+      "resposta": "Pode divulgar conteúdo educativo, respeitando sigilo, consentimento do paciente e as regras da resolução. Cuidados extras valem para imagens de cirurgias."
+    },
+    {
+      "pergunta": "Quem não é especialista pode falar sobre uma doença?",
+      "resposta": "Pode produzir conteúdo educativo, mas não pode se apresentar como especialista nem divulgar que atende determinada área sem ter a especialidade."
+    },
+    {
+      "pergunta": "O que acontece se eu violar a resolução?",
+      "resposta": "Pode haver denúncia e processo ético no CRM, com penalidades que vão de advertência a suspensão, conforme a gravidade."
+    }
+  ],
+  "cta": "Se você quer revisar seu perfil, campanhas e termos de autorização antes de uma denúncia, vale agir com antecedência. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

@@ -5,8 +5,8 @@
   "titulo_curto": "Pacientes e beneficiários",
   "eyebrow": "Para pacientes e beneficiários de planos de saúde",
   "titulo": "Orientação jurídica para quem precisa de cuidado e quer seus direitos respeitados",
-  "descricao_seo": "Advogado para pacientes e beneficiários de planos de saúde: negativa de cobertura, reajustes, cancelamento, home care, medicamentos e erro médico.",
-  "resumo": "Orientação para negativas de cobertura, reajustes, cancelamentos, acesso a tratamentos e falhas no atendimento.",
+  "descricao_seo": "Advogado para pacientes e beneficiários de planos de saúde: negativa de cobertura, reajustes, cancelamento, home care, medicamentos e acesso a tratamentos.",
+  "resumo": "Orientação para negativas de cobertura, reajustes, cancelamentos e acesso a tratamentos e medicamentos.",
   "intro": [
     "Quando a saúde está em jogo, a incerteza sobre cobertura, custos e responsabilidades aumenta a preocupação.",
     "Orientamos pacientes e beneficiários de planos de saúde para que entendam seus direitos, avaliem as alternativas e tomem decisões com segurança, com atenção à urgência que cada situação pode exigir."
@@ -33,15 +33,6 @@
             "Terapias para pessoas com deficiência e transtornos do neurodesenvolvimento",
             "Medidas de urgência quando o tempo faz diferença"
           ]
-        },
-        {
-          "titulo": "Falhas no atendimento",
-          "itens": [
-            "Erro médico e hospitalar",
-            "Erro odontológico",
-            "Erro veterinário, quando o paciente é o seu animal de estimação",
-            "Análise de prontuários, exames e laudos"
-          ]
         }
       ]
     },
@@ -60,11 +51,11 @@
     {
       "titulo": "Nossa forma de atuar",
       "paragrafos": [
-        "Analisamos o contrato, a indicação médica e a documentação do caso para explicar, de forma clara, o que pode ser exigido e quais providências são possíveis.",
-        "Cada situação tem particularidades, por isso o atendimento é individualizado e respeita o ritmo e a urgência de cada pessoa."
+        "Analisamos o contrato do plano de saúde, a indicação médica, os relatórios e demais documentos para identificar os direitos do beneficiário, avaliar as medidas cabíveis e orientar sobre os caminhos jurídicos disponíveis.",
+        "Cada situação exige uma análise própria. Por isso, oferecemos atendimento individualizado, com atenção à urgência do tratamento, às necessidades do paciente e às particularidades de cada caso."
       ]
     }
   ],
-  "cta": "Recebeu uma negativa, um reajuste ou passou por uma falha no atendimento? Entre em contato, agende uma consulta e tire suas dúvidas.",
-  "imagem": "/assets/img/plano-saude-idosos.webp"
+  "cta": "Recebeu uma negativa, um reajuste ou um cancelamento? Entre em contato, agende uma consulta e tire suas dúvidas.",
+  "imagem": "/assets/img/artigos/plano-de-saude-para-idosos.webp"
 }

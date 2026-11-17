@@ -1,22 +1,46 @@
 {
-  "ordem": 6,
-  "numero": "VI",
+  "ordem": 4,
+  "numero": "IV",
   "slug": "consultoria-juridica-preventiva",
   "titulo_curto": "Consultoria jurídica preventiva",
   "titulo": "Consultoria Jurídica Preventiva",
-  "subtitulo": "Prevenção de riscos para profissionais, clínicas e consultórios",
+  "subtitulo": "Segurança jurídica não deve ser uma preocupação apenas quando surge um problema. Ela começa com prevenção, planejamento e orientação jurídica.",
   "descricao_seo": "Prevenção de riscos para profissionais, clínicas e consultórios: revisão de contratos, termos de consentimento, documentação clínica e conduta em conflitos.",
   "paragrafos": [
-    "A advocacia preventiva reduz riscos e evita conflitos. Auxiliamos profissionais e estabelecimentos de saúde na organização documental, na revisão de contratos e na adoção de boas práticas jurídicas."
+    "A atividade na área da saúde envolve responsabilidades que vão muito além do atendimento clínico. Relações com pacientes, elaboração de contratos, publicidade profissional, gestão de clínicas, proteção de dados e cumprimento das normas dos conselhos de classe exigem atenção jurídica constante.",
+    "Nossa consultoria jurídica preventiva é direcionada a médicos, cirurgiões-dentistas, clínicas e demais profissionais da saúde que buscam exercer suas atividades com mais segurança, organização e tranquilidade.",
+    "Por meio de uma análise individualizada, identificamos vulnerabilidades, avaliamos riscos jurídicos e orientamos a adoção de medidas preventivas, considerando a legislação vigente, as normas dos conselhos profissionais, a regulamentação da Agência Nacional de Saúde Suplementar (ANS), quando aplicável, e o entendimento dos tribunais."
   ],
-  "rotulo_lista": "",
+  "rotulo_lista": "Principais frentes de atuação",
   "itens": [
-    "Revisão e elaboração de contratos",
-    "Modelos de termos de consentimento e documentos clínicos",
-    "Orientação para conduta em situações de conflito com pacientes",
-    "Análise de notificações de conselhos e operadoras"
+    "**Análise e gestão de riscos jurídicos:** identificação de vulnerabilidades na atividade profissional, nos procedimentos adotados e nas relações com pacientes, fornecedores e parceiros.",
+    "**Contratos e relações profissionais:** elaboração e revisão de contratos de prestação de serviços, parcerias, sociedades, credenciamentos e instrumentos utilizados na rotina de clínicas e consultórios.",
+    "**Prontuários e documentos médicos:** orientação sobre organização, preenchimento, armazenamento e conservação de prontuários, além da adequação de documentos utilizados no atendimento.",
+    "**Termos de consentimento livre e esclarecido:** elaboração e revisão de documentos compatíveis com os procedimentos realizados, assegurando informações claras sobre indicações, riscos, benefícios, alternativas e possíveis consequências.",
+    "**Relação com pacientes:** orientação sobre deveres de informação, comunicação, registros de atendimento, intercorrências, reclamações e situações de conflito.",
+    "**Publicidade profissional:** análise de materiais publicitários, redes sociais e estratégias de divulgação, observando as normas éticas dos respectivos conselhos profissionais.",
+    "**Proteção de dados e LGPD:** adequação de procedimentos relacionados à coleta, utilização, armazenamento e compartilhamento de dados pessoais e informações sensíveis de saúde.",
+    "**Regulamentação e responsabilidade profissional:** orientação sobre legislação, normas dos conselhos de classe e obrigações aplicáveis ao exercício das atividades na área da saúde."
   ],
   "cta": "Proteger sua prática profissional começa pela orientação certa. Fale com nossa equipe.",
   "cor": "verde",
-  "imagem": "/assets/img/cirurgia-reparadora-bariatrica.webp"
+  "imagem": "/assets/img/artigos/consentimento-informado-termo-medico.webp",
+  "intro_titulo": "",
+  "blocos": [
+    {
+      "titulo": "Como funciona a consultoria jurídica preventiva?",
+      "paragrafos": [
+        "A atuação envolve a análise das particularidades de cada atividade profissional ou estabelecimento de saúde, com foco na prevenção de conflitos, na redução da exposição a responsabilidades jurídicas e na estruturação de relações profissionais mais seguras."
+      ]
+    }
+  ],
+  "destaque": "Prevenir é também proteger sua reputação e seu patrimônio",
+  "paragrafos_final": [
+    "Uma documentação inadequada, um contrato mal estruturado ou uma falha no dever de informação podem gerar consequências que ultrapassam a relação com o paciente, alcançando as esferas ética, civil e administrativa.",
+    "A consultoria preventiva permite antecipar essas situações, orientar condutas e estabelecer procedimentos juridicamente mais seguros, sem interferir na autonomia técnica do profissional de saúde.",
+    "Mais do que solucionar conflitos, nosso trabalho é ajudar você a evitar que eles aconteçam.",
+    "Conte com orientação jurídica estratégica para proteger sua atividade profissional, sua reputação e a estrutura do seu negócio."
+  ],
+  "categoria_artigos": "Direito Médico",
+  "chamada": "Prevenção de riscos para profissionais, clínicas e consultórios"
 }

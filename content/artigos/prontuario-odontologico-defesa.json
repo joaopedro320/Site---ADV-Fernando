@@ -1,0 +1,34 @@
+{
+  "ordem": 17,
+  "tipo": "artigo",
+  "titulo": "Prontuário odontológico: por que ele é a sua principal defesa",
+  "slug": "prontuario-odontologico-defesa",
+  "categoria": "Direito Odontológico",
+  "data": "2026-11-17",
+  "resumo": "O prontuário odontológico é o registro completo do paciente e do tratamento. Em qualquer conflito, ético ou judicial, ele costuma ser a primeira prova analisada. Um prontuário completo, organizado e atualizado a cada consulta protege o dentista. Um prontuário incompleto pode transformar um bom atendimento em um problema.",
+  "imagem": "/assets/img/artigos/prontuario-odontologico-defesa.webp",
+  "texto": "Muitos dentistas veem o prontuário como burocracia. Na advocacia, vemos o contrário: ele é o documento que mais decide casos. Quando o profissional precisa se defender, tudo o que não está registrado tende a ser tratado como se não tivesse acontecido.\n\n## O que é o prontuário odontológico?\n\nÉ o conjunto de documentos sobre o paciente: dados pessoais, anamnese (histórico de saúde), exame clínico, diagnóstico, plano de tratamento, evolução de cada atendimento, exames de imagem, receitas e termos assinados. O Código de Ética Odontológica (Resolução CFO 118/2012) trata da obrigação de elaborar e manter o prontuário, de forma legível e atualizada.\n\nO prontuário pertence, em essência, ao paciente, que tem direito de acesso às informações. Ao profissional ou à clínica cabe a guarda e a responsabilidade por mantê-lo seguro.\n\n## O que não pode faltar\n\n- Identificação completa do paciente e, se for menor, do responsável.\n- **Anamnese detalhada:** doenças, alergias, medicamentos em uso, cirurgias anteriores.\n- Diagnóstico e plano de tratamento, com as alternativas apresentadas.\n- Orçamento aprovado pelo paciente.\n- **Evolução clínica:** data, procedimento realizado, materiais usados e intercorrências.\n- **Exames:** radiografias, tomografias, fotos e modelos.\n- Termos de consentimento assinados.\n- Receitas e atestados emitidos.\n- Registro de faltas, remarcações e orientações dadas ao paciente.\n\n## Prontuário em papel ou digital?\n\nOs dois são aceitos. O prontuário digital tem vantagens, como organização e backup, mas exige cuidados com segurança. A Lei 13.787/2018 trata da digitalização e do uso de sistemas informatizados para guarda de prontuários, e a Lei Geral de Proteção de Dados (Lei 13.709/2018) exige proteção especial para dados de saúde, que são considerados sensíveis.\n\nEm termos práticos: use sistema com controle de acesso, faça cópias de segurança e não deixe informações do paciente em aplicativos pessoais sem proteção.\n\n## Por quanto tempo guardar?\n\nO prazo de guarda é um ponto que gera dúvida, porque há normas e entendimentos diferentes. A recomendação mais segura é guardar o prontuário por muitos anos, e a Lei 13.787/2018 menciona o prazo mínimo de 20 anos a partir do último registro para prontuários em suporte de papel que não tenham sido digitalizados nos termos da lei. Confira sempre a norma em vigor e as orientações do seu CRO.\n\n## Erros mais comuns\n\n- preencher o prontuário apenas no início do tratamento e nunca mais atualizar;\n- escrever de forma ilegível ou com siglas que só o próprio profissional entende;\n- não registrar intercorrências e orientações dadas;\n- guardar radiografias e fotos em local que pode ser perdido;\n- deixar o prontuário nas mãos de terceiros sem controle;\n- alterar, complementar ou \"melhorar\" o prontuário depois de uma reclamação ou denúncia.\n\nEsse último erro é o mais grave. Mudanças feitas depois do conflito podem ser vistas como tentativa de ocultar fatos e, em sistemas digitais, ficam registradas com data e hora.\n\n## O que fazer ao receber um pedido do paciente ou do CRO\n\n1. Não altere nada. Entregue o que existe.\n2. Faça uma cópia completa antes de qualquer envio.\n3. Registre a entrega, com data e protocolo.\n4. Peça orientação jurídica antes de responder a notificações.\n5. Entregue em formato adequado, evitando enviar apenas parte dos documentos.\n\n## Como prevenir\n\nCrie um padrão para a clínica: modelo de anamnese, modelo de evolução e checklist de documentos. Treine a equipe para registrar tudo no mesmo dia. Revise periodicamente se os prontuários estão completos e se os termos estão assinados. Se precisar, estaremos aqui para cuidar de todas essas etapas.",
+  "faq": [
+    {
+      "pergunta": "O paciente pode pedir cópia do prontuário?",
+      "resposta": "Sim. Ele tem direito de acesso às informações do seu tratamento."
+    },
+    {
+      "pergunta": "Posso cobrar pela cópia?",
+      "resposta": "Depende da situação e das normas aplicáveis. Vale pedir orientação antes de impor condições que possam dificultar o acesso."
+    },
+    {
+      "pergunta": "Posso corrigir um erro de digitação no prontuário?",
+      "resposta": "Pode, desde que a correção seja transparente, datada e mantenha o registro original visível, nunca apagando o que foi escrito."
+    },
+    {
+      "pergunta": "Fotos de WhatsApp valem como prova?",
+      "resposta": "Podem ser usadas, mas é melhor que as informações relevantes estejam no prontuário."
+    },
+    {
+      "pergunta": "Se o prontuário estiver incompleto, perdi o caso?",
+      "resposta": "Não necessariamente, mas a defesa fica mais difícil e outras provas precisarão compensar a falha."
+    }
+  ],
+  "cta": "Se você precisa de orientação jurídica ou quer se prevenir, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para dentistas e clínicas odontológicas."
+}

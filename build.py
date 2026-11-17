@@ -33,6 +33,10 @@ REV = load('content/avaliacoes.json')
 PRIV = load('content/privacidade.json')
 ARTS = load_dir('content/artigos')
 ARTS.sort(key=lambda a: (a.get('data', ''), -a.get('ordem', 0)), reverse=True)
+for _a in ARTS:
+    _a.setdefault('tipo', 'artigo')
+ARTIGOS = [a for a in ARTS if a['tipo'] == 'artigo']
+NOTICIAS = [a for a in ARTS if a['tipo'] != 'artigo']
 AREAS = load_dir('content/areas')
 PUBS = load_dir('content/publicos')
 try:
@@ -42,14 +46,7 @@ except Exception:
 
 BASE = S['dominio'].rstrip('/')
 NOME = S['nome']
-CATEGORIA_AREA = {
-    'plano-de-saude-e-saude-suplementar': 'Plano de saúde',
-    'direito-a-saude': 'Plano de saúde',
-    'direito-medico': 'Direito Médico',
-    'direito-odontologico': 'Direito Odontológico',
-    'erro-medico-odontologico-e-veterinario': 'Erro veterinário',
-    'consultoria-juridica-preventiva': 'Direito Médico',
-}
+BRASIL = json.load(open(os.path.join(ROOT, 'data/brasil-mapa.json'), encoding='utf-8'))
 ESCAPE = html.escape
 
 
@@ -194,7 +191,7 @@ def org_node():
         'url': BASE + '/',
         'logo': {'@type': 'ImageObject', 'url': BASE + '/assets/logo/logo-verde.svg'},
         'image': BASE + '/assets/img/og-default.jpg',
-        'description': 'Advocacia especializada em Direito da Saúde: orientação jurídica a médicos, dentistas e profissionais da saúde e defesa de pacientes e beneficiários de planos de saúde.',
+        'description': 'Advocacia dedicada ao Direito da Saúde: orientação jurídica a médicos, dentistas e profissionais da saúde e defesa de pacientes e beneficiários de planos de saúde.',
         'telephone': '+' + S['whatsapp'],
         'email': S['email'],
         'areaServed': {'@type': 'Country', 'name': 'Brasil'},
@@ -224,10 +221,10 @@ def person_node():
     return {
         '@type': 'Person', '@id': BASE + '/#advogado',
         'name': S['advogado'], 'jobTitle': 'Advogado',
-        'description': 'Advogado inscrito na OAB/%s, com atuação em Direito da Saúde.' % S['oab_uf'],
+        'description': 'Advogado inscrito na OAB/%s %s, com atuação em Direito da Saúde.' % (S['oab_uf'], S.get('oab_numero', '')),
         'worksFor': {'@id': BASE + '/#organizacao'},
         'url': BASE + '/o-escritorio/',
-        'image': BASE + '/assets/img/luiz-fernando-neves-hero.webp',
+        'image': BASE + '/assets/img/fernando/perfil-mesa.webp',
         'knowsAbout': ['Direito da Saúde', 'Planos de saúde', 'Direito Médico', 'Direito Odontológico', 'Direito do Consumidor', 'Direito Civil'],
         'knowsLanguage': 'pt-BR',
         'sameAs': [u for u in (S.get('instagram_url'), S.get('linkedin_url')) if u],
@@ -281,11 +278,11 @@ def footer():
     return '''<footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">%(logo)s
-      <p>Advocacia especializada em Direito da Saúde, com rigor técnico, análise estratégica e atendimento individualizado.</p>
+      <p>Advocacia dedicada ao Direito da Saúde, com rigor técnico, análise estratégica e atendimento individualizado. Atendimento em todo o Brasil.</p>
       <p class="oab">Luiz Fernando Neves, %(oab)s</p>
     </div>
     <nav aria-label="Páginas do site"><h2>Navegue</h2><ul>
-      <li><a href="/o-escritorio/">O escritório</a></li><li><a href="/areas-de-atuacao/">Áreas de atuação</a></li><li><a href="/para-quem-atuamos/">Para quem atuamos</a></li><li><a href="/conteudo/">Notícias e artigos</a></li><li><a href="/contato/">Contato</a></li></ul></nav>
+      <li><a href="/o-escritorio/">O escritório</a></li><li><a href="/areas-de-atuacao/">Áreas de atuação</a></li><li><a href="/para-quem-atuamos/">Para quem atuamos</a></li><li><a href="/conteudo/">Artigos e notícias</a></li><li><a href="/contato/">Contato</a></li></ul></nav>
     <nav aria-label="Áreas de atuação"><h2>Áreas de atuação</h2><ul>%(areas)s</ul></nav>
     <div><h2>Contato</h2><ul>
       <li><a href="%(wa)s" target="_blank" rel="noopener" data-wa="footer">WhatsApp %(tel)s</a></li>
@@ -330,8 +327,8 @@ def tracking_head():
     return '\n'.join(parts)
 
 
-def page(path, title, desc, body, active='', schema=None, og_image=None, og_type='website', robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1', preload=None, lastmod=None, prio='0.7', freq='monthly', sitemap=True, extra_head=''):
-    canon = abs_url(path)
+def page(path, title, desc, body, active='', schema=None, og_image=None, og_type='website', robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1', preload=None, lastmod=None, prio='0.7', freq='monthly', sitemap=True, extra_head='', canonical=None):
+    canon = abs_url(canonical or path)
     og_image = og_image or '/assets/img/og-default.jpg'
     graph = [org_node(), person_node(), {'@type': 'WebSite', '@id': BASE + '/#site', 'url': BASE + '/', 'name': NOME, 'inLanguage': 'pt-BR', 'publisher': {'@id': BASE + '/#organizacao'}}]
     graph += schema or []
@@ -402,7 +399,7 @@ def page(path, title, desc, body, active='', schema=None, og_image=None, og_type
 
 
 # ---------- blocos reutilizaveis ----------
-CAT_COR = {'Plano de saúde': 'verde', 'Direito Médico': 'verde', 'Direito Odontológico': 'verde', 'Erro veterinário': 'azul', 'Direito do Consumidor': 'azul'}
+CAT_COR = {'Plano de saúde': 'verde', 'Direito Médico': 'verde', 'Direito Odontológico': 'verde', 'Direito do Consumidor': 'azul', 'Direito Civil': 'azul'}
 ARROW = '<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
 ARROW_L = '<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
 _MONO = None
@@ -455,7 +452,7 @@ def cta_band(titulo=None, texto=None, msg=None, cor='verde'):
     <div class="reveal"><p class="eyebrow">Atendimento individualizado</p>%s<p>%s</p></div>
     <div class="cta-btns reveal"><a class="btn btn-bronze" href="%s" target="_blank" rel="noopener" data-wa="faixa-cta">Agendar pelo WhatsApp %s</a><a class="btn btn-line" href="/contato/">Enviar mensagem</a></div>
   </div>
-</section>''' % (cor, img_tag('/assets/img/luiz-fernando-neves-escritorio.webp', '', sizes='100vw'), mono('mono-anim cta-mono'), split_title(titulo, 'h2', 'display'), h(texto), h(wa(msg)), ARROW)
+</section>''' % (cor, img_tag('/assets/img/fernando/perfil-escritorio.webp', '', sizes='100vw'), mono('mono-anim cta-mono'), split_title(titulo, 'h2', 'display'), h(texto), h(wa(msg)), ARROW)
 
 
 def cta_inline(texto, msg=None, label='wa'):
@@ -471,8 +468,8 @@ def article_card(a, extra=''):
         im = '<div class="card-img card-img-mono">%s</div>' % mono('mono-static')
     return '''<article class="card t-%s reveal"%s>
   <a class="card-link" href="%s">%s
-  <div class="card-body"><p class="tag"><i aria-hidden="true"></i>%s</p><h3>%s</h3><p>%s</p><span class="more">Ler artigo %s</span></div></a>
-</article>''' % (cor, extra, url, im, h(a['categoria']), h(a['titulo']), h(cut(a['resumo'], 140)), ARROW)
+  <div class="card-body"><p class="tag"><i aria-hidden="true"></i>%s</p><h3>%s</h3><p>%s</p><span class="more">%s %s</span></div></a>
+</article>''' % (cor, extra, url, im, h(a['categoria']), h(a['titulo']), h(cut(a['resumo'], 140)), 'Ler artigo' if a.get('tipo', 'artigo') == 'artigo' else 'Ler notícia', ARROW)
 
 
 def rail(cards, label, rid=''):
@@ -486,7 +483,7 @@ def legend():
 
 def image_ribbon():
     items = ''
-    for a in [x for x in ARTS if x.get('imagem')]:
+    for a in [x for x in ARTIGOS if x.get('imagem')]:
         items += '<a class="rb t-%s" href="%s">%s<span><em>%s</em>%s</span></a>' % (CAT_COR.get(a['categoria'], 'verde'), slug_path('conteudo', a['slug']), img_tag(a['imagem'], '', sizes='320px'), h(a['categoria']), h(cut(a['titulo'], 60)))
     return '<section class="ribbon" data-marquee aria-label="Temas em destaque"><div class="mq-track rb-track">%s%s</div></section>' % (items, items.replace('<a class', '<a tabindex="-1" aria-hidden="true" class'))
 
@@ -496,26 +493,55 @@ def badge(text):
 
 
 # ---------- paginas ----------
+def brasil_map():
+    B = BRASIL
+    c = B['centers']
+    sp = c['sp']
+    states = ''.join('<path class="uf%s" d="%s"><title>%s</title></path>' % (' uf-sp' if l['id'] == 'sp' else '', l['path'], h(l['name'])) for l in B['locations'])
+    caps = ['am', 'pa', 'ce', 'pe', 'ba', 'df', 'mg', 'rj', 'pr', 'rs', 'ms', 'mt', 'go', 'sc', 'es', 'ma', 'rn', 'ro', 'to', 'pi', 'pb', 'al', 'se', 'ac', 'rr', 'ap']
+    arcs = dots = ''
+    for i, k in enumerate(caps):
+        x, y = c[k]
+        mx, my = (sp[0] + x) / 2, (sp[1] + y) / 2 - abs(x - sp[0]) * 0.18 - 20
+        arcs += '<path class="arc" style="--i:%d" d="M%.1f %.1f Q%.1f %.1f %.1f %.1f" pathLength="1"/>' % (i, sp[0], sp[1], mx, my, x, y)
+        dots += '<circle class="cap" style="--i:%d" cx="%.1f" cy="%.1f" r="4"/>' % (i, x, y)
+    return ('<svg class="br-map" viewBox="%s" role="img" aria-label="Mapa do Brasil: atendimento a partir de São Paulo para todos os estados">'
+            '<g class="ufs">%s</g><g class="arcs">%s</g><g class="caps">%s</g>'
+            '<circle class="sp-pulse" cx="%.1f" cy="%.1f" r="9"/><circle class="sp-dot" cx="%.1f" cy="%.1f" r="7"/>'
+            '<text class="sp-label" x="%.1f" y="%.1f">São Paulo</text></svg><!-- Mapa: @svg-maps/brazil (VictorCazanave/svg-maps), licença CC BY 4.0 -->') % (
+        B['viewBox'], states, arcs, dots, sp[0], sp[1], sp[0], sp[1], sp[0] - 112, sp[1] + 30)
+
+
+def hero_thumbs():
+    """Fotos pequenas do hero, cada uma leva a um artigo."""
+    alvo = HM.get('hero_galeria_links') or [
+        {'imagem': '/assets/img/plano-saude-idosos.webp', 'artigo': 'denuncia-no-crm-processo-etico', 'rotulo': 'Direito Médico'},
+        {'imagem': '/assets/img/direito-odontologico.webp', 'artigo': 'defesa-processo-erro-odontologico', 'rotulo': 'Direito Odontológico'},
+        {'imagem': '/assets/img/home-care.webp', 'artigo': 'home-care-plano-de-saude', 'rotulo': 'Home care'}]
+    out = ''
+    for i, g in enumerate(alvo[:3]):
+        art = next((a for a in ARTS if a['slug'] == g.get('artigo')), None)
+        if not art:
+            continue
+        out += '<a class="hg hg-%d" href="%s" aria-label="Ler: %s">%s<span class="hg-l">%s</span></a>' % (
+            i + 1, slug_path('conteudo', art['slug']), h(art['titulo']), img_tag(g['imagem'], '', sizes='260px'), h(g.get('rotulo') or art['categoria']))
+    return out
+
+
 def build_home():
-    g = HM.get('hero_galeria') or []
-    gal = ''.join('<figure class="hg hg-%d">%s</figure>' % (i + 1, img_tag(src, '', sizes='240px')) for i, src in enumerate(g[:3]))
     dest = HM.get('destaques') or []
-    ds = [a for s in dest for a in ARTS if a['slug'] == s] or ARTS[:4]
+    ds = [a for s_ in dest for a in ARTS if a['slug'] == s_] or (NOTICIAS[:5] if NOTICIAS else ARTIGOS[:5])
     slides = ''
     for i, a in enumerate(ds):
-        slides += '<a class="slide%s" href="%s" %s><span class="tag">%s</span><span class="slide-t">%s</span></a>' % (
-            ' is-on' if i == 0 else '', slug_path('conteudo', a['slug']), '' if i == 0 else 'tabindex="-1" aria-hidden="true"', h(a['categoria']), h(a['titulo']))
-    dots = ''.join('<button class="dot%s" aria-label="Notícia %d" %s></button>' % (' is-on' if i == 0 else '', i + 1, 'aria-current="true"' if i == 0 else '') for i in range(len(ds)))
-    g = ['/assets/img/plano-saude-idosos.webp', '/assets/img/direito-odontologico.webp', '/assets/img/home-care.webp']
-    gal = ''.join('<figure class="hg hg-%d">%s</figure>' % (i + 1, img_tag(src, '', eager=True, sizes='260px').replace(' fetchpriority="high"', ' decoding="async"')) for i, src in enumerate(g))
-    dest = HM.get('destaques') or []
-    ds = [a for s in dest for a in ARTS if a['slug'] == s] or ARTS[:4]
-    slides = ''
-    for i, a in enumerate(ds):
-        slides += '<a class="slide%s" href="%s" %s><span class="tag">%s</span><span class="slide-t">%s</span></a>' % (
-            ' is-on' if i == 0 else '', slug_path('conteudo', a['slug']), '' if i == 0 else 'tabindex="-1" aria-hidden="true"', h(a['categoria']), h(a['titulo']))
-    dots = ''.join('<button class="dot%s" aria-label="Notícia %d" %s></button>' % (' is-on' if i == 0 else '', i + 1, 'aria-current="true"' if i == 0 else '') for i in range(len(ds)))
-    hero = '''<section class="hero" data-hero>
+        im = img_tag(a.get('imagem'), '', eager=(i == 0), sizes='(max-width:760px) 92vw, 640px') if a.get('imagem') else ''
+        if i:
+            im = im.replace(' loading="lazy"', ' loading="eager"')
+        slides += '<a class="slide%s" href="%s" %s>%s<span class="slide-c"><span class="tag">%s</span><span class="slide-t">%s</span><span class="slide-m">Ler %s %s</span></span></a>' % (
+            ' is-on' if i == 0 else '', slug_path('conteudo', a['slug']), '' if i == 0 else 'tabindex="-1" aria-hidden="true"', im,
+            h(a['categoria']), h(a['titulo']), 'notícia' if a['tipo'] != 'artigo' else 'artigo', ARROW)
+    dots = ''.join('<button class="dot%s" aria-label="Destaque %d" %s></button>' % (' is-on' if i == 0 else '', i + 1, 'aria-current="true"' if i == 0 else '') for i in range(len(ds)))
+    chips = '<div class="legend legend-links"><a class="lg t-verde" href="/areas-de-atuacao/#saude"><i></i>Saúde</a><a class="lg t-azul" href="/areas-de-atuacao/#civil-e-consumidor"><i></i>Civil e consumidor</a></div>'
+    hero = '''<section class="hero hero-v2" data-hero>
   <div class="stripes" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
@@ -527,30 +553,27 @@ def build_home():
     </div>
     <div class="hero-visual">
       %(mono)s
-      <figure class="hero-photo"><picture><source media="(max-width:760px)" srcset="/assets/img/luiz-fernando-neves-hero-m.webp"><img src="/assets/img/luiz-fernando-neves-hero.webp" width="1600" height="1067" fetchpriority="high" alt="Luiz Fernando Neves, advogado de Direito da Saúde, em seu escritório"></picture></figure>
+      <div class="news news-banner" aria-label="Artigos e notícias em destaque" data-carousel>
+        <div class="slides" aria-live="polite">%(slides)s</div>
+        <div class="news-ctl"><p class="news-h">Em destaque</p><div class="dots">%(dots)s</div><div class="arrows"><button class="prev" aria-label="Anterior">%(arrl)s</button><button class="next" aria-label="Próxima">%(arr)s</button></div></div>
+      </div>
       %(gal)s
       %(badge)s
-      <div class="news" aria-label="Notícias e artigos em destaque" data-carousel>
-        <p class="news-h">Notícias e artigos</p>
-        <div class="slides" aria-live="polite">%(slides)s</div>
-        <div class="news-ctl"><div class="dots">%(dots)s</div><div class="arrows"><button class="prev" aria-label="Anterior">%(arrl)s</button><button class="next" aria-label="Próxima">%(arr)s</button></div></div>
-      </div>
     </div>
   </div>
 </section>''' % dict(eb=h(HM['hero_eyebrow']), t=split_title(HM['hero_titulo'], 'h1', 'display hero-t'), x=h(HM['hero_texto']), wa=h(wa()), c1=h(HM['hero_cta_principal']), c2=h(HM['hero_cta_secundario']),
-                     arr=ARROW, arrl=ARROW_L, lg=legend(), mono=mono('mono-anim hero-mono'), gal=gal, badge=badge('Direito da Saúde · OAB/%s · Luiz Fernando Neves · ' % S['oab_uf']), slides=slides, dots=dots)
+                     arr=ARROW, arrl=ARROW_L, lg=chips, mono=mono('mono-anim hero-mono'), gal=hero_thumbs(), badge=badge('Dr. Luiz Fernando Neves · Direito da Saúde · '), slides=slides, dots=dots)
     statement = '''<section class="statement-sec">%s<div class="wrap">
   <p class="statement" data-words>%s</p>
-  <ul class="counters"><li><span class="num" data-count="%d">%d</span><span class="num-l">áreas de atuação</span></li><li><span class="num" data-count="%d">%d</span><span class="num-l">frentes de atendimento</span></li><li><span class="num" data-count="%d">%d</span><span class="num-l">artigos publicados</span></li><li><span class="num">OAB/%s</span><span class="num-l">advogado regularmente inscrito</span></li></ul>
-</div></section>''' % (mono('mono-anim st-mono'), h(HM.get('statement', OF['principios'][1])), len(AREAS), len(AREAS), len(PUBS), len(PUBS), len(ARTS), len(ARTS), h(S['oab_uf']))
-    mq_items = ''.join('<span class="t-%s">%s</span>' % (a['cor'], h(a['titulo_curto'])) for a in AREAS)
+</div></section>''' % (mono('mono-anim st-mono'), h(HM.get('statement', OF['principios'][1])))
+    brasil = '''<section class="sec brasil" id="atendimento-brasil"><div class="wrap brasil-grid">
+  <div class="brasil-copy"><p class="eyebrow reveal">Atuação nacional</p>%s%s<p class="brasil-frase reveal">%s</p>
+  <ul class="brasil-pts reveal"><li>Videoconferência, telefone ou presencial em São Paulo</li><li>Processos eletrônicos em todo o país</li><li>Audiências virtuais e acompanhamento próximo</li></ul>
+  <a class="btn btn-solid reveal" href="%s" target="_blank" rel="noopener" data-wa="brasil">Fale com o escritório %s</a></div>
+  <figure class="brasil-fig" data-map>%s</figure>
+</div></section>''' % (split_title(HM.get('brasil_titulo', 'Atendimento em todo o Brasil'), 'h2', 'display'), ''.join('<p class="reveal">%s</p>' % h(t) for t in HM.get('brasil_texto', [])), h(HM.get('brasil_frase', '')), h(wa()), ARROW, brasil_map())
+    mq_items = ''.join('<span class="t-%s">%s</span>' % (a['cor'], h(a['titulo_curto'].replace(' | ', ' e '))) for a in AREAS)
     mq = '<div class="marquee" data-marquee aria-hidden="true"><div class="mq-track">%s%s</div></div>' % (mq_items, mq_items)
-    _nums_unused = '''<section class="nums"><div class="wrap nums-in">
-  <div class="num reveal"><strong data-count="%d">0</strong><span>áreas de atuação</span></div>
-  <div class="num reveal"><strong data-count="%d">0</strong><span>frentes de atendimento</span></div>
-  <div class="num reveal"><strong data-count="%d">0</strong><span>artigos publicados</span></div>
-  <div class="num reveal"><strong>OAB/%s</strong><span>advogado inscrito</span></div>
-</div></section>''' % (len(AREAS), len(PUBS), len(ARTS), h(S['oab_uf']))
     pubs = ''
     for i, p in enumerate(PUBS):
         pubs += '''<a class="pub t-%s reveal" href="%s">%s<span class="pub-shade"></span><span class="pub-n">0%d</span><span class="pub-c"><span class="pub-k">%s</span><h3>%s</h3><p>%s</p><span class="more">Saiba mais %s</span></span></a>''' % (
@@ -561,34 +584,47 @@ def build_home():
     rows = ''
     for a in AREAS:
         rows += '<li class="reveal t-%s"><a href="%s"><span class="row-n">%s</span><span class="row-t"><strong>%s</strong><em>%s</em></span><span class="row-a">%s</span></a></li>' % (
-            a['cor'], slug_path('areas-de-atuacao', a['slug']), h(a['numero']), h(a['titulo_curto']), h(a['subtitulo']), ARROW)
+            a['cor'], slug_path('areas-de-atuacao', a['slug']), h(a['numero']), h(a['titulo_curto']), h(a.get('chamada') or a['subtitulo']), ARROW)
     areas = '''<section class="sec sec-sand" id="areas"><div class="wrap areas-grid">
   <header class="sec-h sticky"><p class="eyebrow reveal">O que fazemos</p>%s<p class="reveal">%s</p>%s<a class="btn btn-ghost reveal" href="/areas-de-atuacao/">Ver todas as áreas %s</a></header>
   <ol class="rows">%s</ol></div></section>''' % (split_title(HM['areas_titulo'], 'h2', 'display'), h(HM['areas_texto']), legend(), ARROW, rows)
-    tl = ''.join('<li class="tl-h t-%s"><span class="tl-y">%s</span><span class="tl-p">%s</span><strong>%s</strong><em>%s</em></li>' % (t['cor'], h(t['ano']), h(t['periodo']), h(t['titulo']), h(t['instituicao'])) for t in OF['linha_do_tempo'])
     escr = '''<section class="sec escr"><div class="wrap escr-grid">
   <figure class="escr-fig"><div class="escr-img" data-reveal><div class="pin-in" data-speed="-0.1">%s</div></div>%s</figure>
   <div class="escr-copy"><p class="eyebrow reveal">O escritório</p>%s
   <p class="reveal">%s</p><p class="reveal">%s</p>
   <a class="btn btn-solid reveal" href="/o-escritorio/">Conheça o escritório %s</a></div></div>
 </section>''' % (
-        img_tag('/assets/img/luiz-fernando-neves-escritorio.webp', 'Luiz Fernando Neves em sua mesa de trabalho, com livros de Direito Médico', sizes='(max-width:900px) 92vw, 560px'),
-        badge('Rigor técnico · Estratégia · Proximidade · '), split_title('Rigor técnico e atendimento próximo a quem cuida e a quem precisa de cuidados', 'h2', 'display'),
-        h(OF['texto'][0]), h(OF['texto'][1]), ARROW)
-    passos = ''.join('<li class="reveal"><span class="step-n">0%d</span><h3>%s</h3><p>%s</p></li>' % (i + 1, h(p['titulo']), h(p['texto'])) for i, p in enumerate(HM['metodo_passos']))
-    metodo = '''<section class="sec sec-verde">%s<div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Como trabalhamos</p>%s</header><ol class="steps">%s</ol></div></section>''' % (mono('mono-anim metodo-mono'), split_title(HM['metodo_titulo'], 'h2', 'display'), passos)
-    cards = ''.join(article_card(a) for a in ARTS)
-    conteudo = '''<section class="sec"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Conteúdo</p>%s<p class="reveal">%s</p></div><a class="btn btn-ghost reveal" href="/conteudo/">Todos os artigos %s</a></header>%s</div></section>''' % (
+        img_tag('/assets/img/fernando/perfil-mesa.webp', 'Luiz Fernando Neves em seu escritório', sizes='(max-width:900px) 92vw, 560px'),
+        badge('Rigor técnico · Estratégia · Proximidade · '), split_title(HM.get('escritorio_titulo') or 'Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.', 'h2', 'display'),
+        h(HM.get('escritorio_texto') or 'Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde.'), h(OF['texto'][1]), ARROW)
+    cards = ''.join(article_card(a) for a in ARTIGOS)
+    conteudo = '''<section class="sec"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Conteúdo</p>%s<p class="reveal">%s</p></div><a class="btn btn-ghost reveal" href="/conteudo/">Todos os conteúdos %s</a></header>%s</div></section>''' % (
         split_title(HM['conteudo_titulo'], 'h2', 'display'), h(HM['conteudo_texto']), ARROW, rail(cards, 'Artigos'))
-    rev = ''
-    if REV.get('itens'):
-        rv = ''.join('<figure class="rev reveal"><div class="stars" role="img" aria-label="%s de 5 estrelas">%s</div><blockquote>%s</blockquote><figcaption>%s</figcaption></figure>' % (h(r.get('nota', 5)), '★' * int(float(r.get('nota', 5))), h(r['texto']), h(r['autor'])) for r in REV['itens'])
-        link = ('<a class="btn btn-ghost" href="%s" target="_blank" rel="noopener">Ver avaliações no Google</a>' % h(S['google_avaliacoes_url'])) if S.get('google_avaliacoes_url') else ''
-        rev = '<section class="sec sec-sand"><div class="wrap"><header class="sec-h"><p class="eyebrow">Google</p>%s<p>%s</p></header>%s%s</div></section>' % (split_title(REV['titulo'], 'h2', 'display'), h(REV['texto']), rail(rv, 'Avaliações'), link)
-    body = hero + statement + publicos + mq + areas + escr + timeline() + image_ribbon() + metodo + conteudo + rev + faq_section() + cta_band()
+    body = hero + statement + brasil + publicos + mq + areas + escr + timeline() + image_ribbon() + conduta_section() + conteudo + reviews_section() + faq_section() + cta_band()
     sch = [{'@type': 'WebPage', '@id': BASE + '/#pagina', 'url': BASE + '/', 'name': 'Advogado de Direito da Saúde', 'isPartOf': {'@id': BASE + '/#site'}, 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, faq_ld()]
-    page('/', 'Advogado de Direito da Saúde | %s' % NOME, 'Advocacia especializada em Direito da Saúde: orientação a médicos, dentistas e profissionais da saúde e defesa de pacientes e beneficiários de planos de saúde.',
-         body, schema=sch, preload=('/assets/img/luiz-fernando-neves-hero.webp', '(min-width:761px)'), prio='1.0', freq='weekly')
+    page('/', 'Advogado de Direito da Saúde | %s' % NOME, 'Advocacia dedicada ao Direito da Saúde: orientação a médicos, dentistas e profissionais da saúde e defesa de pacientes e beneficiários de planos de saúde. Atendimento em todo o Brasil.',
+         body, schema=sch, preload=(ds[0]['imagem'],) if ds and ds[0].get('imagem') else None, prio='1.0', freq='weekly')
+
+
+def conduta_section():
+    cards = ''.join('<li class="cd-card"><span class="cd-n">0%d</span><h3>%s</h3><p>%s</p></li>' % (i + 1, h(p['titulo']), h(p['texto'])) for i, p in enumerate(HM['metodo_passos']))
+    return '''<section class="sec sec-verde conduta">%s<div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Nosso método</p>%s</div>
+<div class="cd-btns"><button class="cd-prev" aria-label="Anterior">%s</button><button class="cd-next" aria-label="Próximo">%s</button></div></header>
+<div class="cd-viewport" data-autoslide><ol class="cd-track">%s</ol></div><div class="cd-bar" aria-hidden="true"><i></i></div></div></section>''' % (mono('mono-anim metodo-mono'), split_title(HM['metodo_titulo'], 'h2', 'display'), ARROW_L, ARROW, cards)
+
+
+def reviews_section():
+    link = REV.get('link_avaliar') or S.get('google_avaliacoes_url', '')
+    itens = REV.get('itens') or []
+    inner = ''
+    if itens:
+        rv = ''.join('<figure class="rev reveal"><div class="stars" role="img" aria-label="%s de 5 estrelas">%s</div><blockquote>%s</blockquote><figcaption>%s</figcaption></figure>' % (h(r.get('nota', 5)), '★' * int(float(r.get('nota', 5))), h(r['texto']), h(r['autor'])) for r in itens)
+        inner = rail(rv, 'Avaliações')
+    gl = '<svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.3 5.7c4.3-4 7-9.9 7-17.1z"/><path fill="#FBBC05" d="M10.5 28.8A14.5 14.5 0 0 1 9.5 24c0-1.7.3-3.3.9-4.8l-7.9-6.2A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-5.9z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.3-5.7c-2 1.4-4.7 2.3-8.6 2.3-6.3 0-11.6-4.2-13.5-9.9l-7.9 5.9C6.6 42.6 14.6 48 24 48z"/></svg>'
+    return '''<section class="sec sec-sand reviews" id="avaliacoes"><div class="wrap">
+<div class="rv-card reveal">%s<div class="rv-copy"><p class="eyebrow">Google</p>%s<p>%s</p></div>
+<div class="rv-act"><span class="g-stars" aria-hidden="true">★★★★★</span><a class="btn btn-solid" href="%s" target="_blank" rel="noopener" data-cta="avaliar-google">Avaliar no Google %s</a></div></div>
+%s</div></section>''' % (gl, split_title(REV.get('titulo', 'Avaliações no Google'), 'h2', 'display'), h(REV.get('texto', '')), h(link), ARROW, inner)
 
 
 def faq_section():
@@ -602,39 +638,54 @@ def faq_ld():
 
 def timeline():
     its = ''
-    for t in OF['linha_do_tempo']:
-        its += '<li class="htl-i t-%s"><span class="htl-y">%s</span><span class="htl-dot" aria-hidden="true"></span><div class="htl-card"><p class="htl-p">%s</p><h3>%s</h3><p class="htl-inst">%s</p></div></li>' % (t['cor'], h(t['ano']), h(t['periodo']), h(t['titulo']), h(t['instituicao']))
-    return '''<section class="htl" id="trajetoria" data-htl><div class="htl-pin">
-  <div class="htl-head"><p class="eyebrow">Linha do tempo</p><h2 class="display" data-split>%s</h2><p data-fade>%s</p><span class="htl-progress" aria-hidden="true"><i data-htl-bar></i></span><p class="htl-hint" data-fade>Role para percorrer</p></div>
+    for i, t in enumerate(OF['linha_do_tempo']):
+        its += '<li class="htl-i t-%s"><span class="htl-y">%02d</span><span class="htl-dot" aria-hidden="true"></span><div class="htl-card"><p class="htl-p">%s</p><h3>%s</h3><p class="htl-inst">%s</p></div></li>' % (t['cor'], i + 1, h(t.get('tipo', '')), h(t['titulo']), h(t['instituicao']))
+    return '''<section class="htl htl-v2" id="trajetoria" data-htl><div class="htl-pin">
+  <div class="htl-head"><p class="eyebrow">Trajetória</p><h2 class="display" data-split>%s</h2><p data-fade>%s</p><span class="htl-progress" aria-hidden="true"><i data-htl-bar></i></span><p class="htl-hint" data-fade>Role para percorrer</p></div>
   <p class="htl-swipe" aria-hidden="true"><span class="hand"></span>Arraste para o lado <svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></p>
   <div class="htl-wrap"><ol class="htl-track" data-htl-track style="--n:%d">%s</ol></div>
 </div></section>''' % (h(OF['linha_titulo']), h(OF['linha_texto']), len(OF['linha_do_tempo']), its)
 
 
+def office_faq():
+    its = OF.get('faq') or []
+    if not its:
+        return ''
+    html_ = ''.join('<details class="reveal"><summary><span class="faq-n">%02d</span><span class="faq-q">%s</span></summary><div class="faq-a prose-j">%s</div></details>' % (i + 1, h(f['pergunta']), md(f['resposta'])) for i, f in enumerate(its))
+    return '''<section class="sec sec-faq" id="perguntas-frequentes"><div class="wrap faq-grid"><header class="sec-h sticky"><p class="eyebrow reveal">Dúvidas sobre o escritório</p>%s<p class="reveal">Como funciona o atendimento, onde atuamos e o que esperar de cada etapa.</p><a class="btn btn-solid reveal" href="%s" target="_blank" rel="noopener" data-wa="faq-escritorio">Tirar uma dúvida %s</a></header><div class="faq">%s</div></div></section>''' % (
+        split_title(OF.get('faq_titulo', 'Perguntas frequentes'), 'h2', 'display'), h(wa()), ARROW, html_)
+
+
+def office_faq_ld():
+    return {'@type': 'FAQPage', '@id': abs_url('/o-escritorio/') + '#faq', 'mainEntity': [{'@type': 'Question', 'name': f['pergunta'], 'acceptedAnswer': {'@type': 'Answer', 'text': plain(f['resposta'])}} for f in OF.get('faq') or []]}
+
+
 def build_office():
     o = OF
     forms = ''.join('<div class="form-col reveal"><h3>%s</h3><ul class="checks">%s</ul></div>' % (h(g['titulo']), ''.join('<li>%s</li>' % h(i) for i in g['itens'])) for g in o['formacao'])
-    princ = ''.join('<div class="princ reveal"><span class="princ-n">0%d</span><p>%s</p></div>' % (i + 1, h(t)) for i, t in enumerate(o['principios']))
-    body = page_hero('O escritório', o['titulo'], o['subtitulo'], [('Início', '/'), ('O escritório', None)], 'verde', '/assets/img/luiz-fernando-neves-hero.webp', 'Luiz Fernando Neves em seu escritório') + '''
+    body = page_hero('O escritório', o['titulo'], o['subtitulo'], [('Início', '/'), ('O escritório', None)], 'verde', '/assets/img/fernando/perfil-mesa-2.webp', 'Luiz Fernando Neves em seu escritório') + '''
 <section class="sec"><div class="wrap prose-grid">
-  <div class="prose"><p class="eyebrow reveal">Atuação</p>%s%s</div>
+  <div class="prose prose-j"><p class="eyebrow reveal">Atuação</p>%s%s</div>
   <div class="duo"><figure class="duo-a" data-reveal><div class="pin-in" data-speed="-0.1">%s</div></figure><figure class="duo-b" data-reveal><div class="pin-in" data-speed="-0.14">%s</div></figure>%s%s</div>
 </div></section>
-<section class="quote-band"><div class="stripes" aria-hidden="true"></div><div class="wrap"><blockquote class="reveal">%s</blockquote><p class="reveal">%s, OAB/%s</p></div></section>
+<section class="quote-band"><div class="stripes" aria-hidden="true"></div><div class="wrap"><blockquote class="statement-q" data-words>%s</blockquote><p class="reveal">%s</p></div></section>
 <section class="sec sec-sand adv"><div class="wrap two">
-  <header class="sec-h sticky"><p class="eyebrow reveal">Advogado</p>%s<div class="adv-tags reveal"><span class="t-verde">Direito da Saúde</span><span class="t-verde">Direito Médico</span><span class="t-verde">Direito Odontológico</span><span class="t-azul">Processo Civil</span></div></header>
-  <div class="prose">%s</div>
+  <header class="sec-h sticky"><p class="eyebrow reveal">Advogado</p>%s<figure class="adv-photo" data-reveal>%s</figure><div class="adv-tags reveal"><span class="t-verde">Direito da Saúde</span><span class="t-verde">Direito Médico</span><span class="t-verde">Direito Odontológico</span><span class="t-azul">Processo Civil</span></div></header>
+  <div class="prose prose-j">%s</div>
 </div></section>
 %s
-<section class="sec sec-sand"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Princípios</p>%s</header><div class="princs">%s</div></div></section>
-<section class="sec"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Atualização constante</p>%s</header><div class="form-cols">%s</div></div></section>''' % (
+%s
+<section class="sec"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Atualização constante</p>%s</header><div class="form-cols">%s</div></div></section>
+%s''' % (
         split_title('Direito da Saúde, do conflito à prevenção', 'h2', 'display'), ''.join('<p class="reveal">%s</p>' % h(t) for t in o['texto']),
-        img_tag('/assets/img/processo-etico-crm.webp', 'Profissional da saúde analisando documentos', sizes='(max-width:900px) 60vw, 340px'), img_tag('/assets/img/plano-saude-idosos.webp', 'Paciente em atendimento médico', sizes='(max-width:900px) 60vw, 300px'), badge('Rigor técnico · Estratégia · Proximidade · '), mono('mono-anim duo-mono'),
-        h(o['destaque_frase']), h(S['advogado']), h(S['oab_uf']),
-        split_title(o['advogado_titulo'], 'h2', 'display'), ''.join('<p class="reveal">%s</p>' % h(t) for t in o['advogado_texto']),
-        timeline(), split_title(o['principios_titulo'], 'h2', 'display'), princ, split_title(o['formacao_titulo'], 'h2', 'display'), forms) + cta_band()
+        img_tag('/assets/img/fernando/perfil-leitura.webp', 'Luiz Fernando Neves lendo um livro de Direito Médico', sizes='(max-width:900px) 60vw, 340px'), img_tag('/assets/img/fernando/perfil-sofa.webp', 'Luiz Fernando Neves no escritório', sizes='(max-width:900px) 60vw, 300px'), badge('Rigor técnico · Estratégia · Proximidade · '), mono('mono-anim duo-mono'),
+        h(o['destaque_frase']), h(S['advogado']),
+        split_title(o['advogado_titulo'], 'h2', 'display'), img_tag('/assets/img/fernando/perfil-em-pe.webp', 'Luiz Fernando Neves, advogado', sizes='(max-width:900px) 70vw, 360px'), ''.join('<p class="reveal">%s</p>' % h(t) for t in o['advogado_texto']),
+        timeline(), conduta_section(), split_title(o['formacao_titulo'], 'h2', 'display'), forms, office_faq()) + cta_band()
     sch = [{'@type': 'AboutPage', 'url': abs_url('/o-escritorio/'), 'name': o['titulo'], 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('O escritório', '/o-escritorio/')])]
-    page('/o-escritorio/', 'O escritório de Direito da Saúde | Luiz Fernando Neves', 'Conheça o escritório e o advogado Luiz Fernando Neves: atuação em Direito da Saúde, formação em Direito Médico e atendimento individualizado.', body, '/o-escritorio/', sch, og_image='/assets/img/luiz-fernando-neves-hero.webp', prio='0.8')
+    if o.get('faq'):
+        sch.append(office_faq_ld())
+    page('/o-escritorio/', 'O escritório de Direito da Saúde | Luiz Fernando Neves', 'Conheça o escritório e o advogado Luiz Fernando Neves: atuação em Direito da Saúde, formação em Direito Médico e atendimento em todo o Brasil.', body, '/o-escritorio/', sch, og_image='/assets/img/fernando/perfil-mesa.webp', prio='0.8')
 
 
 def side(title, items_html, cor, wa_msg, label):
@@ -642,36 +693,67 @@ def side(title, items_html, cor, wa_msg, label):
         cor, h(title), items_html, mono('mono-static side-mono'), h(wa(wa_msg)), label, ARROW)
 
 
+def area_card(a):
+    its = ''.join('<li>%s</li>' % inline(i) for i in a['itens'][:3])
+    u = slug_path('areas-de-atuacao', a['slug'])
+    return '''<article class="area-card t-%s reveal" id="%s"><a class="area-img" href="%s" tabindex="-1" aria-hidden="true">%s</a><div class="area-body"><span class="area-n">%s <i>%s</i></span><h3><a href="%s">%s</a></h3><p class="area-sub">%s</p><ul>%s</ul><a class="more" href="%s">Ver detalhes %s</a></div></article>''' % (
+        a['cor'], h(a['slug']), u, img_tag(a.get('imagem'), '', sizes='(max-width:700px) 92vw, 560px'), h(a['numero']), 'Saúde' if a['cor'] == 'verde' else 'Civil e consumidor', u, h(a['titulo_curto']), h(a.get('chamada') or a['subtitulo']), its, u, ARROW)
+
+
+def related_for_area(a):
+    cat = a.get('categoria_artigos')
+    rel = [x for x in ARTIGOS if cat and x['categoria'] == cat]
+    if a['slug'] == 'consultoria-juridica-preventiva':
+        rel = [x for x in ARTIGOS if any(k in x['slug'] for k in ('prontuario', 'consentimento', 'publicidade', 'descredenciamento'))]
+    if a['cor'] == 'azul':
+        rel = [x for x in ARTIGOS if x['categoria'] == 'Plano de saúde']
+    rel = rel + [x for x in ARTIGOS if x not in rel]
+    return rel
+
+
 def build_areas():
-    cards = ''
-    for a in AREAS:
-        its = ''.join('<li>%s</li>' % h(i) for i in a['itens'][:3])
-        u = slug_path('areas-de-atuacao', a['slug'])
-        cards += '''<article class="area-card t-%s reveal" id="%s"><a class="area-img" href="%s" tabindex="-1" aria-hidden="true">%s</a><div class="area-body"><span class="area-n">%s <i>%s</i></span><h2><a href="%s">%s</a></h2><p class="area-sub">%s</p><ul>%s</ul><a class="more" href="%s">Ver detalhes %s</a></div></article>''' % (
-            a['cor'], h(a['slug']), u, img_tag(a.get('imagem'), '', sizes='(max-width:700px) 92vw, 560px'), h(a['numero']), 'Saúde' if a['cor'] == 'verde' else 'Civil e consumidor', u, h(a['titulo_curto']), h(a['subtitulo']), its, u, ARROW)
-    body = page_hero('Áreas de atuação', 'Oito frentes de atuação em Direito da Saúde e relações de consumo', 'Da saúde suplementar ao direito civil, cada caso começa pela análise da documentação e termina com uma estratégia clara.', [('Início', '/'), ('Áreas de atuação', None)], 'verde', '/assets/img/plano-saude-negativa.webp') + '<section class="sec"><div class="wrap"><div class="sec-h">%s</div><div class="area-cards">%s</div></div></section>' % (legend(), cards) + cta_band()
+    grupos = [('saude', 'Saúde', 'verde', 'Direito à saúde, planos de saúde, direito médico e odontológico e consultoria preventiva.'), ('civil-e-consumidor', 'Civil e consumidor', 'azul', 'Relações de consumo, contratos, cobranças e responsabilidade civil.')]
+    secs = ''
+    for gid, gt, gc, gd in grupos:
+        cards = ''.join(area_card(a) for a in AREAS if a['cor'] == gc)
+        secs += '<div class="area-group t-%s" id="%s"><header class="ag-h"><span class="lg t-%s"><i></i>%s</span><p>%s</p></header><div class="area-cards">%s</div></div>' % (gc, gid, gc, h(gt), h(gd), cards)
+    n = {4: 'Quatro', 5: 'Cinco', 6: 'Seis', 7: 'Sete', 8: 'Oito'}.get(len(AREAS), str(len(AREAS)))
+    body = page_hero('Áreas de atuação', '%s frentes de atuação em Direito da Saúde e relações civis' % n, 'Do Direito à Saúde ao Direito Civil, cada caso começa pela análise da documentação e termina com uma estratégia clara.', [('Início', '/'), ('Áreas de atuação', None)], 'verde', '/assets/img/artigos/plano-de-saude-negou-tratamento.webp') + '<section class="sec"><div class="wrap">%s</div></section>' % secs + cta_band()
     sch = [{'@type': 'CollectionPage', 'url': abs_url('/areas-de-atuacao/'), 'name': 'Áreas de atuação', 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Áreas de atuação', '/areas-de-atuacao/')]),
            {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': a['titulo'], 'url': abs_url(slug_path('areas-de-atuacao', a['slug']))} for i, a in enumerate(AREAS)]}]
-    page('/areas-de-atuacao/', 'Áreas de atuação em Direito da Saúde | Luiz Fernando Neves', 'Plano de saúde, direito à saúde, direito médico e odontológico, erro médico, consultoria preventiva, direito do consumidor e civil. Conheça as áreas de atuação.', body, '/areas-de-atuacao/', sch, prio='0.9')
+    page('/areas-de-atuacao/', 'Áreas de atuação em Direito da Saúde | Luiz Fernando Neves', 'Direito à saúde e planos de saúde, direito médico e odontológico, consultoria jurídica preventiva, direito do consumidor e direito civil. Atendimento em todo o Brasil.', body, '/areas-de-atuacao/', sch, prio='0.9')
     for a in AREAS:
         path = slug_path('areas-de-atuacao', a['slug'])
-        cat = CATEGORIA_AREA.get(a['slug'])
-        rel = [x for x in ARTS if x['categoria'] == cat] if cat else []
-        rel = rel + [x for x in ARTS if x not in rel and CAT_COR.get(x['categoria']) == a['cor']]
-        rel = rel + [x for x in ARTS if x not in rel]
+        rel = related_for_area(a)
         relh = '<section class="sec sec-sand"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Leia também</p>%s</header>%s</div></section>' % (split_title('Artigos sobre o tema', 'h2', 'display'), rail(''.join(article_card(x) for x in rel[:6]), 'Artigos relacionados'))
         outras = ''.join('<li class="t-%s"><a href="%s"%s><i></i>%s</a></li>' % (o['cor'], slug_path('areas-de-atuacao', o['slug']), ' aria-current="page"' if o['slug'] == a['slug'] else '', h(o['titulo_curto'])) for o in AREAS)
         msg = 'Olá, vim pelo site e gostaria de falar sobre: %s.' % a['titulo']
+        intro = ('<h2 class="h-md reveal">%s</h2>' % h(a['intro_titulo'])) if a.get('intro_titulo') else ''
+        blocos = ''
+        for b in a.get('blocos') or []:
+            inner = ''.join('<p>%s</p>' % inline(t) for t in b.get('paragrafos', []))
+            if b.get('itens'):
+                tag = 'ol' if b.get('numerada') else 'ul'
+                inner += '<%s class="%s">%s</%s>' % (tag, 'numlist' if b.get('numerada') else 'checks', ''.join('<li>%s</li>' % inline(i) for i in b['itens']), tag)
+            blocos += '<div class="area-bloco prose-j reveal"><h2 class="h-sm">%s</h2>%s</div>' % (h(b['titulo']), inner)
+        destaque = ''
+        if a.get('destaque'):
+            destaque = '<div class="area-destaque t-%s">%s<p class="statement-q" data-words>%s</p></div>' % (a['cor'], mono('mono-anim ad-mono'), h(a['destaque']))
+        final = ''.join('<p class="reveal">%s</p>' % inline(t) for t in a.get('paragrafos_final') or [])
+        final = ('<div class="prose prose-j area-final">%s</div>' % final) if final else ''
+        bloco_pos = a['slug'] == 'direito-a-saude'
+        listbox = '<div class="list-box reveal"><h2 class="h-sm">%s</h2><ul class="checks">%s</ul></div>' % (h(a['rotulo_lista'].rstrip(':') or 'Principais situações'), ''.join('<li>%s</li>' % inline(i) for i in a['itens']))
+        main = '<div class="prose prose-j">%s%s</div>' % (intro, ''.join('<p class="reveal">%s</p>' % inline(p) for p in a['paragrafos']))
+        main += (listbox + blocos) if bloco_pos else (blocos + listbox)
+        main += destaque + final
         body = page_hero('Área de atuação %s' % a['numero'], a['titulo'], a['subtitulo'], [('Início', '/'), ('Áreas de atuação', '/areas-de-atuacao/'), (a['titulo_curto'], None)], a['cor'], a.get('imagem')) + '''
 <section class="sec t-%s"><div class="wrap detail-grid">
   <div class="detail-main">
-    <div class="prose">%s</div>
-    <div class="list-box reveal"><h2 class="h-sm">%s</h2><ul class="checks">%s</ul></div>
+    %s
     <div class="reveal">%s</div>
   </div>
   %s
-</div></section>%s''' % (a['cor'], ''.join('<p class="reveal">%s</p>' % h(p) for p in a['paragrafos']), h(a['rotulo_lista'].rstrip(':') or 'Principais situações'), ''.join('<li>%s</li>' % h(i) for i in a['itens']),
-            cta_inline(a['cta'], msg, 'area-cta'), side('Outras áreas', outras, a['cor'], msg, 'area'), relh) + cta_band(cor=a['cor'])
+</div></section>%s''' % (a['cor'], main, cta_inline(a['cta'], msg, 'area-cta'), side('Outras áreas', outras, a['cor'], msg, 'area'), relh) + cta_band(cor=a['cor'])
         sch = [{'@type': 'Service', '@id': abs_url(path) + '#servico', 'name': a['titulo'], 'serviceType': a['titulo'], 'description': a['descricao_seo'], 'url': abs_url(path), 'provider': {'@id': BASE + '/#organizacao'}, 'areaServed': {'@type': 'Country', 'name': 'Brasil'}, 'inLanguage': 'pt-BR'},
                breadcrumb([('Início', '/'), ('Áreas de atuação', '/areas-de-atuacao/'), (a['titulo_curto'], path)])]
         page(path, '%s | Luiz Fernando Neves' % a['titulo'], a['descricao_seo'], body, '/areas-de-atuacao/', sch, og_image=a.get('imagem'), prio='0.8')
@@ -682,7 +764,7 @@ def build_publics():
     for i, p in enumerate(PUBS):
         cards += '''<a class="pub t-%s reveal" href="%s">%s<span class="pub-shade"></span><span class="pub-n">0%d</span><span class="pub-c"><span class="pub-k">%s</span><h2>%s</h2><p>%s</p><span class="more">Saiba mais %s</span></span></a>''' % (
             p['cor'], slug_path('para-quem-atuamos', p['slug']), img_tag(p.get('imagem'), '', sizes='(max-width:900px) 92vw, 400px'), i + 1, 'Saúde' if p['cor'] == 'verde' else 'Civil e consumidor', h(p['titulo_curto']), h(p['resumo']), ARROW)
-    body = page_hero('Para quem atuamos', 'Três frentes de atendimento, um mesmo cuidado com cada caso', 'Profissionais da saúde, pacientes e beneficiários de planos de saúde e clientes de direito civil e do consumidor.', [('Início', '/'), ('Para quem atuamos', None)], 'verde', '/assets/img/plano-saude-idosos.webp') + '<section class="sec"><div class="wrap"><div class="sec-h">%s</div><div class="pubs">%s</div></div></section>' % (legend(), cards) + faq_section() + cta_band()
+    body = page_hero('Para quem atuamos', 'Três frentes de atendimento, um mesmo cuidado com cada caso', 'Soluções jurídicas estratégicas para profissionais da saúde, pacientes, beneficiários de planos de saúde e pessoas físicas e jurídicas.', [('Início', '/'), ('Para quem atuamos', None)], 'verde', '/assets/img/artigos/plano-de-saude-para-idosos.webp') + '<section class="sec"><div class="wrap"><div class="pubs">%s</div></div></section>' % cards + faq_section() + cta_band()
     sch = [{'@type': 'CollectionPage', 'url': abs_url('/para-quem-atuamos/'), 'name': 'Para quem atuamos', 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Para quem atuamos', '/para-quem-atuamos/')]), faq_ld()]
     page('/para-quem-atuamos/', 'Para quem atuamos | Luiz Fernando Neves Advocacia', 'Advocacia para profissionais da saúde, pacientes e beneficiários de planos de saúde e clientes de direito civil e do consumidor.', body, '/para-quem-atuamos/', sch, prio='0.8')
     for p in PUBS:
@@ -699,15 +781,18 @@ def build_publics():
                 inner += '<%s class="%s">%s</%s>' % (tag, 'numlist' if s.get('numerada') else 'checks', ''.join('<li>%s</li>' % h(i) for i in s['itens']), tag)
             if s.get('paragrafos'):
                 inner += ''.join('<p>%s</p>' % h(t) for t in s['paragrafos'])
-            secs += '<section class="pub-sec%s reveal"><h2>%s</h2>%s</section>' % (' pub-destaque' if s.get('destaque') else '', h(s['titulo']), inner)
+            secs += '<section class="pub-sec prose-j%s reveal"><h2>%s</h2>%s</section>' % (' pub-destaque' if s.get('destaque') else '', h(s['titulo']), inner)
         outros = ''.join('<li class="t-%s"><a href="%s"%s><i></i>%s</a></li>' % (o['cor'], slug_path('para-quem-atuamos', o['slug']), ' aria-current="page"' if o['slug'] == p['slug'] else '', h(o['titulo_curto'])) for o in PUBS)
         msg = 'Olá, vim pelo site (%s) e gostaria de agendar uma consulta.' % p['titulo_curto']
-        rel = [x for x in ARTS if CAT_COR.get(x['categoria']) == p['cor']]
-        rel = (rel + [x for x in ARTS if x not in rel])[:6]
+        if p['slug'] == 'profissionais-da-saude':
+            rel = [x for x in ARTIGOS if x['categoria'] in ('Direito Médico', 'Direito Odontológico')]
+        else:
+            rel = [x for x in ARTIGOS if x['categoria'] == 'Plano de saúde']
+        rel = (rel + [x for x in ARTIGOS if x not in rel])[:6]
         relh = '<section class="sec sec-sand"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Leia também</p>%s</header>%s</div></section>' % (split_title('Conteúdos para você', 'h2', 'display'), rail(''.join(article_card(x) for x in rel), 'Artigos')) if rel else ''
         body = page_hero(p['eyebrow'], p['titulo'], None, [('Início', '/'), ('Para quem atuamos', '/para-quem-atuamos/'), (p['titulo_curto'], None)], p['cor'], p.get('imagem')) + '''
 <section class="sec t-%s"><div class="wrap detail-grid">
-  <div class="detail-main"><div class="prose lead-prose">%s</div>%s%s</div>
+  <div class="detail-main"><div class="prose lead-prose prose-j">%s</div>%s%s</div>
   %s
 </div></section>%s''' % (p['cor'], ''.join('<p class="reveal">%s</p>' % h(t) for t in p['intro']), secs, cta_inline(p['cta'], msg, 'publico-cta'), side('Outros atendimentos', outros, p['cor'], msg, 'publico'), relh) + cta_band(cor=p['cor'])
         sch = [{'@type': 'WebPage', 'url': abs_url(path), 'name': p['eyebrow'], 'description': p['descricao_seo'], 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Para quem atuamos', '/para-quem-atuamos/'), (p['titulo_curto'], path)])]
@@ -715,54 +800,79 @@ def build_publics():
 
 
 def build_articles():
-    cats = []
-    for a in ARTS:
-        if a['categoria'] not in cats:
-            cats.append(a['categoria'])
-    chips = '<div class="chips" role="group" aria-label="Filtrar por tema"><button class="chip is-on" data-cat="">Todos</button>%s</div>' % ''.join('<button class="chip t-%s" data-cat="%s"><i></i>%s</button>' % (CAT_COR.get(c, 'verde'), h(c), h(c)) for c in cats)
-    cards = ''.join(article_card(a, ' data-cat="%s"' % h(a['categoria'])) for a in ARTS)
-    body = page_hero('Notícias e artigos', 'Informação jurídica clara sobre saúde, planos e direitos', 'Artigos sobre planos de saúde, direito médico e odontológico, erro médico e direitos de pacientes e profissionais.', [('Início', '/'), ('Conteúdo', None)], 'verde', '/assets/img/reajuste-plano-saude.webp') + '<section class="sec"><div class="wrap">%s%s</div></section>' % (chips, rail(cards, 'Artigos', 'lista-artigos')) + image_ribbon() + cta_band()
-    sch = [{'@type': 'CollectionPage', 'url': abs_url('/conteudo/'), 'name': 'Notícias e artigos', 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Conteúdo', '/conteudo/')]),
-           {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': a['titulo'], 'url': abs_url(slug_path('conteudo', a['slug']))} for i, a in enumerate(ARTS)]}]
-    page('/conteudo/', 'Notícias e artigos sobre Direito da Saúde | Luiz Fernando Neves', 'Artigos sobre plano de saúde, reajustes, home care, bariátrica, direito médico e odontológico, erro veterinário e mais, com linguagem clara.', body, '/conteudo/', sch, prio='0.8', freq='weekly')
+    def chips_for(lista, gid):
+        cats = []
+        for a in lista:
+            if a['categoria'] not in cats:
+                cats.append(a['categoria'])
+        return '<div class="chips" role="group" aria-label="Filtrar por tema" data-for="%s"><button class="chip is-on" data-cat="">Todos</button>%s</div>' % (gid, ''.join('<button class="chip t-%s" data-cat="%s"><i></i>%s</button>' % (CAT_COR.get(c, 'verde'), h(c), h(c)) for c in cats))
+    art_cards = ''.join(article_card(a, ' data-cat="%s"' % h(a['categoria'])) for a in ARTIGOS)
+    not_cards = ''.join(article_card(a, ' data-cat="%s"' % h(a['categoria'])) for a in NOTICIAS)
+    tabs = '''<div class="ct-tabs" role="tablist" aria-label="Tipo de conteúdo"><a class="ct-tab is-on" href="#artigos">Artigos completos <span>%d</span></a><a class="ct-tab" href="#noticias">Notícias e resumos <span>%d</span></a></div>''' % (len(ARTIGOS), len(NOTICIAS))
+    secs = '''<section class="sec" id="artigos"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Artigos</p>%s<p class="reveal">Conteúdos completos, com o passo a passo, os documentos e as perguntas mais comuns de cada tema.</p></div></header>%s%s</div></section>''' % (
+        split_title('Artigos completos', 'h2', 'display'), chips_for(ARTIGOS, 'lista-artigos'), rail(art_cards, 'Artigos', 'lista-artigos'))
+    if NOTICIAS:
+        secs += '''<section class="sec sec-sand" id="noticias"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Notícias</p>%s<p class="reveal">Leituras rápidas sobre os temas em destaque, com link para o artigo completo quando houver.</p></div></header>%s</div></section>''' % (
+            split_title('Notícias e resumos', 'h2', 'display'), rail(not_cards, 'Notícias', 'lista-noticias'))
+    body = page_hero('Conteúdo', 'Informação jurídica clara sobre saúde, planos e direitos', 'Artigos e notícias sobre planos de saúde, direito médico e odontológico e os direitos de pacientes e profissionais da saúde.', [('Início', '/'), ('Conteúdo', None)], 'verde', '/assets/img/artigos/reajuste-abusivo-plano-de-saude.webp') + '<div class="wrap">%s</div>' % tabs + secs + image_ribbon() + cta_band()
+    sch = [{'@type': 'CollectionPage', 'url': abs_url('/conteudo/'), 'name': 'Artigos e notícias', 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Conteúdo', '/conteudo/')]),
+           {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': a['titulo'], 'url': abs_url(slug_path('conteudo', a['slug']))} for i, a in enumerate(ARTIGOS)]}]
+    page('/conteudo/', 'Artigos e notícias sobre Direito da Saúde | Luiz Fernando Neves', 'Artigos sobre plano de saúde, reajustes, home care, bariátrica, processo ético no CRM e CRO, prontuário, consentimento e publicidade de médicos e dentistas.', body, '/conteudo/', sch, prio='0.8', freq='weekly')
     for a in ARTS:
         path = slug_path('conteudo', a['slug'])
         cor = CAT_COR.get(a['categoria'], 'verde')
-        words = len(plain(a['texto']).split())
+        words = len(plain(a['texto']).split()) + sum(len((f['pergunta'] + ' ' + f['resposta']).split()) for f in a.get('faq') or [])
         mins = max(1, round(words / 200))
-        rel = [x for x in ARTS if x['slug'] != a['slug'] and x['categoria'] == a['categoria']]
-        rel += [x for x in ARTS if x['slug'] != a['slug'] and x not in rel]
+        is_art = a['tipo'] == 'artigo'
+        pool = ARTIGOS if is_art else ARTS
+        rel = [x for x in pool if x['slug'] != a['slug'] and x['categoria'] == a['categoria'] and x['slug'] != a.get('artigo_completo')]
+        rel += [x for x in ARTIGOS if x['slug'] != a['slug'] and x not in rel]
         cover = '<figure class="art-cover reveal">%s</figure>' % img_tag(a['imagem'], a['titulo'], eager=True, sizes='(max-width:900px) 92vw, 760px') if a.get('imagem') else ''
         msg = 'Olá, li o artigo “%s” e gostaria de agendar uma consulta.' % a['titulo']
         cta = cta_inline(a['cta'], msg, 'artigo-cta') if a.get('cta') else ''
         areas_l = ''.join('<li class="t-%s"><a href="%s"><i></i>%s</a></li>' % (x['cor'], slug_path('areas-de-atuacao', x['slug']), h(x['titulo_curto'])) for x in AREAS)
+        resumo_box = '<div class="art-resumo reveal"><p class="art-resumo-h">Resposta rápida</p><p>%s</p></div>' % h(a['resumo']) if is_art else ''
+        faq = ''
+        if a.get('faq'):
+            faq = '<section class="art-faq"><h2>Perguntas frequentes</h2><div class="faq">%s</div></section>' % ''.join(
+                '<details><summary><span class="faq-n">%02d</span><span class="faq-q">%s</span></summary><div class="faq-a"><p>%s</p></div></details>' % (i + 1, h(f['pergunta']), inline(f['resposta'])) for i, f in enumerate(a['faq']))
+        completo = ''
+        canon = None
+        if a.get('artigo_completo'):
+            full = next((x for x in ARTIGOS if x['slug'] == a['artigo_completo']), None)
+            if full:
+                canon = slug_path('conteudo', full['slug'])
+                completo = '<a class="art-full reveal" href="%s"><span class="tag">Artigo completo</span><strong>%s</strong><span>Passo a passo, documentos e perguntas frequentes %s</span></a>' % (canon, h(full['titulo']), ARROW)
+        tipo_l = 'Artigo' if is_art else 'Notícia'
         body = '''<article class="art t-%s">
 <header class="art-head"><div class="stripes" aria-hidden="true"></div>%s<div class="wrap narrow"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/conteudo/">Conteúdo</a></li><li><span aria-current="page">%s</span></li></ol></nav>
-<p class="tag"><i aria-hidden="true"></i>%s</p>%s
+<p class="tag"><i aria-hidden="true"></i>%s · %s</p>%s
 <p class="art-meta"><span>Por %s</span> <span aria-hidden="true">·</span> <time datetime="%s">%s</time> <span aria-hidden="true">·</span> <span>%d min de leitura</span></p></div></header>
-<div class="wrap art-grid"><div class="art-main">%s<div class="prose art-body">%s</div>%s
-<p class="disclaimer">Este conteúdo tem caráter informativo e não substitui a análise individual do seu caso por um advogado.</p></div>
+<div class="wrap art-grid"><div class="art-main">%s%s<div class="prose art-body prose-j">%s</div>%s%s%s
+<p class="disclaimer">Este conteúdo tem caráter informativo e não substitui a análise do seu caso por um advogado. A legislação e as normas podem ser atualizadas, por isso confira sempre a versão em vigor.</p></div>
 %s</div>
 </article>
 <section class="sec sec-sand"><div class="wrap"><header class="sec-h"><p class="eyebrow reveal">Continue lendo</p>%s</header>%s</div></section>''' % (
-            cor, mono('mono-anim ph-mono'), h(cut(a['titulo'], 60)), h(a['categoria']), split_title(a['titulo'], 'h1', 'display'), h(S['advogado']), h(a['data']), h(fmt_date(a['data'])), mins, cover, md(a['texto']), cta,
+            cor, mono('mono-anim ph-mono'), h(cut(a['titulo'], 60)), tipo_l, h(a['categoria']), split_title(a['titulo'], 'h1', 'display'), h(S['advogado']), h(a['data']), h(fmt_date(a['data'])), mins, cover, resumo_box, md(a['texto']), faq, completo, cta,
             side('Áreas de atuação', areas_l, cor, msg, 'artigo'), split_title('Outros artigos', 'h2', 'display'), rail(''.join(article_card(x) for x in rel[:6]), 'Outros artigos')) + cta_band(cor=cor)
         img = a['imagem'] if a.get('imagem') else '/assets/img/og-default.jpg'
-        sch = [{'@type': 'Article', '@id': abs_url(path) + '#artigo', 'headline': a['titulo'], 'description': cut(a['resumo'], 200), 'inLanguage': 'pt-BR', 'datePublished': a['data'], 'dateModified': a.get('atualizado', a['data']),
-                'author': {'@id': BASE + '/#advogado'}, 'publisher': {'@id': BASE + '/#organizacao'}, 'mainEntityOfPage': abs_url(path), 'articleSection': a['categoria'], 'image': abs_url(img), 'wordCount': words},
+        sch = [{'@type': 'Article' if is_art else 'NewsArticle', '@id': abs_url(path) + '#artigo', 'headline': a['titulo'], 'description': cut(a['resumo'], 200), 'inLanguage': 'pt-BR', 'datePublished': a['data'], 'dateModified': a.get('atualizado', a['data']),
+                'author': {'@id': BASE + '/#advogado'}, 'publisher': {'@id': BASE + '/#organizacao'}, 'mainEntityOfPage': abs_url(canon or path), 'articleSection': a['categoria'], 'image': abs_url(img), 'wordCount': words},
                breadcrumb([('Início', '/'), ('Conteúdo', '/conteudo/'), (a['titulo'], path)])]
+        if a.get('faq'):
+            sch.append({'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': f['pergunta'], 'acceptedAnswer': {'@type': 'Answer', 'text': f['resposta']}} for f in a['faq']]})
         t = cut(a['titulo'], 46) + ' | Luiz Fernando Neves'
-        page(path, t, cut(a['resumo'], 155), body, '/conteudo/', sch, og_image=img, og_type='article', lastmod=a['data'], prio='0.7')
+        page(path, t, cut(a['resumo'], 155), body, '/conteudo/', sch, og_image=img, og_type='article', lastmod=a['data'], prio='0.7' if is_art else '0.4', canonical=canon, sitemap=not canon)
 
 
 def build_contact():
-    areas = ['Plano de saúde', 'Direito à saúde', 'Direito médico', 'Direito odontológico', 'Erro médico, odontológico ou veterinário', 'Consultoria preventiva', 'Direito do consumidor', 'Direito civil', 'Outro assunto']
+    areas = [a['titulo_curto'].replace(' | ', ' e ') for a in AREAS] + ['Outro assunto']
     opts = ''.join('<option>%s</option>' % h(a) for a in areas)
     end = ''
     if S.get('endereco_cidade'):
         end = '<li><span>Endereço</span><strong>%s</strong></li>' % h(', '.join(x for x in (S.get('endereco_rua'), S.get('endereco_cidade'), S.get('endereco_uf'), S.get('endereco_cep')) if x))
     ig = ('<li><span>Instagram</span><a href="%s" target="_blank" rel="noopener me">%s</a></li>' % (h(S['instagram_url']), h(S.get('instagram_usuario', '')))) if S.get('instagram_url') else ''
-    body = page_hero('Contato', 'Agende uma consulta e receba uma orientação adequada ao seu caso', 'Conte brevemente sua situação. O atendimento é individualizado e respeita o ritmo e a urgência de cada pessoa.', [('Início', '/'), ('Contato', None)], 'verde', '/assets/img/luiz-fernando-neves-escritorio.webp') + '''
+    body = page_hero('Contato', 'Agende uma consulta e receba uma orientação adequada ao seu caso', 'Conte brevemente sua situação. O atendimento é individualizado e respeita o ritmo e a urgência de cada pessoa.', [('Início', '/'), ('Contato', None)], 'verde', '/assets/img/fernando/perfil-telefone.webp') + '''
 <section class="sec"><div class="wrap contact-grid">
   <div class="contact-info reveal"><h2 class="h-sm">Canais de atendimento</h2><ul class="info-list">
     <li><span>WhatsApp</span><a href="%(wa)s" target="_blank" rel="noopener" data-wa="contato">%(tel)s</a></li>
@@ -804,7 +914,7 @@ def build_files():
     rb += 'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nDisallow: /obrigado/\n\nSitemap: %s/sitemap.xml\n' % BASE
     write('/robots.txt', rb)
     # llms.txt
-    L = ['# %s' % NOME, '', '> Advocacia especializada em Direito da Saúde. Orientação jurídica a médicos, dentistas e profissionais da saúde e defesa dos direitos de pacientes e beneficiários de planos de saúde. Advogado: %s (OAB/%s). Atendimento em todo o Brasil por WhatsApp e e-mail.' % (S['advogado'], S['oab_uf']), '',
+    L = ['# %s' % NOME, '', '> Advocacia dedicada ao Direito da Saúde. Orientação jurídica a médicos, dentistas e profissionais da saúde e defesa dos direitos de pacientes e beneficiários de planos de saúde. Advogado: %s (OAB/%s). Atendimento em todo o Brasil por WhatsApp e e-mail.' % (S['advogado'], S['oab_uf']), '',
          'Contato: WhatsApp %s, e-mail %s.' % (S['telefone'], S['email']), '', '## Áreas de atuação', '']
     for a in AREAS:
         L.append('- [%s](%s): %s' % (a['titulo'], abs_url(slug_path('areas-de-atuacao', a['slug'])), a['descricao_seo']))
@@ -812,11 +922,13 @@ def build_files():
     for p in PUBS:
         L.append('- [%s](%s): %s' % (p['eyebrow'], abs_url(slug_path('para-quem-atuamos', p['slug'])), p['descricao_seo']))
     L += ['', '## Artigos', '']
-    for a in ARTS:
+    for a in ARTIGOS:
         L.append('- [%s](%s): %s' % (a['titulo'], abs_url(slug_path('conteudo', a['slug'])), cut(a['resumo'], 160)))
     L += ['', '## Institucional', '', '- [O escritório](%s)' % abs_url('/o-escritorio/'), '- [Contato](%s)' % abs_url('/contato/'), '- [Versão completa em texto](%s/llms-full.txt)' % BASE, '']
     write('/llms.txt', '\n'.join(L))
-    F = ['# %s' % NOME, '', '> Advocacia especializada em Direito da Saúde (OAB/%s). Conteúdo informativo; cada caso exige análise individual.' % S['oab_uf'], '', '## O escritório', ''] + OF['texto'] + OF['advogado_texto'] + OF['principios'] + ['']
+    F = ['# %s' % NOME, '', '> Advocacia dedicada ao Direito da Saúde (OAB/%s). Conteúdo informativo; cada caso exige análise individual.' % S['oab_uf'], '', '## O escritório', ''] + OF['texto'] + OF['advogado_texto'] + OF['principios'] + ['']
+    for f in OF.get('faq') or []:
+        F += ['**%s**' % f['pergunta'], f['resposta'], '']
     for a in AREAS:
         F += ['## %s' % a['titulo'], '', a['subtitulo'], ''] + a['paragrafos'] + [''] + ['- %s' % i for i in a['itens']] + ['', a['cta'], '']
     for p in PUBS:
@@ -829,12 +941,12 @@ def build_files():
     F += ['## Perguntas frequentes', '']
     for f in FAQ:
         F += ['**%s**' % f['pergunta'], f['resposta'], '']
-    for a in ARTS:
-        F += ['## %s' % a['titulo'], '', '%s (%s)' % (a['categoria'], fmt_date(a['data'])), '', a['texto'], '', a['cta'], '', abs_url(slug_path('conteudo', a['slug'])), '']
+    for a in ARTIGOS:
+        F += ['## %s' % a['titulo'], '', '%s (%s)' % (a['categoria'], fmt_date(a['data'])), '', a['resumo'], '', a['texto'], ''] + sum([['**%s**' % f['pergunta'], f['resposta'], ''] for f in a.get('faq') or []], []) + [a['cta'], '', abs_url(slug_path('conteudo', a['slug'])), '']
     write('/llms-full.txt', '\n'.join(F))
     # rss
     items = ''.join('<item><title>%s</title><link>%s</link><guid isPermaLink="true">%s</guid><pubDate>%s</pubDate><category>%s</category><description>%s</description></item>' % (
-        h(a['titulo']), abs_url(slug_path('conteudo', a['slug'])), abs_url(slug_path('conteudo', a['slug'])), datetime.datetime.strptime(a['data'], '%Y-%m-%d').strftime('%a, %d %b %Y 09:00:00 -0300'), h(a['categoria']), h(cut(a['resumo'], 200))) for a in ARTS)
+        h(a['titulo']), abs_url(slug_path('conteudo', a['slug'])), abs_url(slug_path('conteudo', a['slug'])), datetime.datetime.strptime(a['data'], '%Y-%m-%d').strftime('%a, %d %b %Y 09:00:00 -0300'), h(a['categoria']), h(cut(a['resumo'], 200))) for a in ARTIGOS)
     write('/feed.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>%s, notícias e artigos</title><link>%s/conteudo/</link><description>Informação jurídica sobre Direito da Saúde.</description><language>pt-BR</language>%s</channel></rss>\n' % (h(NOME), BASE, items))
     write('/site.webmanifest', json.dumps({'name': NOME, 'short_name': 'Luiz Fernando Neves', 'start_url': '/', 'display': 'standalone', 'background_color': '#F6F1E7', 'theme_color': '#28583F', 'lang': 'pt-BR',
                                           'icons': [{'src': '/assets/img/icon-192.png', 'sizes': '192x192', 'type': 'image/png'}, {'src': '/assets/img/icon-512.png', 'sizes': '512x512', 'type': 'image/png'}]}, ensure_ascii=False, indent=2))

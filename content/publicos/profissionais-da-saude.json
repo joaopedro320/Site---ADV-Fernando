@@ -8,8 +8,9 @@
   "descricao_seo": "Advogado para médicos, dentistas e clínicas: defesa em processos éticos no CRM e CRO, responsabilidade civil, contratos, prontuários e atuação preventiva.",
   "resumo": "Prevenção de riscos e defesa em situações de conflito para médicos, dentistas, clínicas e consultórios.",
   "intro": [
-    "A prática da medicina, da odontologia e das demais áreas da saúde exige decisões diárias, e cada uma delas pode ter repercussões jurídicas.",
-    "Atuamos ao lado dos profissionais da saúde, clínicas e consultórios, tanto na prevenção de riscos quanto na defesa em situações de conflito, com conhecimento da rotina profissional e atenção às particularidades de cada atividade."
+    "O exercício da medicina, da odontologia e das demais profissões da saúde envolve decisões constantes e responsabilidades que ultrapassam o atendimento clínico, com possíveis repercussões jurídicas em diferentes aspectos da atividade profissional.",
+    "Atuamos ao lado dos profissionais da saúde, clínicas e consultórios, oferecendo assessoria jurídica preventiva e defesa estratégica.",
+    "Nosso trabalho envolve a identificação de riscos, a orientação sobre questões jurídicas do cotidiano profissional e a atuação em situações de conflito, sempre considerando as particularidades de cada especialidade e as exigências legais e regulatórias do setor da saúde."
   ],
   "secoes": [
     {
@@ -47,10 +48,10 @@
     {
       "titulo": "Nossa forma de atuar",
       "paragrafos": [
-        "Cada caso começa com a análise da documentação e do contexto. A partir dela, orientamos sobre os caminhos possíveis, os riscos envolvidos e a estratégia mais adequada, com atendimento individualizado e comunicação clara durante todo o acompanhamento."
+        "Cada caso é conduzido a partir de uma análise criteriosa da documentação, das circunstâncias e dos aspectos jurídicos envolvidos. Com base nessa avaliação, identificamos os caminhos possíveis, os riscos e as medidas cabíveis, definindo uma estratégia individualizada, com rigor técnico, transparência e comunicação clara em todas as etapas do acompanhamento."
       ]
     }
   ],
-  "cta": "Atuação preventiva e defesa especializada para profissionais da saúde. Entre em contato e agende uma consulta.",
-  "imagem": "/assets/img/processo-etico-crm.webp"
+  "cta": "Atuação preventiva e defesa estratégica para profissionais da saúde. Entre em contato e agende uma consulta.",
+  "imagem": "/assets/img/artigos/descredenciamento-medico-glosa.webp"
 }

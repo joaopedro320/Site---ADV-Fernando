@@ -1,11 +1,38 @@
 {
-  "ordem": 7,
-  "titulo": "Home care: quando o plano de saúde pode ser obrigado a custear",
+  "ordem": 4,
+  "tipo": "artigo",
+  "titulo": "Home care: quando o plano de saúde pode ser obrigado a pagar?",
   "slug": "home-care-plano-de-saude",
   "categoria": "Plano de saúde",
-  "data": "2026-11-13",
-  "resumo": "O home care é a assistência de saúde prestada na residência do paciente, com equipe, equipamentos e insumos. Muitos contratos o excluem, mas o Tribunal de Justiça de São Paulo, por meio da Súmula 90, entende que, havendo expressa indicação médica, a cláusula de exclusão é abusiva.",
-  "imagem": "/assets/img/home-care.webp",
-  "texto": "O home care é a assistência de saúde prestada na residência do paciente, com equipe, equipamentos e insumos.\n\nMuitos contratos o excluem, mas o Tribunal de Justiça de São Paulo, por meio da Súmula 90, entende que, havendo expressa indicação médica, a cláusula de exclusão é abusiva.\n\nEm muitos casos, o home care substitui a internação hospitalar, que o plano já custearia.\n\nAinda assim, há divergência entre os tribunais, e o resultado depende do contrato, do quadro clínico e do relatório médico.",
-  "cta": "Para uma análise detalhada da sua situação e saber se você tem direito, entre em contato e agende uma consulta."
+  "data": "2026-11-17",
+  "resumo": "O plano pode ser obrigado a custear o home care quando ele substitui a internação hospitalar, está indicado pelo médico que acompanha o paciente e é viável e seguro em casa. Mesmo quando o contrato exclui o serviço, os tribunais costumam considerar essa cláusula abusiva nesses casos.",
+  "imagem": "/assets/img/artigos/home-care-plano-de-saude.webp",
+  "texto": "Quando o paciente já está estável, mas ainda precisa de cuidados médicos intensos, muitas famílias querem trazer o tratamento para casa. O conforto e a recuperação costumam ser melhores, e o risco de infecção hospitalar diminui. O problema é que muitos planos negam o serviço. Entenda quando essa negativa pode ser contestada.\n\n## O que é home care?\n\nHome care é a internação domiciliar: o paciente continua em tratamento, mas em casa, com equipe de saúde, equipamentos e materiais, como se estivesse no hospital. Pode incluir médico, enfermagem, fisioterapia, fonoaudiologia, oxigênio, sondas, curativos e medicamentos. O STJ entende que, nesses casos, a internação domiciliar é um desdobramento da internação hospitalar.\n\n## Quando o plano pode ser obrigado a custear?\n\nOs tribunais costumam analisar se:\n\n- há indicação do médico que acompanha o paciente, com relatório detalhado;\n- o home care substitui ou dá continuidade à internação hospitalar;\n- o quadro clínico permite o tratamento em casa com segurança;\n- a casa tem condições mínimas para receber a estrutura necessária;\n- o custo do atendimento domiciliar não ultrapassa o da internação hospitalar.\n\nQuando esses pontos estão presentes, a recusa costuma ser considerada abusiva, mesmo que o contrato não fale de home care.\n\n## O contrato exclui home care. E agora?\n\nO STJ tem entendimento de que é abusiva a cláusula que veda a internação domiciliar como alternativa à internação hospitalar. Em São Paulo, o Tribunal de Justiça tem a Súmula 90, no mesmo sentido: havendo indicação médica expressa, a cláusula de exclusão não pode prevalecer. Isso não significa vitória automática, porque cada caso depende da situação clínica e das provas.\n\n## O que o plano deve cobrir no home care?\n\nQuando o home care substitui a internação, o plano deve cobrir o que o paciente receberia no hospital, como:\n\n- equipe de saúde (médico, enfermagem, fisioterapia e outros profissionais indicados);\n- equipamentos, como cama hospitalar, aspirador e oxigênio;\n- insumos e materiais prescritos;\n- medicamentos usados durante o tratamento.\n\nO STJ já decidiu que os insumos indispensáveis devem ser custeados, desde que o custo diário não ultrapasse o de uma diária hospitalar.\n\n## O que normalmente não é coberto?\n\n- cuidador ou acompanhante que só ajuda na rotina, sem função de saúde, que costuma ser visto como responsabilidade da família;\n- medicamentos de uso domiciliar comuns, quando o paciente não está em internação domiciliar;\n- atendimentos de rotina em casa que não substituem internação.\n\nPor isso, o laudo médico precisa deixar claro que se trata de internação domiciliar com necessidade de cuidados de saúde, e não de simples apoio.\n\n## Por que os planos negam o home care?\n\n- dizem que o contrato não prevê o serviço;\n- alegam que o paciente pode ser tratado em ambiente hospitalar;\n- sustentam que o custo seria maior;\n- oferecem uma equipe menor do que a indicada;\n- retiram o serviço depois de um tempo, sem justificativa médica.\n\n## Documentos que fortalecem o pedido\n\n- relatório médico detalhado, com diagnóstico, necessidades e riscos de manter o paciente internado;\n- prescrição com equipe, equipamentos, insumos e carga horária de cada profissional;\n- laudos de avaliação da casa e do paciente, quando houver;\n- histórico de internações e exames;\n- negativa do plano por escrito e protocolos;\n- contrato do plano.\n\n## O que fazer passo a passo\n\n1. Peça a negação por escrito. Anote o protocolo e o motivo.\n2. Peça um relatório completo ao médico. Ele deve explicar por que o home care é necessário e o que a equipe precisa fazer.\n3. Reclame na ouvidoria e na ANS. O Disque ANS é o 0800 701 9656.\n4. Procure um advogado especialista com urgência. Como a demora pode prejudicar o paciente, muitas vezes é possível pedir uma liminar.\n5. Acompanhe a perícia ou avaliação do plano, se houver, e guarde todos os documentos.\n\n## Se o plano cancelar o home care que já existia\n\nSe o serviço foi retirado ou reduzido sem justificativa médica, você pode contestar. A decisão sobre o tratamento, em regra, é do médico que acompanha o paciente, e não da operadora. Procure orientação jurídica imediatamente.\n\n## Posso pedir indenização?\n\nSe a negativa indevida causar agravamento do quadro ou sofrimento, é possível pedir também indenização por danos morais. Cada caso é diferente e não há garantia de resultado.",
+  "faq": [
+    {
+      "pergunta": "Home care está no Rol da ANS?",
+      "resposta": "Não como cobertura obrigatória automática. Mas, quando substitui a internação hospitalar, os tribunais costumam entender que a cobertura é devida, mesmo sem previsão expressa."
+    },
+    {
+      "pergunta": "O plano pode escolher entre hospital e home care?",
+      "resposta": "A decisão sobre o melhor tratamento é, em regra, do médico assistente. O plano pode discutir a indicação, mas não pode impor a internação hospitalar sem justificativa clínica."
+    },
+    {
+      "pergunta": "O plano é obrigado a pagar cuidador?",
+      "resposta": "Em geral, não, quando se trata apenas de apoio na rotina. A cobertura depende de o serviço ser de saúde e integrar a internação domiciliar."
+    },
+    {
+      "pergunta": "E se o custo do home care for maior que o do hospital?",
+      "resposta": "Esse é um dos pontos mais discutidos. Em alguns casos, os tribunais consideram o custo diário da internação como referência, por isso a análise do caso é importante."
+    },
+    {
+      "pergunta": "Posso pedir home care para paciente idoso ou com doença crônica?",
+      "resposta": "Sim, desde que haja indicação médica e o tratamento em casa seja uma alternativa à internação. Doenças crônicas e degenerativas, com muita dependência, estão entre os casos mais discutidos."
+    },
+    {
+      "pergunta": "Preciso esperar a resposta da ANS para ir à Justiça?",
+      "resposta": "Não. Em casos urgentes, é possível procurar a Justiça diretamente."
+    }
+  ],
+  "cta": "Se o seu plano negou ou retirou o home care, o tempo importa. Entre em contato conosco, agende uma consulta e tire suas dúvidas."
 }

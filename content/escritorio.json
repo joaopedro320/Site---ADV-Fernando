@@ -2,12 +2,12 @@
   "titulo": "O escritório",
   "subtitulo": "Direito da Saúde com rigor técnico, análise estratégica e atendimento individualizado",
   "texto": [
-    "O escritório é especializado em Direito da Saúde. Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde e na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+    "O escritório é dedicado ao Direito da Saúde. Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
     "Unimos rigor técnico, análise estratégica e atendimento individualizado, com foco na prevenção de riscos e na construção de soluções adequadas a cada caso."
   ],
   "advogado_titulo": "Luiz Fernando Neves",
   "advogado_texto": [
-    "Luiz Fernando Neves, advogado, regularmente inscrito na OAB/SP, com atuação voltada ao Direito da Saúde, à proteção e orientação jurídica de médicos, dentistas e profissionais da saúde, bem como à defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+    "Luiz Fernando Neves é advogado, com atuação voltada ao Direito da Saúde, à proteção e orientação jurídica de médicos, dentistas e profissionais da saúde, bem como à defesa dos direitos de pacientes e beneficiários de planos de saúde.",
     "É pós-graduando em Direito Médico, Hospitalar e da Saúde pela Pontifícia Universidade Católica de São Paulo (PUC-SP), pós-graduado em Direito Processual Civil pela Faculdade de Direito, Educação e Gestão (FADEG) e está sempre aprofundando seus conhecimentos nas questões jurídicas que envolvem a assistência à saúde e as relações entre profissionais, instituições, pacientes e operadoras de planos de saúde.",
     "Sua formação é complementada por cursos de extensão e aperfeiçoamento em Direito Médico e Odontológico, entre eles os promovidos pela Escola Superior de Advocacia da OAB-SP e pela Academia Brasileira de Direito Médico, além da participação em congressos e eventos acadêmicos, incluindo iniciativas do grupo de pesquisa em Direito Médico e Bioética da Faculdade de Direito de Ribeirão Preto da Universidade de São Paulo (FDRP-USP), buscando atualização constante e aprofundamento técnico nas matérias relacionadas à sua atuação."
   ],
@@ -21,63 +21,88 @@
     {
       "titulo": "Cursos de extensão",
       "itens": [
-        "Direito Médico: Aspectos Criminais, Cíveis e Administrativos, Escola Superior de Advocacia da OAB-SP (ESA), janeiro de 2026",
-        "Direito Odontológico na Prática, Academia Brasileira de Direito Médico (Abradimed), agosto a setembro de 2025"
+        "Direito Médico: Aspectos Criminais, Cíveis e Administrativos, Escola Superior de Advocacia da OAB-SP (ESA)",
+        "Direito Odontológico na Prática, Academia Brasileira de Direito Médico (Abradimed)"
       ]
     },
     {
       "titulo": "Congressos e eventos",
       "itens": [
-        "II Congresso de Direito Médico e Bioética, Grupo de Pesquisa da Faculdade de Direito de Ribeirão Preto da USP (FDRP-USP), agosto de 2025",
-        "3º Congresso Brasileiro de Direito Médico, Escola Mineira de Direito, maio de 2024"
+        "II Congresso de Direito Médico e Bioética, Grupo de Pesquisa da Faculdade de Direito de Ribeirão Preto da USP (FDRP-USP)",
+        "3º Congresso Brasileiro de Direito Médico, Escola Mineira de Direito"
       ]
     }
   ],
   "destaque_frase": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade com o cliente.",
-  "linha_titulo": "Trajetória e formação",
-  "linha_texto": "Atualização constante em Direito Médico, Odontológico e da Saúde, com formação acadêmica e participação em congressos da área.",
+  "linha_titulo": "Formação",
+  "linha_texto": "Atualização constante em Direito Médico, Odontológico e da Saúde, com formação acadêmica, cursos e participação em congressos da área.",
   "linha_do_tempo": [
     {
-      "ano": "Base",
-      "periodo": "Pós-graduação concluída",
-      "titulo": "Pós-graduação em Direito Processual Civil",
+      "tipo": "Pós-graduação em andamento",
+      "titulo": "Pós-graduando em Direito Médico, Hospitalar e da Saúde",
+      "instituicao": "Pontifícia Universidade Católica de São Paulo (PUC-SP)",
+      "cor": "verde"
+    },
+    {
+      "tipo": "Pós-graduação",
+      "titulo": "Pós-graduado em Direito Processual Civil",
       "instituicao": "Faculdade de Direito, Educação e Gestão (FADEG)",
       "cor": "azul"
     },
     {
-      "ano": "2024",
-      "periodo": "Maio de 2024",
-      "titulo": "3º Congresso Brasileiro de Direito Médico",
-      "instituicao": "Escola Mineira de Direito",
+      "tipo": "Curso de extensão",
+      "titulo": "Direito Médico: Aspectos Criminais, Cíveis e Administrativos",
+      "instituicao": "Escola Superior de Advocacia da OAB-SP (ESA)",
       "cor": "verde"
     },
     {
-      "ano": "2025",
-      "periodo": "Agosto de 2025",
+      "tipo": "Curso de extensão",
+      "titulo": "Direito Odontológico na Prática",
+      "instituicao": "Academia Brasileira de Direito Médico (Abradimed)",
+      "cor": "verde"
+    },
+    {
+      "tipo": "Congresso",
       "titulo": "II Congresso de Direito Médico e Bioética",
       "instituicao": "Grupo de Pesquisa da Faculdade de Direito de Ribeirão Preto da USP (FDRP-USP)",
       "cor": "verde"
     },
     {
-      "ano": "2025",
-      "periodo": "Agosto a setembro de 2025",
-      "titulo": "Curso de extensão: Direito Odontológico na Prática",
-      "instituicao": "Academia Brasileira de Direito Médico (Abradimed)",
+      "tipo": "Congresso",
+      "titulo": "3º Congresso Brasileiro de Direito Médico",
+      "instituicao": "Escola Mineira de Direito",
       "cor": "verde"
+    }
+  ],
+  "faq_titulo": "Perguntas frequentes sobre o escritório",
+  "faq": [
+    {
+      "pergunta": "O escritório atua em quais áreas do Direito?",
+      "resposta": "Nossa atuação é direcionada ao Direito da Saúde, com abordagem estratégica e técnica.\n\nAtuamos na proteção jurídica de médicos, dentistas, clínicas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde. Nossa atuação abrange, principalmente:\n\n- **Direito Médico e Odontológico:** assessoria preventiva e contenciosa para médicos, dentistas, clínicas e profissionais da saúde, incluindo responsabilidade civil, defesa profissional, processos ético-disciplinares e orientação jurídica na prática profissional.\n- **Saúde Suplementar:** atuação em conflitos envolvendo planos de saúde, incluindo negativas de cobertura, reajustes abusivos, descredenciamento de prestadores, rescisões contratuais e acesso a tratamentos, exames e procedimentos médicos.\n- **Direito do Consumidor:** defesa dos direitos de consumidores nas relações com operadoras de planos de saúde, hospitais, clínicas e demais prestadores de serviços, diante de práticas abusivas e falhas na prestação de serviços.\n- **Direito Civil e Responsabilidade Civil:** atuação em demandas relacionadas à reparação de danos materiais e morais, além de outras questões jurídicas decorrentes das relações civis.\n\nMais do que solucionar conflitos, buscamos oferecer segurança jurídica, prevenção de riscos e soluções estratégicas. Conheça nossas [áreas de atuação](/areas-de-atuacao/) e acompanhe nossos [conteúdos informativos](/conteudo/) para compreender seus direitos e as possibilidades de proteção jurídica."
     },
     {
-      "ano": "2026",
-      "periodo": "Janeiro de 2026",
-      "titulo": "Curso de extensão: Direito Médico, aspectos criminais, cíveis e administrativos",
-      "instituicao": "Escola Superior de Advocacia da OAB-SP (ESA)",
-      "cor": "verde"
+      "pergunta": "Como funciona a consulta com o escritório?",
+      "resposta": "Cada caso recebe atenção individualizada, análise criteriosa e orientação jurídica estratégica.\n\nNosso atendimento começa com uma conversa para compreender as particularidades da situação, identificar as necessidades do cliente e avaliar os aspectos jurídicos envolvidos.\n\nA partir da análise prévia dos documentos e das informações apresentadas, examinamos os riscos, as possibilidades legais e as medidas mais adequadas para cada caso, seja na proteção de profissionais e estabelecimentos de saúde, seja na defesa dos direitos de pacientes e beneficiários de planos de saúde.\n\nCom um modelo de atendimento personalizado, pautado pela proximidade, discrição e excelência técnica, buscamos oferecer não apenas soluções para conflitos existentes, mas também orientação preventiva para evitar problemas futuros."
     },
     {
-      "ano": "Hoje",
-      "periodo": "Em andamento",
-      "titulo": "Pós-graduação em Direito Médico, Hospitalar e da Saúde",
-      "instituicao": "Pontifícia Universidade Católica de São Paulo (PUC-SP)",
-      "cor": "verde"
+      "pergunta": "O atendimento é apenas presencial ou também online?",
+      "resposta": "Oferecemos atendimento presencial e remoto em São Paulo e atendimento digital, com atuação em todo o território nacional.\n\nNosso modelo de atendimento combina proximidade, praticidade e tecnologia, permitindo que médicos, dentistas, clínicas, profissionais da saúde, pacientes e beneficiários de planos de saúde recebam orientação jurídica, independentemente de sua localização.\n\nAs consultas e reuniões podem ser realizadas por videoconferência, telefone ou presencialmente, mediante agendamento. Além disso, a tramitação eletrônica dos processos permite a atuação jurídica em diferentes estados do Brasil, sem que a distância seja um obstáculo.\n\nOnde você estiver, nosso compromisso é oferecer atendimento personalizado, segurança jurídica e acompanhamento próximo em cada etapa."
+    },
+    {
+      "pergunta": "O escritório atende clientes em outros estados?",
+      "resposta": "Sim. Nossa atuação abrange todo o território nacional.\n\nPor meio de uma estrutura de atendimento digital, oferecemos assessoria e representação jurídica a clientes de diferentes regiões do Brasil.\n\nA utilização de processos eletrônicos permite a realização de todos os atos processuais necessários, incluindo petições, audiências virtuais, despachos e acompanhamento processual, sem a necessidade de deslocamentos frequentes.\n\nA distância não limita nossa atuação. Levamos atendimento jurídico, proximidade e acompanhamento personalizado a qualquer lugar do Brasil."
+    },
+    {
+      "pergunta": "Como sei se meu caso pode ser judicializado?",
+      "resposta": "Cada situação exige uma análise jurídica individualizada e criteriosa.\n\nA possibilidade de ingressar com uma ação judicial depende das particularidades do caso, da documentação disponível e dos direitos envolvidos. Por isso, avaliamos aspectos como:\n\n- **Documentação:** contratos, relatórios médicos, prescrições, exames, negativas e demais documentos relevantes.\n- **Conduta da operadora ou prestador de serviço:** negativas de cobertura, reajustes abusivos, descumprimento contratual ou outras práticas que possam violar direitos.\n- **Urgência da situação:** especialmente quando a demora na autorização de tratamentos, medicamentos, exames ou procedimentos pode comprometer a saúde do paciente.\n\nApós a análise, apresentamos as alternativas jurídicas aplicáveis ao caso e definimos a estratégia mais adequada, inclusive o eventual ajuizamento de ação judicial com pedido de tutela de urgência, quando a situação e os requisitos legais justificarem essa medida.\n\nTem dúvidas sobre seus direitos ou não sabe como proceder? Agende uma consulta conosco."
+    },
+    {
+      "pergunta": "Quais os diferenciais do Luiz Fernando Neves Advocacia?",
+      "resposta": "Atuação dedicada, atendimento personalizado e compromisso com a excelência jurídica.\n\nNosso escritório possui atuação direcionada ao Direito da Saúde, reunindo conhecimento técnico e visão estratégica para atender às particularidades de cada demanda. Entre nossos principais diferenciais, destacam-se:\n\n- **Foco em Direito da Saúde:** atuação direcionada às questões jurídicas que envolvem médicos, dentistas, clínicas, demais profissionais da saúde, pacientes e beneficiários de planos de saúde, com análise criteriosa e estratégias construídas de acordo com cada demanda.\n- **Atendimento personalizado:** cada cliente recebe atenção individualizada, com estratégias construídas de acordo com suas necessidades e particularidades.\n- **Abordagem preventiva:** buscamos não apenas solucionar conflitos, mas também antecipar riscos e oferecer segurança jurídica aos profissionais e estabelecimentos de saúde.\n- **Proximidade e transparência:** mantemos uma comunicação clara e acompanhamento próximo, para que o cliente compreenda cada etapa do trabalho jurídico.\n- **Atuação nacional:** estrutura digital que permite atender e representar clientes em todo o Brasil.\n\nMais do que oferecer serviços jurídicos, buscamos construir relações de confiança e entregar soluções pautadas pela técnica, responsabilidade e cuidado."
+    },
+    {
+      "pergunta": "Quanto tempo demora um processo contra o plano de saúde?",
+      "resposta": "O tempo de duração depende das particularidades de cada caso e da urgência da situação.\n\nEm algumas situações é possível solicitar ao Poder Judiciário uma tutela de urgência. Quando presentes os requisitos legais, o juiz pode analisar o pedido em caráter prioritário, em poucos dias, determinando, por exemplo, que o plano de saúde autorize ou restabeleça a cobertura do tratamento.\n\nJá o processo principal, até a sentença de primeiro grau, pode levar alguns meses ou mais de um ano, dependendo da complexidade da demanda, da necessidade de produção de provas, perícia e da tramitação do tribunal.\n\nCada dia pode fazer diferença quando a saúde está em jogo. Por isso, uma análise jurídica criteriosa e uma atuação adequada desde o início são fundamentais para buscar a proteção dos seus direitos."
     }
   ]
 }

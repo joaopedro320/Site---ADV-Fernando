@@ -1,0 +1,34 @@
+{
+  "ordem": 16,
+  "tipo": "artigo",
+  "titulo": "Erro odontológico: quando o dentista pode ser responsabilizado?",
+  "slug": "erro-odontologico-responsabilidade",
+  "categoria": "Direito Odontológico",
+  "data": "2026-11-17",
+  "resumo": "O dentista pode ser responsabilizado quando o paciente sofre um dano e fica demonstrado que houve falha na conduta profissional, como imprudência, negligência ou imperícia. Resultado insatisfatório, por si só, não significa erro. O que pesa é a forma como o tratamento foi planejado, executado e documentado.",
+  "imagem": "/assets/img/artigos/erro-odontologico-responsabilidade.webp",
+  "texto": "Todo cirurgião-dentista sabe que, em algum momento, pode ouvir a frase: \"o tratamento deu errado, vou procurar meus direitos\". Entender como a Justiça enxerga o chamado erro odontológico ajuda a trabalhar com mais segurança e a se defender melhor, se for preciso.\n\n## O que a lei considera erro odontológico?\n\nNão existe um conceito único e fechado. Na prática, fala-se em erro quando o paciente sofre um dano e esse dano tem ligação com uma falha do profissional. Essa falha costuma ser classificada de três formas:\n\n- **Imprudência:** agir sem o cuidado necessário, como realizar um procedimento sem exames prévios.\n- **Negligência:** deixar de fazer o que era esperado, como não orientar o paciente sobre os cuidados pós-operatórios.\n- **Imperícia:** falta de preparo técnico para o procedimento realizado.\n\nA regra geral para profissionais liberais está no Código de Defesa do Consumidor (Lei 8.078/1990): a responsabilidade pessoal do dentista depende da comprovação de culpa. Ou seja, não basta o paciente dizer que ficou insatisfeito.\n\n## Obrigação de meio e obrigação de resultado\n\nEsse é o ponto que mais gera discussão. Em muitos tratamentos, o dentista assume uma obrigação de meio: ele se compromete a usar a técnica adequada e todo o seu conhecimento, mas não garante um resultado específico, porque o organismo de cada pessoa reage de um jeito.\n\nJá em alguns procedimentos, principalmente os estéticos, os tribunais frequentemente tratam a situação como obrigação de resultado, quando houve promessa de um desfecho determinado. Nesses casos, se o resultado combinado não é entregue, o profissional precisa demonstrar que não teve culpa. Por isso, o cuidado ao prometer resultados e ao registrar o que foi combinado faz toda a diferença.\n\n## Quais são os tipos de responsabilidade?\n\nO mesmo fato pode gerar consequências em esferas diferentes:\n\n- **Civil:** pedido de indenização por danos materiais, morais e, em alguns casos, estéticos.\n- **Ética:** processo no Conselho Regional de Odontologia, com base no Código de Ética Odontológica (Resolução CFO 118/2012).\n- **Criminal:** nos casos mais graves, como lesão corporal culposa.\n\nAs esferas são independentes. O dentista pode ser absolvido em uma e responder em outra.\n\n## Como a Justiça decide esses casos?\n\nNa maioria das ações, o juiz determina uma perícia técnica, feita por um perito de confiança do juízo, geralmente também cirurgião-dentista. O laudo costuma ter grande peso. O perito analisa o prontuário, os exames, as radiografias e o estado atual do paciente.\n\nPor isso, a qualidade da documentação é decisiva. Um tratamento bem executado, mas mal documentado, fica difícil de provar.\n\n## Erros mais comuns do dentista em uma acusação\n\n- não ter prontuário completo ou deixá-lo desatualizado;\n- não registrar o que foi explicado ao paciente;\n- prometer resultado sem deixar claro os limites do tratamento;\n- abandonar o tratamento sem justificativa e sem encaminhar o paciente;\n- alterar o prontuário depois que o conflito começou;\n- discutir o caso em redes sociais ou grupos de mensagens.\n\n## O que fazer se o paciente reclamar\n\n1. Mantenha a calma e o respeito. Escute o paciente e evite discussões.\n2. Não altere nenhum documento. Mudar o prontuário depois do problema pode ser interpretado como tentativa de esconder fatos.\n3. Reúna a documentação. Prontuário, radiografias, fotos, orçamento, termos assinados e mensagens trocadas.\n4. Evite acordos informais sem orientação. Uma conversa mal conduzida pode virar prova contra você.\n5. Procure um advogado especialista logo no início. A primeira resposta costuma definir o rumo do caso.\n6. Comunique o seguro de responsabilidade civil, se houver, conforme o contrato.\n\n## Como prevenir\n\nA melhor proteção é a rotina bem organizada: anamnese detalhada, plano de tratamento claro, termos de consentimento específicos, orçamento por escrito e registro de cada atendimento. Também vale reavaliar periodicamente a forma de comunicação com o paciente, já que boa parte das reclamações nasce de expectativas não alinhadas.",
+  "faq": [
+    {
+      "pergunta": "Resultado ruim significa erro do dentista?",
+      "resposta": "Não necessariamente. É preciso demonstrar falha na conduta e ligação entre essa falha e o dano."
+    },
+    {
+      "pergunta": "O paciente tem prazo para processar?",
+      "resposta": "Sim. Existem prazos de prescrição, que variam conforme o tipo de ação. Em relações de consumo, o prazo costuma ser de cinco anos a partir do conhecimento do dano e de seu autor. Um advogado pode analisar o seu caso."
+    },
+    {
+      "pergunta": "Posso ser processado mesmo que o tratamento esteja correto?",
+      "resposta": "Pode, porque qualquer pessoa pode ingressar com uma ação. Mas, com boa documentação, a defesa tem muito mais força."
+    },
+    {
+      "pergunta": "O que é dano estético?",
+      "resposta": "É a alteração permanente na aparência do paciente, que pode gerar indenização própria, além do dano moral."
+    },
+    {
+      "pergunta": "Vale a pena tentar um acordo?",
+      "resposta": "Em alguns casos sim, mas a decisão deve ser tomada com orientação jurídica, avaliando riscos e provas."
+    }
+  ],
+  "cta": "Se você precisa de orientação jurídica ou quer se prevenir, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para dentistas e clínicas odontológicas."
+}

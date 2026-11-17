@@ -1,0 +1,38 @@
+{
+  "ordem": 14,
+  "tipo": "artigo",
+  "titulo": "Fui processado por erro odontológico: o que fazer e como me defender?",
+  "slug": "defesa-processo-erro-odontologico",
+  "categoria": "Direito Odontológico",
+  "data": "2026-11-17",
+  "resumo": "Não deixe o prazo da citação passar e procure um advogado o quanto antes. A responsabilidade pessoal do dentista, em regra, depende da comprovação de culpa, mas em tratamentos estéticos a discussão costuma girar em torno do resultado prometido. Prontuário, orçamento, consentimento e perícia são as provas mais importantes.",
+  "imagem": "/assets/img/artigos/defesa-processo-erro-odontologico.webp",
+  "texto": "Ser citado em uma ação de indenização por suposto erro odontológico é um momento difícil, mas processo não significa condenação. Muitos casos são decididos pela prova técnica e pela documentação. Veja como funciona.\n\n## O dentista responde por qualquer resultado insatisfatório?\n\nNão. O Código de Defesa do Consumidor prevê que a responsabilidade pessoal dos profissionais liberais é apurada mediante verificação de culpa. Ou seja, o paciente precisa demonstrar que houve falha na conduta (negligência, imprudência ou imperícia) e que ela causou o dano.\n\n## Obrigação de meio ou de resultado?\n\nEssa distinção pesa muito nos processos:\n\n- Tratamentos terapêuticos (como tratamento de canal, periodontia e cirurgias), em regra, são tratados como obrigação de meio: o dentista deve empregar a técnica adequada, sem garantir o resultado.\n- Tratamentos estéticos (como lentes de contato dental, clareamento e algumas ortodontias estéticas) costumam ser discutidos pelos tribunais como obrigação de resultado, o que facilita a prova da falha quando o resultado combinado não é alcançado.\n\nPor isso, o que foi explicado, prometido e documentado antes do tratamento é tão importante.\n\n## Situações mais comuns nos processos\n\n- implantes que não osseointegram ou têm complicações;\n- fratura de instrumento ou dor persistente após tratamento endodôntico;\n- lesões nervosas e parestesia após extrações;\n- próteses e lentes que não agradam ao paciente ou apresentam falhas;\n- ortodontia com resultado diferente do esperado ou abandono do tratamento;\n- intercorrências com anestesia e sedação.\n\nNem toda intercorrência é erro. Uma complicação conhecida, informada ao paciente e tratada adequadamente pode não gerar responsabilidade.\n\n## O que o paciente pode pedir?\n\n- reembolso dos valores pagos e custo de refazer o tratamento;\n- danos materiais, como despesas e perda de renda;\n- danos morais;\n- danos estéticos, quando há sequela visível.\n\nO mesmo fato também pode levar a processo ético no CRO.\n\n## Quais provas fazem diferença?\n\n- Prontuário completo e atualizado, com anamnese, diagnóstico, plano de tratamento e evolução;\n- Radiografias, tomografias e fotos antes, durante e depois;\n- Orçamento e plano de tratamento assinados;\n- Termo de consentimento informado, específico para o procedimento;\n- Perícia odontológica judicial, que costuma ser decisiva;\n- Assistente técnico, um cirurgião-dentista indicado pela defesa;\n- Registros de faltas e abandono do paciente, quando houver.\n\n## Quanto tempo o paciente tem para processar?\n\nNas relações de consumo, o prazo costuma ser de cinco anos, contados do conhecimento do dano e de sua autoria. Em algumas situações, o prazo pode variar. Por isso, a guarda de documentos por longo prazo é essencial.\n\n## O que fazer passo a passo\n\n1. Confira o prazo da citação. A contestação tem prazo curto, em regra de 15 dias úteis.\n2. Procure um advogado especialista. Ele analisa o caso e a estratégia, inclusive em relação à clínica e a outros profissionais envolvidos.\n3. Avise o seguro de responsabilidade civil, se houver, dentro do prazo do contrato.\n4. Reúna todos os documentos. Prontuário, exames, imagens, termos, orçamento, recibos e mensagens.\n5. Não altere o prontuário. Qualquer mudança posterior pode ser interpretada como tentativa de ocultar fatos.\n6. Evite contato direto com o paciente sobre o caso, sem orientação.\n7. Defina o assistente técnico para a perícia.\n\n## Como prevenir\n\nA maior parte da defesa é construída antes do problema: prontuário claro, orçamento detalhado, consentimento específico, registro das orientações, controle de faltas e contratos revisados com a clínica e os profissionais parceiros. A assessoria jurídica preventiva ajuda a organizar tudo isso.",
+  "faq": [
+    {
+      "pergunta": "Se o paciente não gostou do resultado, sou obrigado a refazer ou devolver?",
+      "resposta": "Depende. Em tratamentos estéticos, o que foi combinado pesa muito. Avalie o caso com seu advogado antes de qualquer decisão ou acordo."
+    },
+    {
+      "pergunta": "Posso ser processado junto com a clínica?",
+      "resposta": "Sim. É comum o paciente processar o dentista e a clínica ou a rede no mesmo processo. A defesa precisa avaliar a posição de cada um."
+    },
+    {
+      "pergunta": "O seguro de responsabilidade civil cobre tudo?",
+      "resposta": "Depende da apólice: limites, exclusões e prazos de aviso variam. Revise o contrato antes de precisar."
+    },
+    {
+      "pergunta": "O paciente abandonou o tratamento. Isso me protege?",
+      "resposta": "Pode ajudar, se estiver bem documentado, com registro de faltas e de orientações. Mas cada caso é analisado individualmente."
+    },
+    {
+      "pergunta": "Vale fazer acordo?",
+      "resposta": "Pode ser uma boa estratégia em alguns casos, mas a decisão depende da prova, do risco e do valor."
+    },
+    {
+      "pergunta": "Posso corrigir o prontuário depois da citação?",
+      "resposta": "Não. Evite qualquer alteração. Se for necessário registrar algo, procure orientação jurídica antes."
+    }
+  ],
+  "cta": "Se você foi citado em uma ação por suposto erro odontológico ou quer revisar a sua documentação para se proteger, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para dentistas e clínicas odontológicas."
+}

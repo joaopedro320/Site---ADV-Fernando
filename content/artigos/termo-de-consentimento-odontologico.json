@@ -1,0 +1,34 @@
+{
+  "ordem": 18,
+  "tipo": "artigo",
+  "titulo": "Termo de consentimento: o que o dentista precisa saber",
+  "slug": "termo-de-consentimento-odontologico",
+  "categoria": "Direito Odontológico",
+  "data": "2026-11-17",
+  "resumo": "O termo de consentimento livre e esclarecido é o documento em que o paciente declara que foi informado sobre o tratamento, seus riscos, alternativas e custos, e concorda em realizá-lo. Ele não impede o paciente de reclamar, mas é uma prova importante de que houve informação adequada. Para valer, precisa ser claro, específico e acompanhado de uma boa conversa.",
+  "imagem": "/assets/img/artigos/termo-de-consentimento-odontologico.webp",
+  "texto": "Muitos dentistas usam um termo genérico, assinado no primeiro dia, e acham que isso resolve. Não resolve. Na hora do conflito, o que se avalia é se o paciente realmente entendeu o que ia acontecer.\n\n## Por que o consentimento é importante?\n\nO paciente tem direito de ser informado e de decidir sobre o próprio tratamento. O Código de Defesa do Consumidor (Lei 8.078/1990) exige informação adequada e clara sobre serviços, e o Código de Ética Odontológica (Resolução CFO 118/2012) também trata do dever de informar e de respeitar a autonomia do paciente.\n\nSe o paciente alega que \"ninguém avisou\" sobre um risco, o termo e o registro da conversa ajudam a demonstrar que o dever de informar foi cumprido.\n\n## O que deve constar no termo\n\n- Identificação do paciente e do profissional.\n- Descrição do procedimento, em linguagem simples.\n- Objetivo do tratamento e resultado esperado.\n- Riscos e possíveis complicações, sem exageros e sem omissões.\n- Alternativas de tratamento, inclusive a opção de não tratar.\n- Cuidados necessários antes e depois do procedimento.\n- Custos e forma de pagamento, ou referência ao orçamento.\n- Declaração de que as dúvidas foram esclarecidas.\n- Data, local e assinaturas.\n\n## Termo genérico ou específico?\n\nO ideal é ter um termo específico para cada procedimento de maior complexidade, como implantes, cirurgias, ortodontia, tratamentos estéticos e procedimentos com anestesia mais profunda.\n\nUm modelo genérico serve como base, mas não substitui o termo que trata dos riscos reais daquele tratamento.\n\nTambém vale lembrar que o termo deve ser entregue com tempo, não colocado na frente do paciente na hora da cadeira com uma caneta na mão.\n\n## O termo livra o dentista de qualquer responsabilidade?\n\nNão. Esse é um engano comum. O termo não autoriza erro e não afasta a responsabilidade por falha técnica. Ele serve para provar que o paciente foi informado, mas não protege contra negligência ou imperícia.\n\nTambém não vale cláusula que tente excluir completamente a responsabilidade do profissional. Em relações de consumo, cláusulas abusivas podem ser consideradas nulas.\n\n## Casos que exigem atenção especial\n\n- **Menores de idade:** o consentimento deve ser dado pelos pais ou responsáveis legais.\n- **Pacientes com dificuldade de compreensão:** é importante registrar quem acompanhou e como foi feita a explicação.\n- **Procedimentos estéticos:** deixar claro que o resultado pode variar e o que foi realmente combinado.\n- **Imagens do paciente:** fotos de antes e depois exigem autorização própria. A Lei Geral de Proteção de Dados (Lei 13.709/2018) trata os dados de saúde como sensíveis.\n\n## Erros mais comuns\n\n- usar um modelo copiado da internet sem adaptar;\n- entregar o termo apenas para assinar, sem conversar;\n- não guardar o termo no prontuário;\n- esquecer de registrar a explicação verbal;\n- usar termos técnicos que o paciente não entende;\n- preencher o termo depois do procedimento.\n\n## O que fazer passo a passo\n\n1. Explique com calma o diagnóstico, o plano e os riscos.\n2. Entregue o termo antes do procedimento, com tempo para leitura.\n3. Responda às dúvidas e registre no prontuário que a conversa aconteceu.\n4. Colete a assinatura e entregue uma via ao paciente.\n5. Arquive o termo junto com o prontuário.\n6. Atualize o termo se o plano de tratamento mudar de forma relevante.\n\n## Como prevenir\n\nMantenha modelos revisados por um advogado, adaptados aos procedimentos que sua clínica realmente faz. Treine a equipe para explicar o termo e não apenas colher assinaturas. E revise os modelos de tempos em tempos, porque as normas mudam.",
+  "faq": [
+    {
+      "pergunta": "O paciente pode se recusar a assinar?",
+      "resposta": "Pode. Nesse caso, registre a recusa no prontuário e avalie com cuidado se é seguro seguir com o procedimento."
+    },
+    {
+      "pergunta": "Termo assinado impede processo?",
+      "resposta": "Não. O paciente continua tendo direito de reclamar, mas o termo ajuda na defesa."
+    },
+    {
+      "pergunta": "Posso usar o mesmo termo para todos os tratamentos?",
+      "resposta": "Não é recomendável. Termos específicos são mais fortes."
+    },
+    {
+      "pergunta": "O consentimento pode ser eletrônico?",
+      "resposta": "Pode, desde que haja forma confiável de identificar o paciente e guardar o documento. Peça orientação sobre o formato."
+    },
+    {
+      "pergunta": "Preciso de novo termo se o tratamento mudar?",
+      "resposta": "Se a mudança for relevante, sim. Ao menos, registre a nova explicação e o novo acordo."
+    }
+  ],
+  "cta": "Se você precisa de orientação jurídica ou quer se prevenir, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para dentistas e clínicas odontológicas."
+}

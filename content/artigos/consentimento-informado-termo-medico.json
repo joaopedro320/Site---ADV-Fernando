@@ -1,0 +1,38 @@
+{
+  "ordem": 11,
+  "tipo": "artigo",
+  "titulo": "Consentimento informado: como o termo protege o médico?",
+  "slug": "consentimento-informado-termo-medico",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "O consentimento informado é um dever ético e legal do médico. Um termo bem feito, específico para o procedimento e acompanhado de conversa clara com o paciente, é uma das melhores provas de defesa. Mas o papel, sozinho, não basta: o termo genérico ou assinado sem explicação pode não proteger.",
+  "imagem": "/assets/img/artigos/consentimento-informado-termo-medico.webp",
+  "texto": "Muitos médicos tratam o termo de consentimento como uma formalidade burocrática. Na prática, ele pode ser decisivo em um processo ético ou judicial. Veja o que é, como fazer e o que evitar.\n\n## O que é consentimento informado?\n\nÉ a autorização dada pelo paciente, depois de receber explicações claras sobre o diagnóstico, o tratamento proposto, seus riscos, benefícios e alternativas. O Código de Ética Médica proíbe realizar procedimentos sem esclarecer o paciente e obter seu consentimento, salvo em risco iminente de morte. O paciente decide, e o médico informa.\n\n## O termo substitui a conversa?\n\nNão. O dever é de informar, e o termo é a prova de que isso aconteceu. A conversa com o paciente é a parte mais importante, e o termo e o registro no prontuário documentam o que foi dito. Em alguns processos, o paciente alega que não foi avisado dos riscos, mesmo sem erro técnico. A falta de informação adequada pode, por si só, gerar responsabilidade.\n\n## O que um bom termo deve ter\n\n- identificação do paciente e do médico;\n- descrição do procedimento ou tratamento, em linguagem simples;\n- finalidade, benefícios esperados e limitações;\n- riscos e possíveis complicações, inclusive os mais comuns e os graves;\n- alternativas disponíveis, incluindo não tratar;\n- orientações pré e pós-procedimento;\n- espaço para dúvidas e para anotações específicas do caso;\n- data, assinatura do paciente ou responsável e do médico.\n\n## Termo genérico protege?\n\nGeralmente, não. A jurisprudência, inclusive do STJ, tem rejeitado termos muito genéricos, que não descrevem o procedimento nem os riscos específicos do caso. Um modelo “valendo para tudo” tende a ter pouco valor como prova. O ideal é ter um termo por procedimento, adaptado ao paciente.\n\n## Quando o consentimento é ainda mais importante?\n\n- procedimentos invasivos, cirurgias e anestesias;\n- procedimentos estéticos, em que a expectativa do paciente é maior;\n- tratamentos com risco relevante ou uso fora da bula (off-label);\n- uso de imagem do paciente em redes sociais ou aulas;\n- pacientes menores, idosos ou com limitação de compreensão.\n\n## Menores e pessoas sem capacidade de decidir\n\nQuando o paciente é menor ou não pode decidir sozinho, o consentimento deve ser dado pelo responsável legal, sem deixar de explicar ao paciente, na medida do possível, o que será feito. Em situações de urgência e risco de morte, o médico pode agir para salvar a vida, registrando bem as circunstâncias no prontuário.\n\n## Como fazer na prática\n\n1. **Converse primeiro:** explique em linguagem simples e deixe o paciente perguntar.\n2. Entregue o termo com antecedência, quando possível, e não minutos antes do procedimento.\n3. **Adapte o termo ao caso:** Inclua riscos relevantes para aquele paciente.\n4. Registre no prontuário que a explicação foi dada e que o paciente entendeu.\n5. Guarde o termo junto com o prontuário, pelo mesmo prazo.\n6. Atualize os modelos periodicamente, com apoio jurídico.\n\n## Erros que mais causam problemas\n\n- termo genérico, sem riscos específicos;\n- assinatura sem explicação, ou com o paciente já sedado ou sob pressão;\n- letra pequena ou linguagem técnica demais;\n- falta de registro no prontuário;\n- termo copiado de outro serviço, sem adaptação;\n- não guardar o documento.\n\n## Como prevenir\n\nRevisar os termos usados no consultório, na clínica e no hospital, e treinar a equipe sobre como conduzir a conversa e o registro, reduz muito o risco. A assessoria jurídica preventiva costuma incluir a criação ou a adaptação de termos por especialidade.",
+  "faq": [
+    {
+      "pergunta": "Termo assinado impede o paciente de processar?",
+      "resposta": "Não. O termo é uma prova importante, mas não impede uma ação. Se houve falha técnica ou informação inadequada, o médico ainda pode ser responsabilizado."
+    },
+    {
+      "pergunta": "O consentimento pode ser verbal?",
+      "resposta": "Pode existir consentimento verbal, mas ele é difícil de provar. O ideal é registrar por escrito e no prontuário, principalmente em procedimentos de risco."
+    },
+    {
+      "pergunta": "Preciso de um termo para cada consulta?",
+      "resposta": "Nem sempre. Procedimentos, exames invasivos, anestesias e tratamentos com riscos relevantes costumam exigir termo. Em consultas simples, o registro no prontuário pode bastar."
+    },
+    {
+      "pergunta": "Posso usar um termo digital?",
+      "resposta": "Sim, desde que o sistema permita comprovar a identidade de quem assinou, a data e a integridade do documento."
+    },
+    {
+      "pergunta": "E se o paciente se recusar a assinar?",
+      "resposta": "Registre a recusa no prontuário, com as orientações dadas, e, quando possível, com testemunha. Avalie com seu advogado como proceder."
+    },
+    {
+      "pergunta": "O consentimento vale para uso de imagem nas redes sociais?",
+      "resposta": "Não. O uso de imagem exige autorização específica e deve seguir as regras do CFM sobre publicidade médica."
+    }
+  ],
+  "cta": "Se você quer revisar os termos de consentimento do seu consultório ou da sua clínica, vale fazer isso antes de um problema. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

@@ -1,11 +1,38 @@
 {
   "ordem": 2,
-  "titulo": "Mensalidade do plano de saúde disparou, e agora?",
+  "tipo": "artigo",
+  "titulo": "Mensalidade do plano de saúde disparou: o que fazer?",
   "slug": "reajuste-abusivo-plano-de-saude",
   "categoria": "Plano de saúde",
-  "data": "2026-11-13",
-  "resumo": "Nem todo reajuste é ilegal, mas nem todo reajuste é válido. Nos planos individuais e familiares, o percentual anual é limitado pela ANS.",
-  "imagem": "/assets/img/reajuste-plano-saude.webp",
-  "texto": "Nem todo reajuste é ilegal, mas nem todo reajuste é válido.\n\nNos planos individuais e familiares, o percentual anual é limitado pela ANS. Por sua vez, nos planos coletivos (empresariais e por adesão), não há teto da ANS, mas a operadora deve demonstrar de forma transparente a base do aumento, como a sinistralidade.\n\nJá os reajustes por mudança de faixa etária precisam estar previstos em contrato, respeitar as regras da ANS e não podem ser desproporcionais. Além disso, há proteção específica para idosos.\n\nSinais de alerta: percentuais muito acima da média, ausência de explicação clara e aumentos sucessivos sem justificativa.",
-  "cta": "Ficou com dúvidas? Entre em contato e agende uma consulta."
+  "data": "2026-11-17",
+  "resumo": "Primeiro descubra que tipo de plano você tem e qual reajuste foi aplicado.",
+  "imagem": "/assets/img/artigos/reajuste-abusivo-plano-de-saude.webp",
+  "texto": "Nos planos individuais, existe um teto definido pela ANS (5,11% em 2026). Nos planos coletivos, não há teto, mas o aumento precisa ser explicado. Se o valor parece abusivo, é possível contestar, administrativa ou judicialmente.\n\nAbriu o boleto e levou um susto? Esse é um dos motivos que mais levam pessoas a procurar um advogado de direito da saúde. Algumas vezes o aumento é permitido, mas em outras muitas vezes ele passa do limite ou vem sem qualquer explicação.\n\nAs regras de reajuste dependem do tipo de contrato:\n\n- **Individual ou familiar:** contratado diretamente com a operadora, em seu nome.\n- **Coletivo empresarial:** oferecido pela empresa onde você trabalha.\n- **Coletivo por adesão:** contratado por meio de associação, sindicato, conselho profissional ou, muitas vezes, por CNPJ (inclusive MEI).\n\nO tipo do plano está no contrato e na carteirinha. Se tiver dúvida, peça uma cópia do contrato à operadora ou entre em contato conosco que conseguimos orientar.\n\n## Plano individual: o aumento tem limite\n\nPara planos individuais e familiares contratados a partir de 1999 (ou adaptados à lei), a ANS fixa um teto anual.\n\nEm 2026, o teto é de 5,11%, para contratos com aniversário entre maio de 2026 e abril de 2027. Segundo a ANS, é o menor índice desde 2000, com exceção de 2021.\n\nO plano pode aplicar um percentual menor, mas nunca maior. E o reajuste anual só pode acontecer no mês de aniversário do contrato. Contratos muito antigos, anteriores a 1999 e não adaptados, seguem regras próprias.\n\n## Plano coletivo: sem teto, mas com regras\n\nNos planos coletivos, a ANS não define um teto anual. O reajuste costuma ser negociado entre a operadora e a empresa ou a administradora, e leva em conta o custo do uso do plano (a chamada sinistralidade). Contratos pequenos, com menos de 30 vidas, entram em um agrupamento de contratos da operadora e recebem o mesmo percentual do grupo.\n\nPercentual alto, por si só, não é ilegal. Mas a operadora deve explicar como chegou ao número, e você tem o direito de pedir essa justificativa. Todavia, muitas vezes a operadora não consegue explicar e, sendo assim, o reajuste se torna ilegal.\n\n## Aumento por mudança de faixa etária\n\nO aumento por idade é diferente do reajuste anual, e os dois podem acontecer no mesmo ano. Os planos têm dez faixas de idade, e a última começa aos 59 anos. Existem limites: o valor da última faixa não pode ser mais de seis vezes o da primeira, e a alta nas faixas finais não pode superar a das faixas iniciais.\n\nAs regras para idosos são ainda mais protegidas. O Estatuto da Pessoa Idosa proíbe a discriminação por idade, e os tribunais analisam com cuidado saltos muito grandes.\n\n## Sinais de que o aumento pode ser abusivo\n\n- o plano individual aplicou percentual acima do teto da ANS;\n- o reajuste anual foi cobrado fora do mês de aniversário;\n- o aumento veio sem explicação ou sem demonstrativo de cálculo;\n- o percentual por faixa etária é desproporcional ou não está no contrato;\n- o aumento foi aplicado só a você por ter usado o plano;\n- o boleto traz cobranças que ninguém explica.\n\n## O que fazer passo a passo\n\n1. Guarde os boletos e o contrato. Compare o valor antes e depois do aumento.\n2. Peça explicações por escrito. Solicite o percentual aplicado, o tipo de reajuste e, no plano coletivo, o demonstrativo do cálculo. Anote o protocolo.\n3. Reclame na ouvidoria e na ANS. O Disque ANS é o 0800 701 9656.\n4. Avalie alternativas. Renegocie com a operadora ou use a portabilidade de carências, que permite trocar de plano sem cumprir novos prazos de carência, desde que sejam atendidas as regras.\n5. Procure um advogado na área da saúde. Quando o aumento é abusivo, é possível pedir na Justiça a revisão do valor e a devolução do que foi pago a mais.\n\n## Cuidado: não deixe de pagar por conta própria\n\nSuspender o pagamento por discordar do aumento é arriscado. No plano individual, a falta de pagamento por mais de 60 dias, seguidos ou não, nos últimos 12 meses pode levar ao cancelamento. Antes de qualquer decisão, converse com um advogado. Dependendo do caso, é possível pedir na Justiça autorização para pagar o valor sem o aumento contestado, sem perder o plano.\n\n## Posso pedir de volta o que paguei a mais?\n\nSe o reajuste for declarado abusivo, é possível pedir a devolução da diferença. Existem limites de tempo para isso, por isso agir cedo ajuda. Cada situação é diferente e não há garantia de resultado.",
+  "faq": [
+    {
+      "pergunta": "Qual é o teto de reajuste em 2026?",
+      "resposta": "Para planos individuais e familiares, 5,11%, válido para aniversários entre maio de 2026 e abril de 2027."
+    },
+    {
+      "pergunta": "Plano contratado por CNPJ ou MEI tem teto?",
+      "resposta": "Não. Esses planos são coletivos e não seguem o teto da ANS, mas o reajuste deve ter justificativa."
+    },
+    {
+      "pergunta": "O plano pode reajustar mais de uma vez por ano?",
+      "resposta": "O reajuste anual só pode ocorrer uma vez por ano. O aumento por faixa etária é outro tipo de aumento e pode ocorrer na mudança de idade."
+    },
+    {
+      "pergunta": "O plano pode aumentar só a minha mensalidade porque usei muito?",
+      "resposta": "Não. O reajuste considera o contrato como um todo, e não o uso individual de cada beneficiário."
+    },
+    {
+      "pergunta": "Posso trocar de plano sem cumprir carência de novo?",
+      "resposta": "Sim, pela portabilidade de carências, desde que cumpridos os requisitos, como o tempo de permanência no plano atual e a compatibilidade de faixa de preço."
+    },
+    {
+      "pergunta": "Depois dos 59 anos o plano pode aumentar pela idade?",
+      "resposta": "A última faixa etária começa aos 59 anos e, depois dela, não há novos aumentos por idade. O reajuste anual, porém, continua."
+    }
+  ],
+  "cta": "Se a sua mensalidade disparou e você não sabe se o aumento é legal, vale analisar o contrato com calma. Entre em contato conosco, agende uma consulta e tire suas dúvidas."
 }

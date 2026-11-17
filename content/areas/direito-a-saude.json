@@ -1,23 +1,39 @@
 {
-  "ordem": 2,
-  "numero": "II",
+  "ordem": 1,
+  "numero": "I",
   "slug": "direito-a-saude",
-  "titulo_curto": "Direito à saúde",
-  "titulo": "Direito à Saúde",
-  "subtitulo": "Acesso a tratamentos, medicamentos e procedimentos indicados pelo médico",
-  "descricao_seo": "Acesso a tratamentos, medicamentos e procedimentos indicados pelo médico, pelo plano de saúde ou pelo poder público. Orientação jurídica e medidas de urgência.",
+  "titulo_curto": "Direito à Saúde | Planos de Saúde",
+  "titulo": "Direito à Saúde e Planos de Saúde",
+  "subtitulo": "Negativa de cobertura, reajustes abusivos e cancelamentos",
+  "descricao_seo": "Advogado para negativa de cobertura, reajuste abusivo, cancelamento de plano de saúde, home care e acesso a tratamentos. Atendimento em todo o Brasil.",
   "paragrafos": [
-    "O direito à saúde é garantido pela Constituição, e sua efetivação depende, muitas vezes, de orientação jurídica adequada.",
-    "Atuamos para que o paciente tenha acesso ao tratamento indicado por seu médico, seja por meio do plano de saúde ou do poder público."
+    "Analisamos o contrato, o relatório médico, a legislação vigente, a jurisprudência e as normas da ANS para identificar o que a operadora é obrigada a cobrir e qual é o caminho mais rápido para garantir o seu atendimento, inclusive com pedido de tutela de urgência quando necessário."
   ],
-  "rotulo_lista": "",
+  "rotulo_lista": "Em que podemos ajudar",
   "itens": [
-    "Fornecimento de medicamentos, inclusive de alto custo",
-    "Tratamentos e procedimentos de urgência",
-    "Acesso a terapias para pessoas com deficiência e transtornos do neurodesenvolvimento",
-    "Medidas judiciais de urgência quando necessário"
+    "**Negativa de cobertura:** tratamentos, exames, cirurgias, terapias e medicamentos prescritos pelo seu médico",
+    "**Reajustes abusivos:** aumentos por faixa etária, sinistralidade e planos “falso coletivo”",
+    "**Cancelamento unilateral:** rescisão ou suspensão do contrato sem justificativa válida",
+    "**Home care e internação domiciliar:** continuidade do cuidado em casa, muitas vezes o plano nega esse direito",
+    "**Cirurgia bariátrica e reparadora:** autorizações negadas ou atrasadas",
+    "**Beneficiários idosos:** proteção contra práticas abusivas e garantia de atendimento",
+    "**Medicamentos e terapias:** acesso a tratamentos de alto custo e terapias indicadas pelo médico, inclusive pelo SUS"
   ],
-  "cta": "Cada situação é única. Agende uma consulta e receba uma orientação adequada ao seu caso.",
+  "cta": "Recebeu uma negativa, um reajuste ou um cancelamento que não entendeu? Agende uma consulta e tire suas dúvidas.",
   "cor": "verde",
-  "imagem": "/assets/img/home-care.webp"
+  "imagem": "/assets/img/artigos/plano-de-saude-negou-tratamento.webp",
+  "intro_titulo": "Seu plano negou, reajustou ou cancelou? Você tem direitos, e podemos te ajudar.",
+  "blocos": [
+    {
+      "titulo": "Como funciona",
+      "numerada": true,
+      "itens": [
+        "**Análise:** avaliamos sua negativa, o contrato e a indicação médica.",
+        "**Estratégia:** definimos a medida adequada (notificação extrajudicial, reclamação na ANS ou ação judicial).",
+        "**Acompanhamento:** conduzimos o caso até a solução, mantendo você informado a cada etapa, sempre com linguagem clara e acessível."
+      ]
+    }
+  ],
+  "categoria_artigos": "Plano de saúde",
+  "chamada": "Negativa de cobertura, reajustes abusivos e cancelamentos"
 }

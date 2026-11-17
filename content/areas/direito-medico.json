@@ -1,14 +1,15 @@
 {
-  "ordem": 3,
-  "numero": "III",
+  "ordem": 2,
+  "numero": "II",
   "slug": "direito-medico",
   "titulo_curto": "Direito médico",
   "titulo": "Direito Médico",
-  "subtitulo": "Proteção jurídica preventiva e defesa para médicos e clínicas",
+  "subtitulo": "Segurança jurídica para quem dedica a vida a cuidar",
   "descricao_seo": "Assessoria jurídica preventiva e defesa para médicos e clínicas: processos éticos no CRM, responsabilidade civil, prontuários, contratos e publicidade médica.",
   "paragrafos": [
-    "Assessoria jurídica para médicos e clínicas, com atuação preventiva e, caso necessário, na defesa em situações de conflito.",
-    "O objetivo é proteger a atividade profissional e reduzir riscos antes que se transformem em litígios."
+    "Atuação estratégica em Direito Médico, com assessoria jurídica preventiva e defesa de médicos, dentistas, profissionais da saúde e clínicas em questões éticas, cíveis e profissionais.",
+    "Oferecemos orientação jurídica para prevenir conflitos, reduzir riscos e proteger o exercício da atividade profissional. Da elaboração de contratos e documentos médicos à defesa em processos judiciais e administrativos, cada atuação é conduzida com rigor técnico e estratégia individualizada.",
+    "Mais do que atuar em conflitos, trabalhamos para antecipar riscos e oferecer segurança jurídica a quem dedica sua profissão ao cuidado com o próximo."
   ],
   "rotulo_lista": "",
   "itens": [
@@ -19,7 +20,10 @@
     "Relação com operadoras, hospitais e clínicas",
     "Orientação sobre publicidade médica e redes sociais"
   ],
-  "cta": "Atuação preventiva e defesa especializada para profissionais da medicina. Entre em contato.",
+  "cta": "Atuação preventiva e defesa dedicada a profissionais da medicina. Entre em contato.",
   "cor": "verde",
-  "imagem": "/assets/img/processo-etico-crm.webp"
+  "imagem": "/assets/img/artigos/denuncia-no-crm-processo-etico.webp",
+  "intro_titulo": "Assessoria jurídica para médicos e clínicas",
+  "categoria_artigos": "Direito Médico",
+  "chamada": "Segurança jurídica para quem dedica a vida a cuidar"
 }

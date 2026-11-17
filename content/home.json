@@ -1,7 +1,7 @@
 {
   "hero_eyebrow": "Direito da Saúde",
   "hero_titulo": "Direito da Saúde com estratégia, precisão, técnica e compromisso",
-  "hero_texto": "Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde e na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
+  "hero_texto": "Atuamos na assessoria e proteção jurídica de médicos, dentistas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde.",
   "hero_cta_principal": "Agende uma consulta",
   "hero_cta_secundario": "Conheça as áreas de atuação",
   "alerta_ativo": true,
@@ -10,29 +10,47 @@
   "publicos_titulo": "Para quem atuamos",
   "publicos_texto": "Cada pessoa chega com uma necessidade diferente. Por isso, o atendimento é organizado em três frentes.",
   "areas_titulo": "Áreas de atuação",
-  "areas_texto": "Oito frentes de atuação, da saúde suplementar ao direito civil, com análise individual de cada caso.",
-  "metodo_titulo": "Nossa forma de atuar",
+  "areas_texto": "Seis frentes de atuação, do Direito à Saúde ao Direito Civil, com análise individual de cada caso.",
+  "metodo_titulo": "Como o trabalho é conduzido",
   "metodo_passos": [
     {
-      "titulo": "Análise da documentação",
-      "texto": "Cada caso começa pela análise da documentação e do contexto, com escuta atenta da situação."
+      "titulo": "Rigor técnico",
+      "texto": "Cada caso é analisado a fundo, com base na legislação, na jurisprudência e nas particularidades médicas e contratuais envolvidas."
     },
     {
-      "titulo": "Estratégia e caminhos possíveis",
-      "texto": "Explicamos, de forma clara, os caminhos possíveis, os riscos envolvidos e a estratégia mais adequada."
+      "titulo": "Estratégia e prevenção",
+      "texto": "Antes de litigar, avaliamos riscos e caminhos possíveis, buscando proteger direitos e evitar conflitos sempre que isso for o melhor para o cliente."
     },
     {
-      "titulo": "Acompanhamento individualizado",
-      "texto": "Atendimento individualizado e comunicação clara durante todo o acompanhamento, respeitando o ritmo e a urgência de cada pessoa."
+      "titulo": "Atendimento individualizado",
+      "texto": "Cada cliente é atendido diretamente, com comunicação clara e acompanhamento próximo em todas as etapas."
+    },
+    {
+      "titulo": "Segurança jurídica para quem cuida e para quem precisa de cuidados",
+      "texto": "Atuamos ao lado de profissionais da saúde e de pacientes, com o mesmo compromisso: proteger direitos com responsabilidade e sensibilidade."
     }
   ],
-  "conteudo_titulo": "Notícias e artigos",
+  "conteudo_titulo": "Artigos e notícias",
   "conteudo_texto": "Informação jurídica clara sobre saúde, planos de saúde e direitos de pacientes e profissionais.",
-  "destaques": [],
+  "destaques": [
+    "plano-de-saude-negou-tratamento-em-resumo",
+    "reajuste-abusivo-plano-de-saude-em-resumo",
+    "home-care-plano-de-saude-em-resumo",
+    "notificacao-crm-processo-paciente",
+    "paciente-insatisfeito-odontologia",
+    "plano-de-saude-cancelou-contrato-em-resumo"
+  ],
   "faq_titulo": "Perguntas frequentes",
   "cta_titulo": "Cada situação é única",
   "cta_texto": "Agende uma consulta e receba uma orientação adequada ao seu caso.",
   "hero_linha_1": "Direito da Saúde",
   "hero_linha_2": "com estratégia",
-  "statement": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade para oferecer segurança jurídica a quem cuida e a quem precisa de cuidados."
+  "statement": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade para oferecer segurança jurídica a quem cuida e a quem precisa de cuidados.",
+  "escritorio_titulo": "Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.",
+  "brasil_titulo": "Atendimento em todo o Brasil",
+  "brasil_texto": [
+    "Nossa atuação abrange todo o território nacional. Por meio de uma estrutura de atendimento digital, oferecemos assessoria e representação jurídica a clientes de diferentes regiões do Brasil.",
+    "A utilização de processos eletrônicos permite a realização de todos os atos processuais necessários, incluindo petições, audiências virtuais, despachos e acompanhamento processual, sem a necessidade de deslocamentos frequentes."
+  ],
+  "brasil_frase": "A distância não limita nossa atuação."
 }

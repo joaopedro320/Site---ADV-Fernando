@@ -1,0 +1,38 @@
+{
+  "ordem": 10,
+  "tipo": "artigo",
+  "titulo": "Prontuário médico: o que registrar e por quanto tempo guardar?",
+  "slug": "prontuario-medico-o-que-registrar",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "O prontuário deve ser legível, completo e feito para cada paciente. A lei exige a guarda por, no mínimo, 20 anos a partir do último registro. O prontuário é a principal prova de defesa do médico em processos éticos e judiciais, e nunca deve ser alterado depois que um problema surge.",
+  "imagem": "/assets/img/artigos/prontuario-medico-o-que-registrar.webp",
+  "texto": "Muitos médicos só descobrem a importância do prontuário quando recebem uma notificação do CRM ou uma citação. Nessa hora, o que foi (ou não foi) registrado pesa muito. Veja o básico que todo profissional deve saber.\n\n## Por que o prontuário é tão importante?\n\nO prontuário reúne as informações sobre o atendimento e a evolução do paciente. Ele garante a continuidade do cuidado e protege o profissional: em um processo, é ele que mostra o que foi avaliado, decidido e orientado. Um prontuário bem feito pode encerrar uma discussão. Um prontuário pobre pode transformar uma boa conduta em um caso difícil de provar.\n\nO Código de Ética Médica considera infração deixar de elaborar prontuário legível para cada paciente.\n\n## O que registrar\n\nAs informações básicas que costumam ser esperadas são:\n\n- identificação do paciente, data e hora do atendimento;\n- queixa e histórico (anamnese), incluindo alergias e medicamentos em uso;\n- exame físico e hipóteses diagnósticas;\n- exames solicitados e resultados analisados;\n- conduta, prescrições e orientações dadas;\n- riscos e alternativas conversados, e o consentimento do paciente;\n- evolução, intercorrências e encaminhamentos;\n- identificação do médico, com nome e CRM.\n\nQuanto mais objetivo e específico, melhor. Anotações vagas, como “paciente orientado”, ajudam pouco. Registrar o que foi explicado, e como o paciente reagiu, faz mais diferença.\n\n## Por quanto tempo guardar?\n\nPela Lei 13.787/2018, o prontuário deve ser guardado por, no mínimo, 20 anos a partir do último registro. Depois desse prazo, ele pode ser eliminado, seguindo as regras legais, ou entregue ao paciente, se houver interesse. Em alguns casos, o prazo pode ser maior, por exemplo, se houver processo em andamento ou legislação específica.\n\n## Prontuário eletrônico e digitalização\n\nO prontuário pode ser eletrônico, desde que o sistema ofereça segurança, controle de acesso, registro de alterações e assinatura digital adequada, seguindo as regras do CFM e da legislação. A digitalização de prontuários em papel também é permitida, com requisitos técnicos que precisam ser respeitados antes de qualquer descarte do original.\n\n## O paciente pode pedir o prontuário?\n\nSim. O Código de Ética Médica proíbe negar ao paciente o acesso ao seu prontuário. Ele pode pedir cópia, e a recusa sem motivo válido pode gerar problemas éticos e jurídicos. A entrega a terceiros, como familiares ou advogados, exige cuidados e, em regra, autorização do paciente ou determinação legal.\n\n## Prontuário e LGPD\n\nOs dados de saúde são dados pessoais sensíveis e têm proteção especial pela Lei Geral de Proteção de Dados. O médico e a clínica precisam garantir o sigilo e o acesso restrito, além de definir quem pode ver, copiar ou compartilhar essas informações.\n\n## Erros que mais causam problemas\n\n- letra ilegível ou registros incompletos;\n- prontuário copiado de um atendimento para outro, sem refletir a realidade;\n- ausência de registro de orientações e riscos informados;\n- alterações feitas depois de um problema, sem identificação;\n- falta de assinatura e identificação do profissional;\n- perda de documentos ou arquivos por falta de backup.\n\n## Preciso corrigir um registro. Como fazer?\n\nSe for necessário corrigir ou complementar, o ideal é fazer um novo registro, com data, hora e identificação de quem escreveu, sem apagar o que já existe. Depois que o paciente reclama, entra com ação ou há denúncia, qualquer alteração precisa de cuidado extra: procure orientação jurídica antes.\n\n## Como prevenir problemas\n\nUma revisão do modelo de prontuário, do sistema usado, dos termos de consentimento e da política de guarda de documentos evita muitos riscos. A assessoria jurídica preventiva costuma incluir essa análise.",
+  "faq": [
+    {
+      "pergunta": "Por quanto tempo devo guardar o prontuário do meu consultório?",
+      "resposta": "No mínimo 20 anos a partir do último registro, nos termos da Lei 13.787/2018. Se houver processo em andamento, guarde até o fim."
+    },
+    {
+      "pergunta": "O prontuário é do médico ou do paciente?",
+      "resposta": "O paciente tem direito ao acesso, e o médico ou a instituição tem o dever de guarda e sigilo."
+    },
+    {
+      "pergunta": "Posso usar modelo pronto de prontuário?",
+      "resposta": "Pode, desde que o conteúdo reflita o atendimento real. Textos automáticos, iguais para todos os pacientes, enfraquecem a prova."
+    },
+    {
+      "pergunta": "O que fazer se o prontuário foi perdido?",
+      "resposta": "Avise a instituição ou o responsável, registre o ocorrido e procure orientação jurídica. A perda pode ter consequências éticas e civis."
+    },
+    {
+      "pergunta": "O prontuário eletrônico substitui o de papel?",
+      "resposta": "Pode substituir, desde que atenda aos requisitos de segurança e assinatura previstos nas normas."
+    },
+    {
+      "pergunta": "O paciente pode exigir cópia do prontuário?",
+      "resposta": "Sim. O acesso é um direito, e a recusa sem justificativa pode gerar problemas."
+    }
+  ],
+  "cta": "Se você quer revisar seus registros e a documentação do consultório ou da clínica, vale fazer isso antes de um problema. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

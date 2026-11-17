@@ -1,23 +1,29 @@
 {
-  "ordem": 8,
-  "numero": "VIII",
+  "ordem": 6,
+  "numero": "VI",
   "slug": "direito-civil",
   "titulo_curto": "Direito civil",
   "titulo": "Direito Civil",
-  "subtitulo": "Contratos, responsabilidade civil e indenizações",
+  "subtitulo": "Seus direitos, seu patrimônio e seus interesses merecem proteção jurídica.",
   "descricao_seo": "Contratos, responsabilidade civil e indenizações: elaboração, revisão e rescisão de contratos, cobranças, notificações extrajudiciais, negociação e acordos.",
   "paragrafos": [
-    "Assessoria e atuação em demandas cíveis, com foco em contratos e na responsabilidade civil. Cada caso é analisado com atenção à documentação, às provas e às medidas mais adequadas para a proteção dos interesses do cliente, seja pela via extrajudicial ou pela via judicial."
+    "As relações civis fazem parte de praticamente todos os aspectos da vida, desde a celebração de contratos e aquisição de imóveis até as relações familiares, obrigações financeiras e questões patrimoniais. Quando essas relações não são conduzidas adequadamente ou surgem conflitos, a orientação jurídica torna-se fundamental para prevenir prejuízos e assegurar o cumprimento dos direitos envolvidos.",
+    "Nossa atuação em Direito Civil é voltada à orientação, prevenção e resolução de conflitos entre pessoas físicas e jurídicas, com análise individualizada de cada situação e definição de estratégias jurídicas adequadas.",
+    "Oferecemos suporte na elaboração e revisão de contratos, defesa de direitos, responsabilidade civil, cobranças, relações patrimoniais e demandas judiciais, sempre considerando a legislação vigente, o entendimento dos tribunais e as particularidades de cada caso."
   ],
-  "rotulo_lista": "",
+  "rotulo_lista": "Principais situações",
   "itens": [
-    "Elaboração, revisão e rescisão de contratos",
-    "Responsabilidade civil e ações de indenização",
+    "Responsabilidade civil e indenizações",
     "Cobranças e inadimplemento contratual",
+    "Obrigações e relações civis",
+    "Defesa em processos judiciais",
+    "Elaboração, revisão e rescisão de contratos",
     "Notificações extrajudiciais",
     "Negociação e acordos"
   ],
   "cta": "Cada situação é única. Agende uma consulta e receba uma orientação adequada ao seu caso.",
   "cor": "azul",
-  "imagem": "/assets/img/plano-saude-falso-coletivo.webp"
+  "imagem": "/assets/img/plano-saude-falso-coletivo.webp",
+  "intro_titulo": "",
+  "chamada": "Contratos, responsabilidade civil, cobranças e indenizações"
 }

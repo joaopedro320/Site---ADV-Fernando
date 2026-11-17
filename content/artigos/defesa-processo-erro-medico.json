@@ -1,0 +1,38 @@
+{
+  "ordem": 9,
+  "tipo": "artigo",
+  "titulo": "Fui processado por erro médico: o que fazer e como me defender?",
+  "slug": "defesa-processo-erro-medico",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "Não deixe o prazo da citação passar e procure um advogado o quanto antes. O médico, em regra, só responde se ficar provada a culpa (imperícia, imprudência ou negligência). O prontuário, o consentimento informado e a perícia costumam ser as provas mais importantes da defesa.",
+  "imagem": "/assets/img/artigos/defesa-processo-erro-medico.webp",
+  "texto": "Ser citado em uma ação de indenização por suposto erro médico é um dos momentos mais difíceis da carreira. Além do desgaste emocional, há risco financeiro e de reputação. Mas processo não significa condenação. Veja como funciona e como se organizar.\n\n## O médico responde por qualquer resultado ruim?\n\nNão. Na maioria das especialidades, a obrigação do médico é de meio: ele deve empregar a técnica adequada e o cuidado devido, e não garantir a cura. O Código de Defesa do Consumidor também prevê que a responsabilidade pessoal do profissional liberal depende de culpa. Ou seja, o paciente precisa demonstrar que houve falha na conduta e que ela causou o dano.\n\nExistem casos em que o debate sobre o resultado esperado é maior, como em cirurgias estéticas. Por isso, o que foi conversado e documentado com o paciente é tão importante.\n\n## E o hospital ou a clínica?\n\nA responsabilidade do hospital e da clínica, como prestadores de serviço, costuma ser analisada de forma diferente da do médico. Em muitos processos, o paciente cita o médico, o hospital e até o plano de saúde juntos. A defesa precisa avaliar a posição de cada um, a relação contratual e eventual direito de regresso.\n\n## O que o paciente pode pedir?\n\n- indenização por danos materiais (despesas médicas, perda de renda);\n- danos morais;\n- danos estéticos, quando há cicatriz ou deformidade;\n- pensão, em casos de incapacidade ou morte, conforme o caso.\n\nO mesmo fato pode gerar também processo ético no CRM e, em situações graves, investigação criminal. As esferas são independentes.\n\n## Quais provas fazem diferença?\n\n- Prontuário completo e legível, com anamnese, exame físico, evolução, condutas e orientações;\n- Termo de consentimento informado, específico para cada procedimento;\n- Exames e laudos que justifiquem a conduta;\n- Perícia médica judicial, que costuma ser decisiva;\n- Parecer de assistente técnico, um médico indicado pela defesa para acompanhar a perícia;\n- Testemunhas e colegas que participaram do atendimento.\n\nO ônus de provar os fatos pode ser invertido em favor do paciente em alguns casos, o que torna ainda mais importante ter documentos organizados.\n\n## Quanto tempo o paciente tem para processar?\n\nNas relações de consumo, o prazo costuma ser de cinco anos, contados do conhecimento do dano e de sua autoria. Em algumas situações, o prazo pode variar. Por isso, mesmo depois de muito tempo, uma ação ainda pode ser proposta, e a guarda do prontuário por longo prazo é essencial.\n\n## O que fazer passo a passo\n\n1. Confira o prazo da citação. A contestação tem prazo curto, em regra de 15 dias úteis, contados conforme a lei processual.\n2. Procure um advogado. Ele analisa o caso, a questão contratual e a estratégia.\n3. Avise seu seguro de responsabilidade civil profissional, se houver, dentro do prazo do contrato. Alguns seguros exigem comunicação rápida.\n4. Reúna todos os documentos. Prontuário, termos, exames, receitas, mensagens e e-mails.\n5. Não altere o prontuário. Qualquer mudança posterior pode ser interpretada como tentativa de ocultar fatos.\n6. Evite conversar sobre o caso com o paciente, a família ou nas redes sociais sem orientação.\n\n## Como prevenir\n\nA maior parte da defesa é construída antes do problema: prontuário claro, consentimento bem feito, comunicação honesta com o paciente, contrato com hospital e clínica revisado e seguro de responsabilidade adequado. Uma assessoria preventiva ajuda a revisar esses pontos.",
+  "faq": [
+    {
+      "pergunta": "Se o resultado não foi o esperado, o médico é automaticamente responsável?",
+      "resposta": "Não. Em regra, é preciso demonstrar culpa e ligação entre a conduta e o dano."
+    },
+    {
+      "pergunta": "Posso ser processado junto com o hospital?",
+      "resposta": "Sim, é comum que o paciente processe o médico, o hospital e o plano de saúde no mesmo processo."
+    },
+    {
+      "pergunta": "O seguro de responsabilidade civil cobre tudo?",
+      "resposta": "Depende da apólice: limites, exclusões e prazos de aviso variam. Revise o contrato antes de precisar, agende uma consulta conosco que faremos isso de forma técnica, rápida e prática."
+    },
+    {
+      "pergunta": "Um processo ético no CRM interfere na ação judicial?",
+      "resposta": "São esferas independentes, mas o que é dito em uma pode ser usado na outra. A defesa deve ser coordenada."
+    },
+    {
+      "pergunta": "Vale fazer acordo?",
+      "resposta": "Pode ser uma boa estratégia em alguns casos, mas a decisão depende da prova, do risco e do valor. Converse com seu advogado antes de qualquer proposta."
+    },
+    {
+      "pergunta": "Posso corrigir o prontuário depois que fui citado?",
+      "resposta": "Não. Evite qualquer alteração. Se for necessário registrar algo, procure orientação jurídica antes."
+    }
+  ],
+  "cta": "Se você foi citado em uma ação por suposto erro médico ou quer revisar a sua documentação para se proteger, vale agir cedo. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

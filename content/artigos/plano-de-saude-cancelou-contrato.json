@@ -1,11 +1,34 @@
 {
-  "ordem": 8,
+  "ordem": 5,
+  "tipo": "artigo",
   "titulo": "O plano de saúde cancelou meu contrato. Isso pode?",
   "slug": "plano-de-saude-cancelou-contrato",
   "categoria": "Plano de saúde",
-  "data": "2026-11-13",
-  "resumo": "Nos planos individuais e familiares, a operadora não pode rescindir o contrato por conta própria, salvo em casos de fraude ou de inadimplência superior a 60 dias, consecutivos ou não, nos últimos 12 meses, e desde que o beneficiário seja notificado até o 50º dia de atraso.",
-  "imagem": "",
-  "texto": "Nos planos individuais e familiares, a operadora não pode rescindir o contrato por conta própria, salvo em casos de fraude ou de inadimplência superior a 60 dias, consecutivos ou não, nos últimos 12 meses, e desde que o beneficiário seja notificado até o 50º dia de atraso.\n\nNos planos coletivos (empresariais ou por adesão), a rescisão é permitida em condições mais amplas, como após 12 meses de vigência e mediante aviso prévio.\n\nMesmo assim, o STJ firmou entendimento de que a operadora deve manter a assistência ao beneficiário internado ou em tratamento essencial à sua sobrevivência até a alta, desde que a mensalidade continue sendo paga.\n\nGuarde comunicados, boletos e protocolos, e avalie portabilidade ou migração para outro plano.",
-  "cta": "Cada contrato tem regras próprias. Entre em contato para analisar o seu."
+  "data": "2026-11-17",
+  "resumo": "Depende do tipo de plano. No plano individual ou familiar, o cancelamento só é permitido em caso de fraude ou de atraso no pagamento por mais de 60 dias, com aviso prévio.",
+  "imagem": "/assets/img/artigos/plano-de-saude-cancelou-contrato.webp",
+  "texto": "Por sua vez, no plano coletivo, o cancelamento é possível em algumas situações, mas há regras. Se você está internado ou em tratamento, a cobertura pode ter de ser mantida.\n\nReceber a notícia de que o plano foi cancelado é assustador, ainda mais para quem está em tratamento ou tem uma doença crônica. Mas nem todo cancelamento é válido. Veja quando a operadora pode cancelar e o que fazer se ela não seguiu as regras.\n\n## Primeiro, descubra qual é o seu tipo de plano\n\nAs regras mudam conforme o contrato:\n\n- **Individual ou familiar:** contratado diretamente com a operadora.\n- **Coletivo empresarial:** oferecido pela empresa onde você trabalha ou contratado por sua empresa, inclusive por CNPJ ou MEI.\n- **Coletivo por adesão:** contratado por associação, sindicato ou conselho profissional.\n\nO tipo de plano está no contrato. Se não souber, peça uma cópia à operadora ou entre em contato conosco que conseguimos ajudar.\n\n## Plano individual ou familiar: cancelamento só em casos específicos\n\nA lei proíbe a operadora de cancelar o plano individual ou familiar sem motivo. Ela só pode fazer isso em dois casos:\n\n- **fraude:** por exemplo, informações falsas dadas de má-fé na contratação;\n- atraso no pagamento por mais de 60 dias, seguidos ou não, nos últimos 12 meses, desde que você tenha sido avisado até o 50º dia de atraso.\n\nEnquanto o titular estiver internado, o plano também não pode ser suspenso nem cancelado.\n\n## Plano coletivo empresarial com 30 vidas ou mais\n\nNesses contratos, a operadora pode cancelar sem dar motivo, desde que:\n\n- o contrato tenha cláusula prevendo isso;\n- o contrato esteja em vigor há pelo menos 12 meses;\n- haja aviso prévio de pelo menos 60 dias.\n\n## Plano coletivo com menos de 30 vidas (inclusive MEI)\n\nOs contratos pequenos são tratados de forma parecida com os individuais, porque quem contrata tem pouco poder de negociação. O STJ entende que a operadora precisa apresentar um motivo válido para cancelar. Cancelar sem explicação costuma ser considerado abusivo.\n\n## Plano por adesão\n\nNos planos por adesão, em regra a operadora não pode excluir só você do contrato. O cancelamento atinge o contrato inteiro, e as regras de aviso e de notificação precisam ser seguidas.\n\n## Estou em tratamento. O plano pode me deixar sem cobertura?\n\nMesmo quando o cancelamento do plano coletivo é regular, o STJ decidiu (Tema 1.082) que a operadora deve manter os cuidados até a alta para quem está internado ou em tratamento essencial para a sobrevivência ou a integridade física. A condição é que o titular continue pagando a mensalidade. Por isso, se você está em tratamento, avise a operadora e guarde os laudos.\n\n## Quando o cancelamento costuma ser ilegal?\n\n- plano individual cancelado sem fraude ou sem inadimplência;\n- cancelamento por atraso sem a notificação exigida;\n- plano coletivo cancelado sem aviso prévio de 60 dias;\n- contrato pequeno (menos de 30 vidas) cancelado sem motivo válido;\n- cancelamento durante internação ou tratamento essencial, sem manter a cobertura;\n\n## O que fazer passo a passo\n\n1. Peça o comunicado por escrito. Veja o motivo, a data e se houve aviso prévio. Anote protocolos.\n2. Reúna o contrato e os comprovantes de pagamento. Eles mostram se o motivo é verdadeiro.\n3. Se estiver em tratamento, junte relatórios médicos. Eles são importantes para pedir a continuidade da cobertura.\n4. Reclame na ouvidoria e na ANS. O Disque ANS é o 0800 701 9656.\n5. Procure um advogado da área da saúde. Em casos urgentes, é possível pedir uma liminar para restabelecer o plano ou manter o tratamento.\n6. Avalie a portabilidade. Em alguns casos, é possível migrar para outro plano sem novas carências, mas isso depende de requisitos e prazos.\n\n## Posso pedir o plano de volta e indenização?\n\nSe o cancelamento foi indevido, é possível pedir na Justiça o restabelecimento do contrato, com as mesmas condições, e, dependendo do caso, indenização por danos morais, principalmente quando o paciente fica sem tratamento. Cada situação é diferente e não há garantia de resultado.",
+  "faq": [
+    {
+      "pergunta": "O plano pode cancelar porque atrasei uma mensalidade?",
+      "resposta": "No plano individual, não. Só se o atraso passar de 60 dias, seguidos ou não, nos últimos 12 meses, e com aviso prévio. Nos planos coletivos, as regras contratuais também exigem notificação."
+    },
+    {
+      "pergunta": "O plano pode cancelar durante uma internação?",
+      "resposta": "No plano individual, não. No plano coletivo, mesmo que o cancelamento seja regular, a cobertura deve ser mantida até a alta, desde que a mensalidade continue sendo paga."
+    },
+    {
+      "pergunta": "O plano da minha empresa foi cancelado. Perco a cobertura?",
+      "resposta": "Pode perder o plano, mas, se você estiver em tratamento ou internado, pode ter direito à continuidade. Vale analisar as opções, como portabilidade e contratação de outro plano."
+    },
+    {
+      "pergunta": "Tive meu plano cancelado e o plano diz que era por fraude. E agora?",
+      "resposta": "A operadora precisa provar a fraude e dar chance de defesa. Procure orientação jurídica o quanto antes, estamos aqui para ajudar."
+    },
+    {
+      "pergunta": "Posso ir à Justiça sem esperar a ANS?",
+      "resposta": "Sim. Em muitos casos, você pode procurar a Justiça diretamente."
+    }
+  ],
+  "cta": "Se o seu plano foi cancelado e você tem dúvidas se isso é permitido, não deixe o tempo passar. Entre em contato, agende uma consulta e tire suas dúvidas."
 }

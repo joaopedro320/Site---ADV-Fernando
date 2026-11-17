@@ -1,0 +1,38 @@
+{
+  "ordem": 13,
+  "tipo": "artigo",
+  "titulo": "Operadora descredenciou o médico ou aplicou glosa? Veja seus direitos",
+  "slug": "descredenciamento-medico-glosa",
+  "categoria": "Direito Médico",
+  "data": "2026-11-17",
+  "resumo": "A relação entre médico e operadora precisa ter contrato escrito, com regras claras sobre valores, reajuste anual, glosas e rescisão (Lei 13.003/2014). Descredenciamento e glosa sem base contratual ou sem explicação podem ser contestados, administrativamente ou na Justiça.",
+  "imagem": "/assets/img/artigos/descredenciamento-medico-glosa.webp",
+  "texto": "Para muitos médicos, os planos de saúde são parte importante da renda. Por isso, ser descredenciado de uma hora para outra, ter honorários glosados ou ficar anos sem reajuste causa grande impacto. Veja o que a lei prevê e como agir.\n\n## O contrato com a operadora precisa ser escrito?\n\nSim. A Lei 13.003/2014 alterou a Lei dos Planos de Saúde para exigir contrato escrito entre as operadoras e os prestadores de serviço, o que inclui médicos, clínicas e hospitais. O objetivo é dar transparência e segurança à relação. A ANS regulamentou o tema em normas próprias.\n\n## O que o contrato deve prever\n\nEntre os pontos que devem constar com clareza estão:\n\n- o objeto e a natureza do contrato, e os serviços contratados;\n- a definição dos valores dos serviços e a forma de pagamento;\n- prazos de faturamento e de pagamento;\n- a periodicidade e o critério do reajuste, que deve ser anual;\n- os atos e procedimentos que precisam de autorização da operadora;\n- a rotina de auditoria técnica e administrativa e as regras sobre glosas;\n- a vigência e as regras de renovação e de rescisão;\n- as penalidades para ambas as partes.\n\nSe você atende por uma operadora sem contrato escrito, ou com cláusulas confusas, vale rever sua situação.\n\n## Como funciona o reajuste?\n\nA lei estabelece que os valores pagos aos prestadores devem ser reajustados anualmente, na data de aniversário do contrato. As partes podem negociar o índice, e a lei prevê um período de negociação. Quando não há acordo e não existe outra regra contratual válida, a ANS define o índice a ser aplicado. Por isso, verifique se o seu contrato traz a cláusula de reajuste e se ela está sendo cumprida.\n\n## Glosa: o que é e o que a operadora pode fazer?\n\nGlosa é a recusa total ou parcial de pagamento de um procedimento, normalmente por auditoria. Ela pode ser legítima, por exemplo, se o serviço não foi prestado ou não seguiu as regras do contrato. Mas precisa ser motivada, comunicada ao prestador e permitir recurso. Sinais de glosa abusiva:\n\n- ausência de justificativa clara;\n- glosa com base em critério que não está no contrato;\n- prazo muito curto ou inexistente para recurso;\n- repetição sistemática da mesma recusa, sem análise técnica;\n- auditoria que não identifica quem analisou o caso.\n\nUm prontuário completo e a documentação do atendimento são as principais defesas contra glosas indevidas.\n\n## E o descredenciamento?\n\nO descredenciamento, ou a rescisão do contrato pela operadora, deve seguir as regras do contrato e da legislação, que preveem prazos e critérios de aviso. Quando o médico é descredenciado, a operadora também tem deveres perante os beneficiários, como informar a mudança e garantir a continuidade do atendimento, inclusive em casos de substituição de prestadores.\n\nDescredenciamento sem aviso, sem cláusula contratual ou como retaliação, por exemplo, por reclamação de valores, pode ser contestado. A análise depende do contrato e das circunstâncias.\n\n## O que fazer passo a passo\n\n1. **Peça o contrato e os aditivos por escrito:** veja valores, reajuste, auditoria e rescisão.\n2. **Guarde as comunicações:** E-mails, cartas, tabelas e notificações de glosa ou descredenciamento.\n3. **Notifique a operadora formalmente:** peça explicações, contestação das glosas ou aplicação do reajuste, dentro dos prazos do contrato.\n4. **Leve o caso à ANS, quando cabível:** a agência fiscaliza o cumprimento das regras sobre contratos com prestadores.\n5. **Procure um advogado:** em muitos casos, é possível solucionar de forma administrativa ou, se for o caso, discutir na Justiça o reajuste, as glosas e a rescisão.\n\n## Como prevenir\n\nAntes de assinar ou renovar um contrato, vale revisar com um advogado as cláusulas de valores, reajuste, glosa, prazo de aviso e foro. A assessoria jurídica preventiva também ajuda clínicas a organizar o faturamento e a documentação para reduzir glosas.",
+  "faq": [
+    {
+      "pergunta": "A operadora pode me descredenciar sem avisar?",
+      "resposta": "O contrato e a lei preveem regras e prazos para a rescisão. Descredenciamento sem aviso ou sem base contratual pode ser contestado."
+    },
+    {
+      "pergunta": "Meu contrato não prevê reajuste. E agora?",
+      "resposta": "A lei exige reajuste anual e cláusula clara sobre ele. Quando falta ou está irregular, vale buscar orientação jurídica."
+    },
+    {
+      "pergunta": "A operadora pode glosar sem explicar?",
+      "resposta": "A glosa deve ser motivada e comunicada ao prestador, com possibilidade de recurso. Falta de explicação é um sinal de abusividade."
+    },
+    {
+      "pergunta": "Posso cobrar o paciente por glosa da operadora?",
+      "resposta": "Em regra, não. A cobrança direta do paciente pode gerar problemas éticos e jurídicos, e deve ser avaliada com cuidado."
+    },
+    {
+      "pergunta": "Posso negociar em grupo com outros médicos?",
+      "resposta": "Sim. Entidades de classe e cooperativas costumam negociar valores e condições de forma coletiva."
+    },
+    {
+      "pergunta": "Preciso ir à Justiça para contestar uma glosa?",
+      "resposta": "Nem sempre. Muitas glosas se resolvem com recurso administrativo bem documentado, vale contar com apoio jurídico nessa etapa. Se não houver solução, a via judicial pode ser avaliada."
+    }
+  ],
+  "cta": "Se você foi descredenciado, está com glosas ou quer revisar o contrato com a operadora antes de assinar, vale agir com cuidado. Entre em contato, agende uma consulta e tire suas dúvidas. Também atendemos com assessoria jurídica preventiva para médicos e clínicas."
+}

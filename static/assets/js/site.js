@@ -89,16 +89,44 @@
     wr._upd=upd;upd();
   });
 
-  /* filtro de artigos */
-  var chips=$$('.chip'),lista=$('#lista-artigos');
-  if(chips.length&&lista){
-    chips.forEach(function(ch){ch.addEventListener('click',function(){
-      chips.forEach(function(x){x.classList.toggle('is-on',x===ch)});
+  /* filtro de artigos (um grupo de chips por trilho) */
+  $$('.chips').forEach(function(grp){
+    var lista=$('#'+(grp.getAttribute('data-for')||'lista-artigos'));if(!lista)return;var cs=$$('.chip',grp);
+    cs.forEach(function(ch){ch.addEventListener('click',function(){
+      cs.forEach(function(x){x.classList.toggle('is-on',x===ch)});
       var cat=ch.getAttribute('data-cat');
       $$('.card',lista).forEach(function(card){card.hidden=!!cat&&card.getAttribute('data-cat')!==cat;if(!card.hidden)card.classList.add('is-in')});
       lista.scrollTo({left:0});var wr=lista.closest('.rail-wrap');setTimeout(function(){wr&&wr._upd&&wr._upd()},80);
     })});
-  }
+  });
+
+  /* abas do conteudo */
+  $$('.ct-tab').forEach(function(t,_,all){t.addEventListener('click',function(){all.forEach(function(x){x.classList.toggle('is-on',x===t)})})});
+
+  /* como o trabalho e conduzido: passa sozinho */
+  $$('[data-autoslide]').forEach(function(vp){
+    var sec=vp.closest('section'),cards=$$('.cd-card',vp),bar=$('.cd-bar i',sec),i=0,tm,vis=false;
+    if(!cards.length)return;
+    function left(k){return cards[k].offsetLeft-cards[0].offsetLeft}
+    function mark(){var x=vp.scrollLeft,best=0,bd=1e9;cards.forEach(function(c,k){var dd=Math.abs(left(k)-x);if(dd<bd){bd=dd;best=k}});i=best;
+      cards.forEach(function(c,k){c.classList.toggle('is-cur',k===i)});if(bar)bar.style.setProperty('--cp',((i+1)/cards.length).toFixed(3))}
+    function go(k){i=(k+cards.length)%cards.length;vp.scrollTo({left:left(i),behavior:reduce?'auto':'smooth'})}
+    function play(){stop();if(reduce||!vis)return;tm=setInterval(function(){var max=vp.scrollWidth-vp.clientWidth;go(vp.scrollLeft>=max-4?0:i+1)},4200)}
+    function stop(){clearInterval(tm)}
+    var pv=$('.cd-prev',sec),nx=$('.cd-next',sec);
+    if(pv)pv.addEventListener('click',function(){go(i-1);play()});if(nx)nx.addEventListener('click',function(){go(i+1);play()});
+    vp.addEventListener('scroll',raf(mark),{passive:true});
+    ['mouseenter','touchstart','focusin'].forEach(function(ev){vp.addEventListener(ev,stop,{passive:true})});
+    ['mouseleave','touchend','focusout'].forEach(function(ev){vp.addEventListener(ev,play,{passive:true})});
+    if('IntersectionObserver' in w){new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)play();else stop()},{threshold:.35}).observe(vp)}else{vis=true;play()}
+    mark();
+  });
+
+  /* mapa do Brasil: desenha as rotas quando aparece */
+  $$('[data-map]').forEach(function(m){
+    if(!('IntersectionObserver' in w)||reduce){m.classList.add('is-in');return}
+    var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){m.classList.add('is-in');o.disconnect()}},{threshold:.3});o.observe(m);
+  });
 
   /* aviso de golpe: uma vez por sessao, depois da abertura */
   function alerta(delay){var al=$('#alerta-golpe');
