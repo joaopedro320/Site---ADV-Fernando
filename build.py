@@ -237,7 +237,7 @@ def breadcrumb(items):
 
 
 # ---------- layout ----------
-NAV = [('O escritório', '/o-escritorio/'), ('Áreas de atuação', '/areas-de-atuacao/'), ('Para quem atuamos', '/para-quem-atuamos/'), ('Conteúdo', '/conteudo/'), ('Contato', '/contato/')]
+NAV = [('O advogado', '/o-escritorio/'), ('Áreas de atuação', '/areas-de-atuacao/'), ('Para quem atuamos', '/para-quem-atuamos/'), ('Conteúdo', '/conteudo/'), ('Contato', '/contato/')]
 
 
 def header(active=''):
@@ -282,7 +282,7 @@ def footer():
       <p class="oab">Luiz Fernando Neves, %(oab)s</p>
     </div>
     <nav aria-label="Páginas do site"><h2>Navegue</h2><ul>
-      <li><a href="/o-escritorio/">O escritório</a></li><li><a href="/areas-de-atuacao/">Áreas de atuação</a></li><li><a href="/para-quem-atuamos/">Para quem atuamos</a></li><li><a href="/conteudo/">Artigos e notícias</a></li><li><a href="/contato/">Contato</a></li></ul></nav>
+      <li><a href="/o-escritorio/">O advogado</a></li><li><a href="/areas-de-atuacao/">Áreas de atuação</a></li><li><a href="/para-quem-atuamos/">Para quem atuamos</a></li><li><a href="/conteudo/">Artigos e notícias</a></li><li><a href="/contato/">Contato</a></li></ul></nav>
     <nav aria-label="Áreas de atuação"><h2>Áreas de atuação</h2><ul>%(areas)s</ul></nav>
     <div><h2>Contato</h2><ul>
       <li><a href="%(wa)s" target="_blank" rel="noopener" data-wa="footer">WhatsApp %(tel)s</a></li>
@@ -590,9 +590,9 @@ def build_home():
   <ol class="rows">%s</ol></div></section>''' % (split_title(HM['areas_titulo'], 'h2', 'display'), h(HM['areas_texto']), legend(), ARROW, rows)
     escr = '''<section class="sec escr"><div class="wrap escr-grid">
   <figure class="escr-fig"><div class="escr-img" data-reveal><div class="pin-in" data-speed="-0.1">%s</div></div>%s</figure>
-  <div class="escr-copy"><p class="eyebrow reveal">O escritório</p>%s
+  <div class="escr-copy"><p class="eyebrow reveal">O advogado</p>%s
   <p class="reveal">%s</p><p class="reveal">%s</p>
-  <a class="btn btn-solid reveal" href="/o-escritorio/">Conheça o escritório %s</a></div></div>
+  <a class="btn btn-solid reveal" href="/o-escritorio/">Conheça o Dr. Luiz Fernando %s</a></div></div>
 </section>''' % (
         img_tag('/assets/img/fernando/perfil-mesa.webp', 'Luiz Fernando Neves em seu escritório', sizes='(max-width:900px) 92vw, 560px'),
         badge('Rigor técnico · Estratégia · Proximidade · '), split_title(HM.get('escritorio_titulo') or 'Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.', 'h2', 'display'),
@@ -663,7 +663,7 @@ def office_faq_ld():
 def build_office():
     o = OF
     forms = ''.join('<div class="form-col reveal"><h3>%s</h3><ul class="checks">%s</ul></div>' % (h(g['titulo']), ''.join('<li>%s</li>' % h(i) for i in g['itens'])) for g in o['formacao'])
-    body = page_hero('O escritório', o['titulo'], o['subtitulo'], [('Início', '/'), ('O escritório', None)], 'verde', '/assets/img/fernando/perfil-mesa-2.webp', 'Luiz Fernando Neves em seu escritório') + '''
+    body = page_hero('Sobre o advogado', o['titulo'], o['subtitulo'], [('Início', '/'), ('O advogado', None)], 'verde', '/assets/img/fernando/perfil-mesa-2.webp', 'Luiz Fernando Neves em seu escritório') + '''
 <section class="sec"><div class="wrap prose-grid">
   <div class="prose prose-j"><p class="eyebrow reveal">Atuação</p>%s%s</div>
   <div class="duo"><figure class="duo-a" data-reveal><div class="pin-in" data-speed="-0.1">%s</div></figure><figure class="duo-b" data-reveal><div class="pin-in" data-speed="-0.14">%s</div></figure>%s%s</div>
@@ -685,7 +685,7 @@ def build_office():
     sch = [{'@type': 'AboutPage', 'url': abs_url('/o-escritorio/'), 'name': o['titulo'], 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('O escritório', '/o-escritorio/')])]
     if o.get('faq'):
         sch.append(office_faq_ld())
-    page('/o-escritorio/', 'O escritório de Direito da Saúde | Luiz Fernando Neves', 'Conheça o escritório e o advogado Luiz Fernando Neves: atuação em Direito da Saúde, formação em Direito Médico e atendimento em todo o Brasil.', body, '/o-escritorio/', sch, og_image='/assets/img/fernando/perfil-mesa.webp', prio='0.8')
+    page('/o-escritorio/', 'Luiz Fernando Neves, advogado de Direito da Saúde', 'Conheça o advogado Luiz Fernando Neves: atuação em Direito da Saúde, formação em Direito Médico e atendimento em todo o Brasil.', body, '/o-escritorio/', sch, og_image='/assets/img/fernando/perfil-mesa.webp', prio='0.8')
 
 
 def side(title, items_html, cor, wa_msg, label):
@@ -924,7 +924,7 @@ def build_files():
     L += ['', '## Artigos', '']
     for a in ARTIGOS:
         L.append('- [%s](%s): %s' % (a['titulo'], abs_url(slug_path('conteudo', a['slug'])), cut(a['resumo'], 160)))
-    L += ['', '## Institucional', '', '- [O escritório](%s)' % abs_url('/o-escritorio/'), '- [Contato](%s)' % abs_url('/contato/'), '- [Versão completa em texto](%s/llms-full.txt)' % BASE, '']
+    L += ['', '## Institucional', '', '- [O advogado](%s)' % abs_url('/o-escritorio/'), '- [Contato](%s)' % abs_url('/contato/'), '- [Versão completa em texto](%s/llms-full.txt)' % BASE, '']
     write('/llms.txt', '\n'.join(L))
     F = ['# %s' % NOME, '', '> Advocacia dedicada ao Direito da Saúde (OAB/%s). Conteúdo informativo; cada caso exige análise individual.' % S['oab_uf'], '', '## O escritório', ''] + OF['texto'] + OF['advogado_texto'] + OF['principios'] + ['']
     for f in OF.get('faq') or []:

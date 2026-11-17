@@ -162,7 +162,7 @@ collections:
           - {label: "Cta titulo", name: cta_titulo, widget: string}
           - {label: "Cta texto", name: cta_texto, widget: string}
       - name: escritorio
-        label: "Página O escritório"
+        label: "Página O advogado"
         file: content/escritorio.json
         format: json
         fields:
