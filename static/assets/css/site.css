@@ -807,3 +807,8 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 @media (prefers-reduced-motion:reduce){.rev-track{animation:none}.rev-run{overflow-x:auto}}
 .escr .escr-img{aspect-ratio:4/5}.escr .escr-img img{object-position:42% 30%}
 @media (max-width:900px){.escr .escr-img{aspect-ratio:4/4.4}}
+/* marcadores com o icone da marca */
+.escr-pil li{gap:1rem}
+.escr-pil li::before{width:34px;height:12px;background:url(/assets/logo/monograma-verde.svg) center/contain no-repeat;-webkit-mask:none;mask:none}
+.escr-pil li::before{width:44px;height:34px;border-radius:var(--r);background:var(--verde-cl) url(/assets/logo/monograma-verde.svg) center/30px auto no-repeat}
+.escr-pil li::before{width:30px;height:30px;border-radius:6px;background:url(/favicon.svg) center/cover no-repeat}
