@@ -542,7 +542,7 @@ collections:
     - label: 'Chamada final: texto'
       name: cta_texto
       widget: string
-    - label: 'Seção O advogado: título'
+    - label: 'Seção O escritório: título'
       name: escritorio_titulo
       widget: string
       required: false
@@ -563,7 +563,7 @@ collections:
       widget: string
       required: false
   - name: escritorio
-    label: Página O advogado
+    label: Página O escritório
     file: content/escritorio.json
     format: json
     fields:
@@ -723,4 +723,4 @@ collections:
       widget: markdown
       modes:
       - rich_text
-  description: 'Textos fixos do site: página inicial, página O advogado, perguntas frequentes, avaliações e dados de contato.'
+  description: 'Textos fixos do site: página inicial, página O escritório, perguntas frequentes, avaliações e dados de contato.'
