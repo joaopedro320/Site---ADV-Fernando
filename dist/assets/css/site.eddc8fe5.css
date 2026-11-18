@@ -803,7 +803,7 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 .rev-who{display:grid;gap:.15rem;flex:1}.rev-who strong{font:600 .95rem var(--sans);color:var(--tinta)}
 .rev .stars{color:#F4B400;letter-spacing:.1em;font-size:.85rem}
 .rev-g{font:700 1.1rem var(--sans);color:#4285F4}
-.rev blockquote{margin:0;font:400 .95rem/1.6 var(--sans);color:var(--tinta-2);display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.rev blockquote{margin:0;font:400 .95rem/1.6 var(--sans);color:var(--tinta-2);display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
 @media (prefers-reduced-motion:reduce){.rev-track{animation:none}.rev-run{overflow-x:auto}}
 .escr .escr-img{aspect-ratio:4/5}.escr .escr-img img{object-position:42% 30%}
 @media (max-width:900px){.escr .escr-img{aspect-ratio:4/4.4}}

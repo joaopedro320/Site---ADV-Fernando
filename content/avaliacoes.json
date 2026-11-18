@@ -1,6 +1,22 @@
 {
   "titulo": "Avaliações no Google",
   "texto": "A opinião de quem já foi atendido ajuda outras pessoas a encontrar orientação jurídica. Se você é cliente do escritório, deixe a sua avaliação.",
-  "itens": [],
+  "itens": [
+    {
+      "autor": "Elaine Munhoz",
+      "texto": "Dr Luiz Fernando me atendeu prontamente com clareza e honestidade. Aceitou meu caso, tomou as providências necessárias rapidamente com exito. Sempre me mantem informada sobre o andamento do processo. Indico de olhos fechados. Obrigada Dr.",
+      "nota": 5
+    },
+    {
+      "autor": "Aline Moreno",
+      "texto": "O Fernando e a equipe foram muito atenciosos comigo. Eu tinha várias dúvidas, e eles tiveram paciência para explicar tudo de um jeito que eu conseguia entender. Fiquei muito satisfeita com o atendimento!",
+      "nota": 5
+    },
+    {
+      "autor": "Caique Gonçalves",
+      "texto": "Excelente profissional, ótimo atendimento e experiente!",
+      "nota": 5
+    }
+  ],
   "link_avaliar": "https://g.page/r/CSPdCwOvmWuOEBM/review"
 }
