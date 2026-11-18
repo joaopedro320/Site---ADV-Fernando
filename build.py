@@ -357,7 +357,7 @@ def tracking_head():
 
 def page(path, title, desc, body, active='', schema=None, og_image=None, og_type='website', robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1', preload=None, lastmod=None, prio='0.7', freq='monthly', sitemap=True, extra_head='', canonical=None):
     canon = abs_url(canonical or path)
-    og_image = og_image or '/assets/img/og-default.jpg'
+    og_image = og_image or '/assets/img/og-logo.jpg'
     graph = [org_node(), person_node(), {'@type': 'WebSite', '@id': BASE + '/#site', 'url': BASE + '/', 'name': NOME, 'inLanguage': 'pt-BR', 'publisher': {'@id': BASE + '/#organizacao'}}]
     graph += schema or []
     ld = jld({'@context': 'https://schema.org', '@graph': graph})
@@ -718,7 +718,7 @@ def build_office():
     sch = [{'@type': 'AboutPage', 'url': abs_url('/o-escritorio/'), 'name': o['titulo'], 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('O escritório', '/o-escritorio/')])]
     if o.get('faq'):
         sch.append(office_faq_ld())
-    page('/o-escritorio/', 'O escritório | Luiz Fernando Neves Advocacia, Direito da Saúde', 'Conheça o escritório Luiz Fernando Neves Advocacia: atuação em Direito da Saúde, formação em Direito Médico e atendimento em todo o Brasil.', body, '/o-escritorio/', sch, og_image='/assets/img/fernando/perfil-mesa.webp', prio='0.8')
+    page('/o-escritorio/', 'O escritório | Luiz Fernando Neves Advocacia, Direito da Saúde', 'Conheça o escritório Luiz Fernando Neves Advocacia: atuação em Direito da Saúde, formação em Direito Médico e atendimento em todo o Brasil.', body, '/o-escritorio/', sch, prio='0.8')
 
 
 def side(title, items_html, cor, wa_msg, label):
