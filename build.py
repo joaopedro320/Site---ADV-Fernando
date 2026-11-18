@@ -561,12 +561,10 @@ def build_home():
     ds = [a for s_ in dest for a in ARTS if a['slug'] == s_] or (NOTICIAS[:5] if NOTICIAS else ARTIGOS[:5])
     slides = ''
     for i, a in enumerate(ds):
-        im = img_tag(a.get('imagem'), '', eager=(i == 0), sizes='(max-width:760px) 92vw, 640px') if a.get('imagem') else ''
-        if i:
-            im = im.replace(' loading="lazy"', ' loading="eager"')
-        slides += '<a class="slide%s" href="%s" %s>%s<span class="slide-c"><span class="tag">%s</span><span class="slide-t">%s</span><span class="slide-m">Ler %s %s</span></span></a>' % (
+        im = ''
+        slides += '<a class="slide%s" href="%s" %s>%s<span class="slide-c"><span class="tag">%s</span><span class="slide-t">%s</span><span class="slide-r">%s</span><span class="slide-m">Ler %s %s</span></span></a>' % (
             ' is-on' if i == 0 else '', slug_path('conteudo', a['slug']), '' if i == 0 else 'tabindex="-1" aria-hidden="true"', im,
-            h(a['categoria']), h(a['titulo']), 'notícia' if a['tipo'] != 'artigo' else 'artigo', ARROW)
+            h(a['categoria']), h(a['titulo']), h(cut(plain(a.get('resumo', '')), 150)), 'notícia' if a['tipo'] != 'artigo' else 'artigo', ARROW)
     dots = ''.join('<button class="dot%s" aria-label="Destaque %d" %s></button>' % (' is-on' if i == 0 else '', i + 1, 'aria-current="true"' if i == 0 else '') for i in range(len(ds)))
     chips = '<div class="legend legend-links"><a class="lg t-verde" href="/areas-de-atuacao/#saude"><i></i>Saúde</a><a class="lg t-azul" href="/areas-de-atuacao/#civil-e-consumidor"><i></i>Civil e consumidor</a></div>'
     hero = '''<section class="hero hero-v2" data-hero>
@@ -581,7 +579,7 @@ def build_home():
     </div>
     <div class="hero-visual">
       %(mono)s
-      <div class="news news-banner" aria-label="Artigos e notícias em destaque" data-carousel>
+      <div class="news news-banner news-txt" aria-label="Artigos e notícias em destaque" data-carousel>
         <div class="slides" aria-live="polite">%(slides)s</div>
         <div class="news-ctl"><p class="news-h">Em destaque</p><div class="dots">%(dots)s</div><div class="arrows"><button class="prev" aria-label="Anterior">%(arrl)s</button><button class="next" aria-label="Próxima">%(arr)s</button></div></div>
       </div>
@@ -616,22 +614,25 @@ def build_home():
     areas = '''<section class="sec sec-sand" id="areas"><div class="wrap areas-grid">
   <header class="sec-h sticky"><p class="eyebrow reveal">O que fazemos</p>%s<p class="reveal">%s</p>%s<a class="btn btn-ghost reveal" href="/areas-de-atuacao/">Ver todas as áreas %s</a></header>
   <ol class="rows">%s</ol></div></section>''' % (split_title(HM['areas_titulo'], 'h2', 'display'), h(HM['areas_texto']), legend(), ARROW, rows)
+    pil = ''.join('<li>%s</li>' % h(x) for x in HM.get('escritorio_pilares') or [])
     escr = '''<section class="sec escr"><div class="wrap escr-grid">
   <figure class="escr-fig"><div class="escr-img" data-reveal><div class="pin-in" data-speed="-0.1">%s</div></div>%s</figure>
-  <div class="escr-copy"><p class="eyebrow reveal">O advogado</p>%s
+  <div class="escr-copy"><p class="eyebrow reveal">%s</p>%s
   <p class="reveal">%s</p><p class="reveal">%s</p>
-  <a class="btn btn-solid reveal" href="/o-escritorio/">Conheça o Dr. Luiz Fernando %s</a></div></div>
+  <ul class="escr-pil reveal">%s</ul>
+  <div class="escr-btns reveal"><a class="btn btn-solid" href="/o-escritorio/">Conheça o escritório %s</a><a class="btn btn-ghost" href="/areas-de-atuacao/">Áreas de atuação</a></div></div></div>
 </section>''' % (
-        img_tag('/assets/img/fernando/perfil-mesa.webp', 'Luiz Fernando Neves em seu escritório', sizes='(max-width:900px) 92vw, 560px'),
-        badge('Rigor técnico · Estratégia · Proximidade · '), split_title(HM.get('escritorio_titulo') or 'Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.', 'h2', 'display'),
-        h(HM.get('escritorio_texto') or 'Atuamos na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde.'), h(OF['texto'][1]), ARROW)
+        img_tag('/assets/img/fernando/perfil-livro-serio.webp', 'Dr. Luiz Fernando Neves no escritório Luiz Fernando Neves Advocacia', sizes='(max-width:900px) 92vw, 560px'),
+        badge('Rigor técnico · Estratégia · Proximidade · '), h(HM.get('escritorio_eyebrow') or 'O escritório'),
+        split_title(HM.get('escritorio_titulo') or 'Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.', 'h2', 'display'),
+        h(HM.get('escritorio_texto') or ''), h(HM.get('escritorio_texto_2') or OF['texto'][1]), pil, ARROW)
     cards = ''.join(article_card(a) for a in ARTIGOS)
     conteudo = '''<section class="sec"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Conteúdo</p>%s<p class="reveal">%s</p></div><a class="btn btn-ghost reveal" href="/conteudo/">Todos os conteúdos %s</a></header>%s</div></section>''' % (
         split_title(HM['conteudo_titulo'], 'h2', 'display'), h(HM['conteudo_texto']), ARROW, rail(cards, 'Artigos'))
     body = hero + statement + brasil + publicos + mq + areas + escr + timeline() + image_ribbon() + conduta_section() + conteudo + reviews_section() + faq_section() + cta_band()
     sch = [{'@type': 'WebPage', '@id': BASE + '/#pagina', 'url': BASE + '/', 'name': 'Advogado de Direito da Saúde', 'isPartOf': {'@id': BASE + '/#site'}, 'about': {'@id': BASE + '/#organizacao'}, 'inLanguage': 'pt-BR'}, faq_ld()]
     page('/', 'Advogado de Direito da Saúde | %s' % NOME, 'Advocacia dedicada ao Direito da Saúde: orientação a médicos, dentistas e profissionais da saúde e defesa de pacientes e beneficiários de planos de saúde. Atendimento em todo o Brasil.',
-         body, schema=sch, preload=(ds[0]['imagem'],) if ds and ds[0].get('imagem') else None, prio='1.0', freq='weekly')
+         body, schema=sch, prio='1.0', freq='weekly')
 
 
 def conduta_section():
@@ -646,8 +647,12 @@ def reviews_section():
     itens = REV.get('itens') or []
     inner = ''
     if itens:
-        rv = ''.join('<figure class="rev reveal"><div class="stars" role="img" aria-label="%s de 5 estrelas">%s</div><blockquote>%s</blockquote><figcaption>%s</figcaption></figure>' % (h(r.get('nota', 5)), '★' * int(float(r.get('nota', 5))), h(r['texto']), h(r['autor'])) for r in itens)
-        inner = rail(rv, 'Avaliações')
+        def card(r, hide=False):
+            ini = ''.join(p[0] for p in r['autor'].split()[:2]).upper()
+            return '<figure class="rev"%s><div class="rev-top"><span class="rev-av" aria-hidden="true">%s</span><span class="rev-who"><strong>%s</strong><span class="stars" role="img" aria-label="%s de 5 estrelas">%s</span></span><span class="rev-g" aria-hidden="true">G</span></div><blockquote>%s</blockquote></figure>' % (
+                ' aria-hidden="true"' if hide else '', h(ini), h(r['autor']), h(r.get('nota', 5)), '★' * int(float(r.get('nota', 5))), h(r['texto']))
+        rv = ''.join(card(r) for r in itens) + ''.join(card(r, True) for r in itens)
+        inner = '<div class="rev-run" aria-label="Avaliações de clientes no Google"><div class="rev-track" style="--n:%d">%s</div></div>' % (len(itens), rv)
     gl = '<svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.3 5.7c4.3-4 7-9.9 7-17.1z"/><path fill="#FBBC05" d="M10.5 28.8A14.5 14.5 0 0 1 9.5 24c0-1.7.3-3.3.9-4.8l-7.9-6.2A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-5.9z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.3-5.7c-2 1.4-4.7 2.3-8.6 2.3-6.3 0-11.6-4.2-13.5-9.9l-7.9 5.9C6.6 42.6 14.6 48 24 48z"/></svg>'
     return '''<section class="sec sec-sand reviews" id="avaliacoes"><div class="wrap">
 <div class="rv-card reveal">%s<div class="rv-copy"><p class="eyebrow">Google</p>%s<p>%s</p></div>
@@ -837,12 +842,12 @@ def build_articles():
     art_cards = ''.join(article_card(a, ' data-cat="%s"' % h(a['categoria'])) for a in ARTIGOS)
     not_cards = ''.join(article_card(a, ' data-cat="%s"' % h(a['categoria'])) for a in NOTICIAS)
     tabs = '''<div class="ct-tabs" role="tablist" aria-label="Tipo de conteúdo"><a class="ct-tab is-on" href="#artigos">Artigos completos <span>%d</span></a><a class="ct-tab" href="#noticias">Notícias e resumos <span>%d</span></a></div>''' % (len(ARTIGOS), len(NOTICIAS))
-    secs = '''<section class="sec" id="artigos"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Artigos</p>%s<p class="reveal">Conteúdos completos, com o passo a passo, os documentos e as perguntas mais comuns de cada tema.</p></div></header>%s%s</div></section>''' % (
+    secs = '''<section class="sec" id="artigos"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Artigos</p>%s<p class="reveal">Conteúdos completos, com o passo a passo, documentos e perguntas mais comuns de cada tema.</p></div></header>%s%s</div></section>''' % (
         split_title('Artigos completos', 'h2', 'display'), chips_for(ARTIGOS, 'lista-artigos'), rail(art_cards, 'Artigos', 'lista-artigos'))
     if NOTICIAS:
         secs += '''<section class="sec sec-sand" id="noticias"><div class="wrap"><header class="sec-h row"><div><p class="eyebrow reveal">Notícias</p>%s<p class="reveal">Leituras rápidas sobre os temas em destaque, com link para o artigo completo quando houver.</p></div></header>%s</div></section>''' % (
             split_title('Notícias e resumos', 'h2', 'display'), rail(not_cards, 'Notícias', 'lista-noticias'))
-    body = page_hero('Conteúdo', 'Informação jurídica clara sobre saúde, planos e direitos', 'Artigos e notícias sobre planos de saúde, direito médico e odontológico e os direitos de pacientes e profissionais da saúde.', [('Início', '/'), ('Conteúdo', None)], 'verde', '/assets/img/artigos/reajuste-abusivo-plano-de-saude.webp') + '<div class="wrap">%s</div>' % tabs + secs + image_ribbon() + cta_band()
+    body = page_hero('Conteúdo', 'Informação jurídica clara sobre saúde, planos e direitos', 'Artigos e notícias sobre planos de saúde, direito médico, odontológico, bem como direitos de pacientes e beneficiários.', [('Início', '/'), ('Conteúdo', None)], 'verde', '/assets/img/artigos/reajuste-abusivo-plano-de-saude.webp') + '<div class="wrap">%s</div>' % tabs + secs + image_ribbon() + cta_band()
     sch = [{'@type': 'CollectionPage', 'url': abs_url('/conteudo/'), 'name': 'Artigos e notícias', 'inLanguage': 'pt-BR'}, breadcrumb([('Início', '/'), ('Conteúdo', '/conteudo/')]),
            {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': a['titulo'], 'url': abs_url(slug_path('conteudo', a['slug']))} for i, a in enumerate(ARTIGOS)]}]
     page('/conteudo/', 'Artigos e notícias sobre Direito da Saúde | Luiz Fernando Neves', 'Artigos sobre plano de saúde, reajustes, home care, bariátrica, processo ético no CRM e CRO, prontuário, consentimento e publicidade de médicos e dentistas.', body, '/conteudo/', sch, prio='0.8', freq='weekly')

@@ -46,11 +46,19 @@
   "hero_linha_1": "Direito da Saúde",
   "hero_linha_2": "com estratégia",
   "statement": "Uma advocacia que vai além da resolução de conflitos: prevenção, conhecimento, estratégia e proximidade para oferecer segurança jurídica a quem cuida e a quem precisa de cuidados.",
-  "escritorio_titulo": "Estratégia jurídica para quem cuida. Proteção para quem precisa de cuidados.",
+  "escritorio_titulo": "Um escritório dedicado ao Direito da Saúde, do primeiro contato à solução do caso.",
   "brasil_titulo": "Atendimento em todo o Brasil",
   "brasil_texto": [
     "Nossa atuação abrange todo o território nacional. Por meio de uma estrutura de atendimento digital, oferecemos assessoria e representação jurídica a clientes de diferentes regiões do Brasil.",
     "A utilização de processos eletrônicos permite a realização de todos os atos processuais necessários, incluindo petições, audiências virtuais, despachos e acompanhamento processual, sem a necessidade de deslocamentos frequentes."
   ],
-  "brasil_frase": "A distância não limita nossa atuação."
+  "brasil_frase": "A distância não limita nossa atuação.",
+  "escritorio_eyebrow": "O escritório",
+  "escritorio_texto": "O escritório Luiz Fernando Neves Advocacia atua na proteção e orientação jurídica de médicos, dentistas e demais profissionais da saúde, bem como na defesa dos direitos de pacientes e beneficiários de planos de saúde, em todo o Brasil.",
+  "escritorio_texto_2": "Cada caso é conduzido com estrutura de atendimento, acompanhamento processual e comunicação próxima, sob a coordenação do Dr. Luiz Fernando Neves, unindo rigor técnico, análise estratégica e atenção às particularidades de cada cliente.",
+  "escritorio_pilares": [
+    "Análise técnica de cada caso",
+    "Acompanhamento em todas as etapas",
+    "Atendimento em todo o Brasil"
+  ]
 }
